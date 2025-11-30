@@ -72,13 +72,23 @@ header h1 {
 }
 
 .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-panel {
+    width: 100%;
+}
+
+.sidebar-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
 @media (max-width: 968px) {
-    .main-content {
+    .sidebar-panel {
         grid-template-columns: 1fr;
     }
 }
@@ -106,7 +116,7 @@ header h1 {
 .chat-section {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 700px;
 }
 
 .language-selector {
@@ -283,14 +293,23 @@ header h1 {
 }
 
 /* Upload Section */
+.upload-section {
+    padding: 20px;
+}
+
+.upload-section h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
 .upload-area {
     border: 3px dashed #d0d0d0;
     border-radius: 12px;
-    padding: 40px;
+    padding: 30px 20px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .upload-area:hover {
@@ -304,12 +323,12 @@ header h1 {
 }
 
 .upload-icon {
-    font-size: 3em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .upload-text {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #333;
     font-weight: 600;
     margin-bottom: 5px;
@@ -362,6 +381,27 @@ header h1 {
     background: #ffebee;
     color: #c62828;
     border: 1px solid #ef5350;
+}
+
+.stats-section {
+    padding: 20px;
+}
+
+.stats-section h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.stats-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    color: #555;
+}
+
+.stats-content p {
+    margin: 8px 0;
+    font-size: 0.95em;
 }
 
 .stats-card {

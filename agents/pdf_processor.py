@@ -26,19 +26,16 @@ class PDFProcessorAgent:
     """
     
     def __init__(self):
-        """Initialize the PDF processor."""
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        
+        """Initialize the PDF processor agent."""
         # Get vector store
         self.vector_store = get_vector_store()
         
         # Initialize Gemini agent for Q&A
         self.agent = GeminiChatAgent(
-            api_key=api_key,
-            model_name="gemini-1.5-flash",
-            system_instruction=self._get_system_instruction()
+            name="PDFProcessor",
+            instructions=self._get_system_instruction(),
+            model_name="gemini-2.5-flash",
+            temperature=0.7
         )
         
         # Text splitter for chunking documents
@@ -183,7 +180,9 @@ Provide a comprehensive answer in {language}. Quote relevant sections and cite s
 If the answer is not in the provided context, say so clearly.
 """
             
-            response = await self.agent.run(prompt)
+            response = await self.agent.run([
+                {"role": "user", "content": prompt}
+            ])
             return response["text"]
             
         except Exception as e:

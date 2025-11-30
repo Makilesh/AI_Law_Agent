@@ -18,78 +18,83 @@
         </header>
 
         <div class="main-content">
-            <!-- Chat Section -->
-            <div class="section chat-section">
-                <h2>💬 Ask a Legal Question</h2>
-                
-                <div class="language-selector">
-                    <label for="language">Language:</label>
-                    <select id="language">
-                        <option value="English">English</option>
-                        <option value="Hindi">हिन्दी (Hindi)</option>
-                        <option value="Tamil">தமிழ் (Tamil)</option>
-                    </select>
-                </div>
+            <!-- Left Side: Chat Section -->
+            <div class="chat-panel">
+                <div class="section chat-section">
+                    <h2>💬 Ask a Legal Question</h2>
+                    
+                    <div class="language-selector">
+                        <label for="language">Language:</label>
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Hindi">हिन्दी (Hindi)</option>
+                            <option value="Tamil">தமிழ் (Tamil)</option>
+                        </select>
+                    </div>
 
-                <div class="chat-container" id="chatContainer">
-                    <div class="welcome-message">
-                        <p>👋 Welcome! Ask me anything about Indian law, IPC sections, legal procedures, and more.</p>
-                        <div class="example-queries">
-                            <p><strong>Try these examples:</strong></p>
-                            <button class="example-btn" onclick="askExample('What is IPC 420?')">What is IPC 420?</button>
-                            <button class="example-btn" onclick="askExample('Explain bail process')">Explain bail process</button>
-                            <button class="example-btn" onclick="askExample('What are fundamental rights?')">What are fundamental rights?</button>
+                    <div class="chat-container" id="chatContainer">
+                        <div class="welcome-message">
+                            <p>👋 Welcome! Ask me anything about Indian law, IPC sections, legal procedures, and more.</p>
+                            <div class="example-queries">
+                                <p><strong>Try these examples:</strong></p>
+                                <button class="example-btn" onclick="askExample('What is IPC 420?')">What is IPC 420?</button>
+                                <button class="example-btn" onclick="askExample('Explain bail process')">Explain bail process</button>
+                                <button class="example-btn" onclick="askExample('What are fundamental rights?')">What are fundamental rights?</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="input-area">
-                    <input 
-                        type="text" 
-                        id="queryInput" 
-                        placeholder="Type your legal question here..."
-                        onkeypress="handleKeyPress(event)"
-                    >
-                    <button id="sendBtn" onclick="sendQuery()">
-                        <span id="sendBtnText">Send</span>
-                        <span id="sendBtnLoader" class="loader" style="display: none;"></span>
-                    </button>
+                    <div class="input-area">
+                        <input 
+                            type="text" 
+                            id="queryInput" 
+                            placeholder="Type your legal question here..."
+                            onkeypress="handleKeyPress(event)"
+                        >
+                        <button id="sendBtn" onclick="sendQuery()">
+                            <span id="sendBtnText">Send</span>
+                            <span id="sendBtnLoader" class="loader" style="display: none;"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- PDF Upload Section -->
-            <div class="section upload-section">
-                <h2>📄 Upload Legal Document</h2>
-                <p class="section-desc">Upload PDF documents to add them to the knowledge base</p>
-                
-                <div class="upload-area" id="uploadArea">
-                    <input 
-                        type="file" 
-                        id="pdfInput" 
-                        accept=".pdf"
-                        style="display: none;"
-                        onchange="handleFileSelect(event)"
-                    >
-                    <div class="upload-content" onclick="document.getElementById('pdfInput').click()">
-                        <div class="upload-icon">📎</div>
-                        <p class="upload-text">Click to select a PDF file</p>
-                        <p class="upload-subtext">or drag and drop here</p>
+            <!-- Right Side: PDF Upload & Stats -->
+            <div class="sidebar-panel">
+                <!-- PDF Upload Section -->
+                <div class="section upload-section">
+                    <h2>📄 Upload Document</h2>
+                    <p class="section-desc">Add PDF documents to the knowledge base</p>
+                    
+                    <div class="upload-area" id="uploadArea">
+                        <input 
+                            type="file" 
+                            id="pdfInput" 
+                            accept=".pdf"
+                            style="display: none;"
+                            onchange="handleFileSelect(event)"
+                        >
+                        <div class="upload-content" onclick="document.getElementById('pdfInput').click()">
+                            <div class="upload-icon">📎</div>
+                            <p class="upload-text">Click to select PDF</p>
+                            <p class="upload-subtext">or drag and drop</p>
+                        </div>
                     </div>
-                </div>
 
-                <div id="uploadProgress" class="upload-progress" style="display: none;">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
+                    <div id="uploadProgress" class="upload-progress" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p id="uploadStatus">Uploading...</p>
                     </div>
-                    <p id="uploadStatus">Uploading...</p>
-                </div>
 
-                <div id="uploadResult" class="upload-result" style="display: none;"></div>
+                    <div id="uploadResult" class="upload-result" style="display: none;"></div>
+                </div>
 
                 <!-- Vector Store Stats -->
-                <div class="stats-card" id="statsCard">
-                    <h3>📊 Knowledge Base Stats</h3>
-                    <div id="statsContent">
+                <div class="section stats-section">
+                    <h2>📊 Knowledge Base</h2>
+                    <div id="statsContent" class="stats-content">
                         <p>Loading...</p>
                     </div>
                 </div>
