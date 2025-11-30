@@ -1,184 +1,193 @@
 # Copyright (c) Microsoft. All rights reserved.
 
 """
-Router Agent - Intelligently routes queries to appropriate specialist agents.
+Router Agent - Routes queries to appropriate specialized agents using Gemini.
 """
 
 import os
-from typing import Any
-from agent_framework import ChatAgent, ChatMessage, Role
-from agent_framework.azure import AzureOpenAIChatClient
-from azure.identity import DefaultAzureCredential
+from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import logging
-import json
 
-from utils.prompts import ROUTER_INSTRUCTIONS
-from models.schemas import QueryDecision
+from utils.gemini_agent import GeminiChatAgent
+from agents.legal_classifier import get_classifier_agent
+from agents.section_expert import get_section_expert
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
 
 class RouterAgent:
-    """Agent that determines which specialist agent should handle a query."""
+    """
+    Routes incoming queries to the appropriate specialized agent.
+    Uses free Gemini API for routing decisions.
+    """
     
-    def __init__(self, chat_client: AzureOpenAIChatClient = None):
-        """
-        Initialize the Router Agent.
+    def __init__(self):
+        """Initialize the router agent."""
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment variables")
         
-        Args:
-            chat_client: Azure OpenAI chat client. If None, creates a new one.
-        """
-        if chat_client is None:
-            self.chat_client = AzureOpenAIChatClient(
-                credential=DefaultAzureCredential(),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_version=os.getenv("OPENAI_API_VERSION"),
-                model_deployment_name=os.getenv("AZURE_CHAT_DEPLOYMENT")
-            )
-        else:
-            self.chat_client = chat_client
-        
-        # Create agent with structured output
-        self.agent = self.chat_client.create_agent(
-            name="QueryRouter",
-            instructions=ROUTER_INSTRUCTIONS,
+        self.agent = GeminiChatAgent(
+            api_key=api_key,
+            model_name="gemini-1.5-flash",
+            system_instruction=self._get_system_instruction()
         )
         
-        logger.info("Router Agent initialized")
+        # Get specialized agents
+        self.classifier = get_classifier_agent()
+        self.section_expert = get_section_expert()
+        
+        logger.info("RouterAgent initialized with Gemini")
     
-    async def route_query(self, query: str) -> QueryDecision:
+    def _get_system_instruction(self) -> str:
+        """Get the system instruction for routing."""
+        return """You are a routing agent for a legal assistant system.
+
+Your job is to analyze user queries and decide which specialized agent should handle them:
+
+1. CLASSIFIER: For general legal questions, situation analysis, crime classification
+2. SECTION_EXPERT: For questions about specific legal sections (IPC, CrPC, etc.)
+3. PDF_PROCESSOR: For questions about uploaded documents
+4. GENERAL_ASSISTANT: For general questions and conversation
+
+Respond with ONLY a JSON object:
+{
+    "route": "CLASSIFIER|SECTION_EXPERT|PDF_PROCESSOR|GENERAL_ASSISTANT",
+    "confidence": 0.95,
+    "reasoning": "why this route"
+}
+
+Be decisive and accurate."""
+    
+    async def route(self, query: str, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
-        Analyze query and determine which agent should handle it.
+        Route a query to the appropriate agent.
         
         Args:
-            query: User's legal query
+            query: The user's query
+            context: Optional context dict
             
         Returns:
-            QueryDecision with routing information
+            Routing decision with agent name and metadata
         """
         try:
-            prompt = f"""
-Analyze this legal query and determine if it should be routed to:
-1. 'law' agent - for criminal situation analysis and offense classification
-2. 'section' agent - for information about specific legal sections
-
-Query: {query}
-
-Respond with:
-- query_type: either "law" or "section"
-- confidence: score between 0 and 1
-- reasoning: brief explanation
-
-Format your response as JSON.
-"""
+            # Get routing decision
+            response = await self.agent.generate_structured(
+                prompt=f"Route this query to the appropriate agent:\n\nQuery: {query}",
+                schema={
+                    "type": "object",
+                    "properties": {
+                        "route": {
+                            "type": "string",
+                            "enum": ["CLASSIFIER", "SECTION_EXPERT", "PDF_PROCESSOR", "GENERAL_ASSISTANT"]
+                        },
+                        "confidence": {"type": "number"},
+                        "reasoning": {"type": "string"}
+                    },
+                    "required": ["route", "confidence", "reasoning"]
+                }
+            )
             
-            messages = [ChatMessage(role=Role.USER, text=prompt)]
-            response = await self.agent.run(messages)
+            route_name = response.get("route", "GENERAL_ASSISTANT")
             
-            # Extract response text
-            response_text = ""
-            if response.messages:
-                last_message = response.messages[-1]
-                if hasattr(last_message, 'text'):
-                    response_text = last_message.text
-                elif hasattr(last_message, 'contents'):
-                    for content in last_message.contents:
-                        if hasattr(content, 'text'):
-                            response_text = content.text
-                            break
+            logger.info(f"Routed query to: {route_name} (confidence: {response.get('confidence', 0.8)})")
             
-            # Parse JSON response
-            try:
-                # Try to extract JSON from the response
-                response_text = response_text.strip()
-                if '```json' in response_text:
-                    response_text = response_text.split('```json')[1].split('```')[0].strip()
-                elif '```' in response_text:
-                    response_text = response_text.split('```')[1].split('```')[0].strip()
-                
-                decision_data = json.loads(response_text)
-                return QueryDecision(**decision_data)
-            except Exception as parse_error:
-                logger.warning(f"Failed to parse router response as JSON: {parse_error}")
-                # Fallback: analyze query with simple heuristics
-                return self._fallback_routing(query)
-                
+            return {
+                "route": route_name,
+                "confidence": response.get("confidence", 0.8),
+                "reasoning": response.get("reasoning", ""),
+                "original_query": query
+            }
+            
         except Exception as e:
-            logger.error(f"Error in query routing: {str(e)}")
-            # Fallback to default routing
-            return self._fallback_routing(query)
+            logger.error(f"Routing error: {str(e)}")
+            return {
+                "route": "GENERAL_ASSISTANT",
+                "confidence": 0.5,
+                "reasoning": f"Error during routing: {str(e)}",
+                "original_query": query
+            }
     
-    def _fallback_routing(self, query: str) -> QueryDecision:
+    async def process_query(
+        self,
+        query: str,
+        language: str = "English",
+        context: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """
-        Simple heuristic-based routing as fallback.
+        Process a query by routing and executing with the appropriate agent.
         
         Args:
-            query: User's query
+            query: The user's query
+            language: Response language
+            context: Optional context dict
             
         Returns:
-            QueryDecision based on simple heuristics
+            Result from the selected agent
         """
-        query_lower = query.lower()
-        
-        # Keywords that indicate section query
-        section_keywords = [
-            'section', 'sec', 'ipc', 'crpc', 'act', 'article',
-            'what is', 'explain', 'define', 'definition', 
-            'punishment for', 'penalty', 'bns', 'bnss'
-        ]
-        
-        # Check for section patterns (e.g., "302", "420 IPC")
-        import re
-        if re.search(r'\b\d{1,4}\b.*(?:ipc|crpc|bns|act)', query_lower):
-            return QueryDecision(
-                query_type="section",
-                confidence=0.8,
-                reasoning="Query contains section number pattern"
-            )
-        
-        # Check for section keywords
-        if any(keyword in query_lower for keyword in section_keywords):
-            return QueryDecision(
-                query_type="section",
-                confidence=0.7,
-                reasoning="Query contains section-related keywords"
-            )
-        
-        # Default to law classification for situation analysis
-        return QueryDecision(
-            query_type="law",
-            confidence=0.6,
-            reasoning="Query appears to describe a legal situation for classification"
-        )
-
-
-def is_classification_query(decision: Any) -> bool:
-    """
-    Condition function to check if query should go to classification agent.
+        try:
+            # Get routing decision
+            routing = await self.route(query, context)
+            route_name = routing["route"]
+            
+            # Prepare context
+            exec_context = context or {}
+            exec_context["language"] = language
+            
+            # Execute with appropriate agent
+            if route_name == "SECTION_EXPERT":
+                result = await self.section_expert.run(query, exec_context)
+            elif route_name == "CLASSIFIER":
+                result = await self.classifier.run(query, exec_context)
+            else:
+                # Use general assistant
+                result = await self._handle_general_query(query, language)
+            
+            # Add routing metadata
+            result["routing"] = routing
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error processing query: {str(e)}")
+            return {
+                "error": str(e),
+                "message": "I encountered an error processing your request. Please try again.",
+                "original_query": query
+            }
     
-    Args:
-        decision: QueryDecision object
+    async def _handle_general_query(self, query: str, language: str) -> Dict[str, Any]:
+        """Handle general queries that don't need specialized agents."""
+        prompt = f"""
+The user asked: {query}
+
+Provide a helpful response. If this is a greeting or general question, respond appropriately.
+If this is a legal question, explain that you can help with:
+- Questions about Indian criminal law sections
+- Legal situation analysis
+- Information about IPC, CrPC, and other Indian criminal laws
+
+Respond in {language}.
+"""
         
-    Returns:
-        True if query should be routed to legal classifier
-    """
-    if isinstance(decision, QueryDecision):
-        return decision.query_type == "law"
-    return False
+        response = await self.agent.run(prompt)
+        
+        return {
+            "response": response["text"],
+            "query": query,
+            "language": language
+        }
 
 
-def is_section_query(decision: Any) -> bool:
-    """
-    Condition function to check if query should go to section expert.
-    
-    Args:
-        decision: QueryDecision object
-        
-    Returns:
-        True if query should be routed to section expert
-    """
-    if isinstance(decision, QueryDecision):
-        return decision.query_type == "section"
-    return False
+# Create global instance
+_router_agent = None
+
+
+def get_router_agent() -> RouterAgent:
+    """Get or create the global router agent instance."""
+    global _router_agent
+    if _router_agent is None:
+        _router_agent = RouterAgent()
+    return _router_agent

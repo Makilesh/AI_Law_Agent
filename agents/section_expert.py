@@ -1,156 +1,146 @@
 # Copyright (c) Microsoft. All rights reserved.
 
 """
-Section Expert Agent - Provides detailed information about legal sections and acts.
+Section Expert Agent - Provides detailed information about specific legal sections using Gemini.
 """
 
 import os
-from typing import List
-from agent_framework import ChatAgent, ChatMessage, Role
-from agent_framework.azure import AzureOpenAIChatClient
-from azure.identity import DefaultAzureCredential
+from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import logging
 
-from utils.prompts import SECTION_EXPERT_INSTRUCTIONS
+from utils.gemini_agent import GeminiChatAgent
+from utils.vector_store import search_legal_context
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
 
 class SectionExpertAgent:
-    """Agent specialized in providing information about legal sections and acts."""
+    """
+    Provides detailed explanations of legal sections.
+    Uses free Gemini API with vector search context.
+    """
     
-    def __init__(self, chat_client: AzureOpenAIChatClient = None):
-        """
-        Initialize the Section Expert Agent.
+    def __init__(self):
+        """Initialize the section expert agent."""
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment variables")
         
-        Args:
-            chat_client: Azure OpenAI chat client. If None, creates a new one.
-        """
-        if chat_client is None:
-            self.chat_client = AzureOpenAIChatClient(
-                credential=DefaultAzureCredential(),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_version=os.getenv("OPENAI_API_VERSION"),
-                model_deployment_name=os.getenv("AZURE_CHAT_DEPLOYMENT")
-            )
-        else:
-            self.chat_client = chat_client
-        
-        self.agent = self.chat_client.create_agent(
-            name="SectionExpert",
-            instructions=SECTION_EXPERT_INSTRUCTIONS
+        self.agent = GeminiChatAgent(
+            api_key=api_key,
+            model_name="gemini-1.5-flash",
+            system_instruction=self._get_system_instruction()
         )
         
-        logger.info("Section Expert Agent initialized")
+        logger.info("SectionExpertAgent initialized with Gemini")
+    
+    def _get_system_instruction(self) -> str:
+        """Get the system instruction for section expertise."""
+        return """You are a legal expert specializing in Indian criminal law sections.
+
+Your role is to provide detailed, accurate explanations of legal sections including:
+- The exact text and wording of the section
+- What the section covers and prohibits
+- Penalties and punishments prescribed
+- Key elements required to prove the offense
+- Important case law and precedents
+- Practical applications and examples
+- Related sections and cross-references
+
+When explaining sections:
+1. Start with the section number and title
+2. Quote the relevant legal text
+3. Explain in simple terms what it means
+4. Discuss penalties and consequences
+5. Provide real-world examples
+6. Mention related sections
+
+Always cite sources and be accurate. If you're unsure about specific details, say so.
+Focus on Indian Penal Code (IPC), Criminal Procedure Code (CrPC), and other Indian criminal laws."""
     
     async def explain_section(
-        self, 
-        query: str, 
+        self,
+        section_query: str,
         language: str = "English",
-        context: str = "",
-        chat_history: List[ChatMessage] = None
+        context: str = ""
     ) -> str:
         """
-        Explain a legal section or act in detail.
+        Explain a specific legal section in detail.
         
         Args:
-            query: User's query about a legal section
-            language: Desired response language
+            section_query: Query about a specific section (e.g., "IPC 420", "Section 498A")
+            language: Language for the response
             context: Additional context from vector search
-            chat_history: Previous conversation messages
             
         Returns:
-            Detailed explanation of the legal section
+            Detailed explanation of the section
         """
         try:
-            # Build the prompt with context
+            # Search for relevant legal context
+            if not context:
+                context = await search_legal_context(section_query, n_results=3)
+            
+            # Build prompt with context
             prompt = f"""
-Provide detailed information about the legal section or act mentioned in the query.
+Provide a comprehensive explanation of the following legal section.
 
-Context from legal database:
+Section Query: {section_query}
+
+Relevant Legal Context:
 {context if context else "No additional context available"}
 
-Previous conversation:
-{self._format_chat_history(chat_history) if chat_history else "No previous conversation"}
-
-Query:
-{query}
-
-Provide a comprehensive response including:
-1. Section number and act name (IPC/BNS, CrPC/BNSS, etc.)
-2. Clear summary of what the section covers
-3. Prescribed punishment (if applicable)
-4. Key elements that constitute the offense/provision
-5. Relevant case laws or precedents
-6. Related sections
-7. Recent amendments if any
+Please provide:
+1. Section number and official title
+2. Full text of the section
+3. Simple explanation of what it means
+4. Penalties and punishments
+5. Key elements to prove the offense
+6. Practical examples
+7. Related sections
 
 Respond in {language}.
-
-If this is not related to a legal section or act, provide a helpful response directing the user to ask about specific sections.
 """
             
-            # Prepare messages
-            messages = []
-            if chat_history:
-                messages.extend(chat_history)
-            
-            messages.append(ChatMessage(role=Role.USER, text=prompt))
-            
-            # Get response from agent
-            response = await self.agent.run(messages)
-            
-            # Extract the text from the last message
-            if response.messages:
-                last_message = response.messages[-1]
-                if hasattr(last_message, 'text'):
-                    return last_message.text
-                elif hasattr(last_message, 'contents'):
-                    for content in last_message.contents:
-                        if hasattr(content, 'text'):
-                            return content.text
-            
-            return response.text if hasattr(response, 'text') else str(response)
+            # Get response
+            response = await self.agent.run(prompt)
+            return response["text"]
             
         except Exception as e:
-            logger.error(f"Error in section explanation: {str(e)}")
-            raise
+            logger.error(f"Error explaining section: {str(e)}")
+            return f"I apologize, but I encountered an error while processing your request about {section_query}. Please try again."
     
-    def _format_chat_history(self, chat_history: List[ChatMessage]) -> str:
-        """Format chat history for context."""
-        if not chat_history:
-            return ""
+    async def run(self, query: str, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Run the section expert agent (compatible with workflow executor).
         
-        history_text = []
-        for msg in chat_history[-6:]:  # Last 6 messages
-            role = msg.role.value if hasattr(msg.role, 'value') else str(msg.role)
-            text = msg.text if hasattr(msg, 'text') else str(msg)
-            history_text.append(f"{role}: {text}")
+        Args:
+            query: The user's query about a legal section
+            context: Optional context dict
+            
+        Returns:
+            Result dict with section explanation
+        """
+        language = context.get("language", "English") if context else "English"
+        vector_context = context.get("vector_context", "") if context else ""
         
-        return "\n".join(history_text)
+        explanation = await self.explain_section(query, language, vector_context)
+        
+        return {
+            "section_query": query,
+            "explanation": explanation,
+            "language": language
+        }
 
 
-def create_section_expert(chat_client: AzureOpenAIChatClient = None) -> ChatAgent:
-    """
-    Factory function to create a section expert agent.
-    
-    Args:
-        chat_client: Azure OpenAI chat client
-        
-    Returns:
-        ChatAgent configured for section expertise
-    """
-    if chat_client is None:
-        chat_client = AzureOpenAIChatClient(
-            credential=DefaultAzureCredential(),
-            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-            api_version=os.getenv("OPENAI_API_VERSION"),
-            model_deployment_name=os.getenv("AZURE_CHAT_DEPLOYMENT")
-        )
-    
-    return chat_client.create_agent(
-        name="SectionExpert",
-        instructions=SECTION_EXPERT_INSTRUCTIONS
-    )
+# Create global instance
+_section_expert = None
+
+
+def get_section_expert() -> SectionExpertAgent:
+    """Get or create the global section expert instance."""
+    global _section_expert
+    if _section_expert is None:
+        _section_expert = SectionExpertAgent()
+    return _section_expert

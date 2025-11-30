@@ -10,22 +10,33 @@ from pydantic import BaseModel, Field
 
 class ChatRequest(BaseModel):
     """Request model for chat endpoint."""
-    message: str = Field(..., description="User's message")
+    query: str = Field(..., description="User's query")
     language: str = Field(default="English", description="Response language")
 
 
 class ChatResponse(BaseModel):
     """Response model for chat endpoint."""
     response: str = Field(..., description="AI assistant's response")
-    metadata: Optional[Dict[str, Any]] = Field(default=None, description="Additional metadata")
+    confidence: float = Field(default=0.9, description="Confidence score")
+    source: str = Field(default="gemini", description="Source model")
+    language: str = Field(default="English", description="Response language")
+
+
+class ClassifierResult(BaseModel):
+    """Result model for query classification."""
+    category: str = Field(..., description="Query category")
+    confidence: float = Field(..., description="Confidence score")
+    reasoning: str = Field(..., description="Reasoning for classification")
+    extracted_info: Dict[str, Any] = Field(default_factory=dict, description="Extracted information")
 
 
 class PDFUploadResponse(BaseModel):
     """Response model for PDF upload endpoint."""
-    total_pages: int
-    total_chunks: int
-    message: str = Field(default="PDF processed successfully")
-    vectors_after: Optional[int] = None
+    success: bool = Field(..., description="Upload success status")
+    filename: str = Field(..., description="Uploaded filename")
+    message: str = Field(..., description="Status message")
+    chunks_created: int = Field(default=0, description="Number of chunks created")
+    pages_processed: int = Field(default=0, description="Number of pages processed")
 
 
 class QueryDecision(BaseModel):

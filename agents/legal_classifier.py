@@ -1,140 +1,163 @@
 # Copyright (c) Microsoft. All rights reserved.
 
 """
-Legal Classification Agent - Analyzes criminal situations and classifies offenses.
+Legal Query Classifier Agent - Routes queries to appropriate handlers using Gemini.
 """
 
 import os
-from typing import List
-from agent_framework import ChatAgent, ChatMessage, Role
-from agent_framework.azure import AzureOpenAIChatClient
-from azure.identity import DefaultAzureCredential
+import json
+from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import logging
 
-from utils.prompts import LAW_CLASSIFICATION_INSTRUCTIONS
+from utils.gemini_agent import GeminiChatAgent
+from models.schemas import ClassifierResult
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
 
-class LegalClassificationAgent:
-    """Agent specialized in analyzing and classifying criminal situations."""
+class LegalClassifierAgent:
+    """
+    Classifies legal queries to determine routing.
+    Uses free Gemini API.
+    """
     
-    def __init__(self, chat_client: AzureOpenAIChatClient = None):
-        """
-        Initialize the Legal Classification Agent.
+    def __init__(self):
+        """Initialize the classifier agent."""
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment variables")
         
-        Args:
-            chat_client: Azure OpenAI chat client. If None, creates a new one.
-        """
-        if chat_client is None:
-            self.chat_client = AzureOpenAIChatClient(
-                credential=DefaultAzureCredential(),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_version=os.getenv("OPENAI_API_VERSION"),
-                model_deployment_name=os.getenv("AZURE_CHAT_DEPLOYMENT")
-            )
-        else:
-            self.chat_client = chat_client
-        
-        self.agent = self.chat_client.create_agent(
-            name="LegalClassifier",
-            instructions=LAW_CLASSIFICATION_INSTRUCTIONS
+        self.agent = GeminiChatAgent(
+            api_key=api_key,
+            model_name="gemini-1.5-flash",
+            system_instruction=self._get_system_instruction()
         )
         
-        logger.info("Legal Classification Agent initialized")
+        logger.info("LegalClassifierAgent initialized with Gemini")
     
-    async def classify(
-        self, 
-        query: str, 
-        language: str = "English",
-        context: str = "",
-        chat_history: List[ChatMessage] = None
-    ) -> str:
+    def _get_system_instruction(self) -> str:
+        """Get the system instruction for classification."""
+        return """You are a legal query classifier for Indian criminal law.
+
+Your job is to analyze user queries and classify them into categories:
+
+1. LAW_QUERY: Questions about specific laws (IPC, CrPC, evidence acts, etc.)
+   - Examples: "What is IPC 302?", "Explain sedition law", "What are the provisions of CrPC 41?"
+
+2. SECTION_QUERY: Questions about specific sections of laws
+   - Examples: "Section 420 IPC", "What is Section 498A?", "Details of Section 377"
+
+3. LEGAL_ADVICE: Questions seeking legal advice or case-specific guidance
+   - Examples: "What should I do if I'm accused?", "Can I file an FIR?", "Am I eligible for bail?"
+
+4. DOCUMENT_QUERY: Questions about legal documents, forms, or procedures
+   - Examples: "How to file a petition?", "What documents are needed for bail?", "Format of affidavit"
+
+5. GENERAL: General legal questions not fitting above categories
+   - Examples: "What is the legal system in India?", "Types of courts", "Legal rights"
+
+You must respond with ONLY a JSON object in this format:
+{
+    "category": "one of the categories above",
+    "confidence": 0.95,
+    "reasoning": "brief explanation",
+    "extracted_info": {
+        "section_number": "420" (if applicable),
+        "law_name": "IPC" (if applicable),
+        "query_intent": "brief summary"
+    }
+}
+
+Be precise and accurate. Use extracted_info to capture key details from the query."""
+    
+    async def classify(self, query: str) -> ClassifierResult:
         """
-        Classify a legal query and provide comprehensive analysis.
+        Classify a legal query.
         
         Args:
-            query: User's legal query or situation description
-            language: Desired response language
-            context: Additional context from vector search
-            chat_history: Previous conversation messages
+            query: The user's legal query
             
         Returns:
-            Detailed legal classification and analysis
+            ClassifierResult with category and metadata
         """
         try:
-            # Build the prompt with context
-            prompt = f"""
-Analyze the following criminal situation and provide detailed legal insights.
-
-Previous conversation context:
-{context if context else "No previous context"}
-
-Current query:
-{query}
-
-Provide a comprehensive analysis including:
-1. Classification of the offense
-2. Applicable sections under Indian Penal Code and other relevant acts
-3. Severity level (cognizable/non-cognizable, bailable/non-bailable)
-4. Legal procedures that apply
-5. Rights of the parties involved
-6. Possible defenses or mitigating factors
-
-Respond in {language}.
-
-If this situation is not related to a legal problem or criminal situation, reply with:
-"I am an AI-powered legal assistant specialized in Indian criminal law. I provide information and assistance related to criminal offenses, legal sections, and legal procedures under Indian law."
-"""
+            # Use structured generation for reliable JSON
+            response = await self.agent.generate_structured(
+                prompt=f"Classify this legal query:\n\nQuery: {query}",
+                schema={
+                    "type": "object",
+                    "properties": {
+                        "category": {
+                            "type": "string",
+                            "enum": ["LAW_QUERY", "SECTION_QUERY", "LEGAL_ADVICE", "DOCUMENT_QUERY", "GENERAL"]
+                        },
+                        "confidence": {"type": "number"},
+                        "reasoning": {"type": "string"},
+                        "extracted_info": {
+                            "type": "object",
+                            "properties": {
+                                "section_number": {"type": "string"},
+                                "law_name": {"type": "string"},
+                                "query_intent": {"type": "string"}
+                            }
+                        }
+                    },
+                    "required": ["category", "confidence", "reasoning"]
+                }
+            )
             
-            # Prepare messages
-            messages = []
-            if chat_history:
-                messages.extend(chat_history)
+            # Create ClassifierResult
+            result = ClassifierResult(
+                category=response.get("category", "GENERAL"),
+                confidence=response.get("confidence", 0.8),
+                reasoning=response.get("reasoning", ""),
+                extracted_info=response.get("extracted_info", {})
+            )
             
-            messages.append(ChatMessage(role=Role.USER, text=prompt))
-            
-            # Get response from agent
-            response = await self.agent.run(messages)
-            
-            # Extract the text from the last message
-            if response.messages:
-                last_message = response.messages[-1]
-                if hasattr(last_message, 'text'):
-                    return last_message.text
-                elif hasattr(last_message, 'contents'):
-                    for content in last_message.contents:
-                        if hasattr(content, 'text'):
-                            return content.text
-            
-            return response.text if hasattr(response, 'text') else str(response)
+            logger.info(f"Classified query as: {result.category} (confidence: {result.confidence})")
+            return result
             
         except Exception as e:
-            logger.error(f"Error in legal classification: {str(e)}")
-            raise
-
-
-def create_legal_classifier(chat_client: AzureOpenAIChatClient = None) -> ChatAgent:
-    """
-    Factory function to create a legal classification agent.
+            logger.error(f"Classification error: {str(e)}")
+            # Fallback classification
+            return ClassifierResult(
+                category="GENERAL",
+                confidence=0.5,
+                reasoning=f"Error during classification: {str(e)}",
+                extracted_info={}
+            )
     
-    Args:
-        chat_client: Azure OpenAI chat client
+    async def run(self, query: str, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Run the classifier agent (compatible with workflow executor).
         
-    Returns:
-        ChatAgent configured for legal classification
-    """
-    if chat_client is None:
-        chat_client = AzureOpenAIChatClient(
-            credential=DefaultAzureCredential(),
-            azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-            api_version=os.getenv("OPENAI_API_VERSION"),
-            model_deployment_name=os.getenv("AZURE_CHAT_DEPLOYMENT")
-        )
-    
-    return chat_client.create_agent(
-        name="LegalClassifier",
-        instructions=LAW_CLASSIFICATION_INSTRUCTIONS
-    )
+        Args:
+            query: The user's query
+            context: Optional context dict
+            
+        Returns:
+            Result dict with classification
+        """
+        result = await self.classify(query)
+        
+        return {
+            "category": result.category,
+            "confidence": result.confidence,
+            "reasoning": result.reasoning,
+            "extracted_info": result.extracted_info,
+            "original_query": query
+        }
+
+
+# Create global instance
+_classifier_agent = None
+
+
+def get_classifier_agent() -> LegalClassifierAgent:
+    """Get or create the global classifier agent instance."""
+    global _classifier_agent
+    if _classifier_agent is None:
+        _classifier_agent = LegalClassifierAgent()
+    return _classifier_agent

@@ -3,9 +3,11 @@
 """Utility modules."""
 
 from .prompts import *
-from .search_client import get_search_client, search_legal_context
+from .gemini_agent import GeminiChatAgent
+from .vector_store import ChromaVectorStore, get_vector_store
 
 __all__ = [
-    'get_search_client',
-    'search_legal_context',
+    'GeminiChatAgent',
+    'ChromaVectorStore',
+    'get_vector_store',
 ]

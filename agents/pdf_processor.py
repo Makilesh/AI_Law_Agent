@@ -1,288 +1,233 @@
 # Copyright (c) Microsoft. All rights reserved.
 
 """
-PDF Processor Agent - Handles PDF uploads and conversational retrieval.
+PDF Processor Agent - Processes legal PDFs and stores them in ChromaDB using Gemini.
 """
 
 import os
-from typing import Dict, List
 import logging
-from agent_framework import ChatAgent, ChatMessage, Role
-from agent_framework.azure import AzureOpenAIChatClient
-from azure.identity import DefaultAzureCredential
+from typing import List, Dict, Any, Optional
+from pathlib import Path
 from dotenv import load_dotenv
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationalRetrievalChain
-from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
-from langchain.document_loaders import PyPDFLoader
-from pinecone import Pinecone, ServerlessSpec
-from langchain_pinecone import PineconeVectorStore
-
-from utils.prompts import PDF_PROCESSOR_INSTRUCTIONS
+from langchain_community.document_loaders import PyPDFLoader
+from utils.vector_store import get_vector_store
+from utils.gemini_agent import GeminiChatAgent
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
 
 class PDFProcessorAgent:
-    """Agent for processing PDF documents and answering questions about them."""
+    """
+    Processes PDF documents and stores them in ChromaDB for retrieval.
+    Uses free local vector storage.
+    """
     
-    def __init__(
-        self,
-        pinecone_api_key: str = None,
-        pinecone_index_name: str = None,
-        chunk_size: int = 1000,
-        chunk_overlap: int = 200,
-    ):
-        """
-        Initialize the PDF Processor Agent.
+    def __init__(self):
+        """Initialize the PDF processor."""
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment variables")
         
-        Args:
-            pinecone_api_key: Pinecone API key
-            pinecone_index_name: Name of Pinecone index
-            chunk_size: Size of text chunks for splitting
-            chunk_overlap: Overlap between chunks
-        """
-        # Load environment variables
-        self.pinecone_api_key = pinecone_api_key or os.getenv("PINECONE_API_KEY")
-        self.pinecone_index_name = pinecone_index_name or os.getenv("PINECONE_INDEX_NAME", "pdf-chat-index")
+        # Get vector store
+        self.vector_store = get_vector_store()
         
-        # Initialize Pinecone
-        self.pc = Pinecone(api_key=self.pinecone_api_key)
-        logger.info("Pinecone client initialized")
+        # Initialize Gemini agent for Q&A
+        self.agent = GeminiChatAgent(
+            api_key=api_key,
+            model_name="gemini-1.5-flash",
+            system_instruction=self._get_system_instruction()
+        )
         
-        # Initialize embeddings
-        try:
-            self.embeddings = AzureOpenAIEmbeddings(
-                azure_deployment=os.getenv("AZURE_EMBEDDINGS_DEPLOYMENT"),
-                openai_api_version=os.getenv("OPENAI_API_VERSION"),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-            )
-            # Test embeddings
-            test_embedding = self.embeddings.embed_query("test")
-            logger.info(f"Embeddings initialized. Vector dimension: {len(test_embedding)}")
-        except Exception as e:
-            logger.error(f"Failed to initialize embeddings: {str(e)}")
-            raise
-        
-        # Initialize text splitter
+        # Text splitter for chunking documents
         self.text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
+            chunk_size=1000,
+            chunk_overlap=200,
             length_function=len
         )
         
-        # Initialize conversation memory
-        self.memory = ConversationBufferMemory(
-            memory_key="chat_history",
-            return_messages=True,
-            output_key="answer"
-        )
-        
-        # Initialize chain (will be set up after PDF processing)
-        self.vector_store = None
-        self.chain = None
-        
-        self._initialize_index()
-        logger.info("PDF Processor Agent initialized")
+        logger.info("PDFProcessorAgent initialized")
     
-    def _initialize_index(self):
-        """Initialize or connect to Pinecone index."""
-        try:
-            # Check if index exists
-            if self.pinecone_index_name not in self.pc.list_indexes().names():
-                logger.info(f"Creating new Pinecone index: {self.pinecone_index_name}")
-                self.pc.create_index(
-                    name=self.pinecone_index_name,
-                    dimension=3072,  # text-embedding-3-large dimension
-                    metric="cosine",
-                    spec=ServerlessSpec(cloud="aws", region="us-east-1"),
-                )
-            
-            # Get index and clear if needed
-            index = self.pc.Index(self.pinecone_index_name)
-            stats = index.describe_index_stats()
-            total_vector_count = stats.total_vector_count
-            
-            if total_vector_count != 0:
-                index.delete(delete_all=True)
-                logger.info("Cleared existing vectors from index")
-            
-            # Initialize vector store
-            self.vector_store = PineconeVectorStore(
-                index=index,
-                embedding=self.embeddings,
-                text_key="text"
-            )
-            logger.info("Vector store initialized")
-            
-        except Exception as e:
-            logger.error(f"Error initializing index: {str(e)}")
-            raise
+    def _get_system_instruction(self) -> str:
+        """Get the system instruction for document Q&A."""
+        return """You are a legal document analysis assistant.
+
+Your role is to answer questions about legal documents that have been provided to you.
+
+When answering questions:
+1. Only use information from the provided document context
+2. Quote relevant sections when possible
+3. Be precise and accurate
+4. If the answer is not in the context, say so clearly
+5. Provide section or page references when available
+
+Always be factual and cite the document content."""
     
-    def _initialize_chain(self):
-        """Initialize the conversational retrieval chain."""
-        try:
-            # Initialize chat model
-            chat_model = AzureChatOpenAI(
-                openai_api_version=os.getenv("OPENAI_API_VERSION"),
-                azure_deployment=os.getenv("AZURE_CHAT_DEPLOYMENT"),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-                streaming=False,
-                temperature=0.7,
-                max_tokens=2000,
-            )
-            
-            # Test chat model
-            test_response = chat_model.invoke("Test message")
-            logger.info("Chat model initialized and tested")
-            
-            # Initialize chain
-            self.chain = ConversationalRetrievalChain.from_llm(
-                llm=chat_model,
-                retriever=self.vector_store.as_retriever(search_kwargs={"k": 10}),
-                memory=self.memory,
-                return_source_documents=True,
-                verbose=True,
-                output_key="answer"
-            )
-            logger.info("Conversational retrieval chain initialized")
-            
-        except Exception as e:
-            logger.error(f"Chain initialization failed: {str(e)}")
-            raise
-    
-    async def process_pdf(self, pdf_path: str) -> Dict:
+    async def process_pdf(
+        self,
+        pdf_path: str,
+        metadata: Optional[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """
-        Process a PDF file and store in vector database.
+        Process a PDF file and store it in the vector database.
         
         Args:
             pdf_path: Path to the PDF file
+            metadata: Optional metadata to store with the document
             
         Returns:
-            Dict with processing statistics
+            Processing result with stats
         """
         try:
-            logger.info(f"Starting to process PDF: {pdf_path}")
-            
-            # Verify file exists
-            if not os.path.exists(pdf_path):
+            # Check if file exists
+            if not Path(pdf_path).exists():
                 raise FileNotFoundError(f"PDF file not found: {pdf_path}")
+            
+            logger.info(f"Processing PDF: {pdf_path}")
             
             # Load PDF
             loader = PyPDFLoader(pdf_path)
-            pages = loader.load()
-            total_pages = len(pages)
-            logger.info(f"Loaded PDF with {total_pages} pages")
+            documents = loader.load()
             
             # Split into chunks
-            texts = self.text_splitter.split_documents(pages)
-            total_chunks = len(texts)
-            logger.info(f"Created {total_chunks} text chunks")
+            chunks = self.text_splitter.split_documents(documents)
             
-            # Check index capacity (free tier limit: 10,000 vectors)
-            index = self.pc.Index(self.pinecone_index_name)
-            stats = index.describe_index_stats()
-            current_vectors = stats.get("total_vector_count", 0)
-            logger.info(f"Current vectors in index: {current_vectors}")
+            # Prepare data for ChromaDB
+            texts = [chunk.page_content for chunk in chunks]
+            metadatas = []
+            ids = []
             
-            if current_vectors + total_chunks > 10000:
-                raise Exception("This upload would exceed the free tier limit of 10,000 vectors")
+            filename = Path(pdf_path).name
             
-            # Process chunks and upload
-            logger.info("Starting embeddings generation and upload")
-            self.vector_store = PineconeVectorStore.from_documents(
+            for i, chunk in enumerate(chunks):
+                chunk_metadata = {
+                    "source": filename,
+                    "chunk_id": i,
+                    "page": chunk.metadata.get("page", 0)
+                }
+                
+                # Add custom metadata if provided
+                if metadata:
+                    chunk_metadata.update(metadata)
+                
+                metadatas.append(chunk_metadata)
+                ids.append(f"{filename}_chunk_{i}")
+            
+            # Add to vector store
+            self.vector_store.add_documents(
                 documents=texts,
-                embedding=self.embeddings,
-                index_name=self.pinecone_index_name,
+                metadatas=metadatas,
+                ids=ids
             )
-            logger.info("Successfully uploaded embeddings to Pinecone")
             
-            # Initialize the chain
-            self._initialize_chain()
+            logger.info(f"Successfully processed {len(chunks)} chunks from {filename}")
             
             return {
-                "total_pages": total_pages,
-                "total_chunks": total_chunks,
-                "vectors_before": current_vectors,
-                "vectors_after": current_vectors + total_chunks,
+                "success": True,
+                "filename": filename,
+                "total_chunks": len(chunks),
+                "total_pages": len(documents),
+                "message": f"Successfully processed {filename}"
             }
             
         except Exception as e:
             logger.error(f"Error processing PDF: {str(e)}")
-            raise
+            return {
+                "success": False,
+                "error": str(e),
+                "message": f"Failed to process PDF: {str(e)}"
+            }
     
-    async def query_pdf(
-        self, 
-        question: str, 
+    async def query_documents(
+        self,
+        query: str,
         language: str = "English",
-        chat_history: str = ""
+        n_results: int = 5
     ) -> str:
         """
-        Query the processed PDF with a question.
+        Query the processed documents.
         
         Args:
-            question: User's question
-            language: Response language
-            chat_history: Previous conversation context
+            query: User's question about the documents
+            language: Language for the response
+            n_results: Number of relevant chunks to retrieve
             
         Returns:
-            Answer from the PDF content
+            Answer based on the documents
         """
         try:
-            if self.chain is None:
-                return "Please upload a PDF document first before asking questions."
+            # Search vector store
+            results = self.vector_store.query(query, n_results=n_results)
             
-            # Enhance question with language instruction
-            enhanced_question = f"""
-{question}
+            if not results:
+                return f"I couldn't find any relevant information in the documents to answer your question."
+            
+            # Build context from results
+            context = "\n\n".join([
+                f"[From {result['metadata'].get('source', 'unknown')} - Page {result['metadata'].get('page', 'unknown')}]\n{result['document']}"
+                for result in results
+            ])
+            
+            # Generate answer using Gemini
+            prompt = f"""
+Based on the following document excerpts, answer this question:
 
-Please provide your answer in {language}. Base your response on the content of the uploaded legal document.
+Question: {query}
+
+Document Context:
+{context}
+
+Provide a comprehensive answer in {language}. Quote relevant sections and cite sources.
+If the answer is not in the provided context, say so clearly.
 """
             
-            # Query the chain
-            result = self.chain({"question": enhanced_question})
-            
-            answer = result.get("answer", "I couldn't find an answer in the document.")
-            source_documents = result.get("source_documents", [])
-            
-            # Add source information if available
-            if source_documents:
-                sources = set()
-                for doc in source_documents[:3]:  # Top 3 sources
-                    page = doc.metadata.get("page", "unknown")
-                    sources.add(f"Page {page}")
-                
-                if sources:
-                    answer += f"\n\nSources: {', '.join(sorted(sources))}"
-            
-            return answer
+            response = await self.agent.run(prompt)
+            return response["text"]
             
         except Exception as e:
-            logger.error(f"Error querying PDF: {str(e)}")
-            return f"Error processing your question: {str(e)}"
+            logger.error(f"Error querying documents: {str(e)}")
+            return f"I encountered an error while searching the documents: {str(e)}"
     
-    def clear_memory(self):
-        """Clear conversation memory."""
-        self.memory.clear()
-        logger.info("Conversation memory cleared")
-    
-    def get_index_stats(self) -> Dict:
+    async def run(self, query: str, context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
-        Get statistics about the Pinecone index.
+        Run the PDF processor agent (compatible with workflow executor).
         
+        Args:
+            query: The user's query about documents
+            context: Optional context dict
+            
         Returns:
-            Dict with index statistics
+            Result dict with answer
         """
-        try:
-            index = self.pc.Index(self.pinecone_index_name)
-            stats = index.describe_index_stats()
-            logger.info(f"Retrieved index stats: {stats}")
-            return stats
-        except Exception as e:
-            logger.error(f"Error getting index stats: {str(e)}")
-            raise
+        language = context.get("language", "English") if context else "English"
+        
+        answer = await self.query_documents(query, language)
+        
+        return {
+            "query": query,
+            "answer": answer,
+            "language": language
+        }
+    
+    def get_stats(self) -> Dict[str, Any]:
+        """Get statistics about processed documents."""
+        return self.vector_store.get_stats()
+    
+    def clear_all_documents(self) -> None:
+        """Clear all documents from the vector store."""
+        self.vector_store.delete_all()
+        logger.info("Cleared all documents from vector store")
+
+
+# Create global instance
+_pdf_processor = None
+
+
+def get_pdf_processor() -> PDFProcessorAgent:
+    """Get or create the global PDF processor instance."""
+    global _pdf_processor
+    if _pdf_processor is None:
+        _pdf_processor = PDFProcessorAgent()
+    return _pdf_processor
