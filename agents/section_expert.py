@@ -24,14 +24,11 @@ class SectionExpertAgent:
     
     def __init__(self):
         """Initialize the section expert agent."""
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        
         self.agent = GeminiChatAgent(
-            api_key=api_key,
-            model_name="gemini-1.5-flash",
-            system_instruction=self._get_system_instruction()
+            name="SectionExpert",
+            instructions=self._get_system_instruction(),
+            model_name="gemini-2.5-flash",
+            temperature=0.7
         )
         
         logger.info("SectionExpertAgent initialized with Gemini")
@@ -78,33 +75,54 @@ Focus on Indian Penal Code (IPC), Criminal Procedure Code (CrPC), and other Indi
             Detailed explanation of the section
         """
         try:
-            # Search for relevant legal context
+            # Search for relevant legal context from database with fallback
+            retrieved_context = ""
             if not context:
-                context = await search_legal_context(section_query, n_results=3)
+                try:
+                    retrieved_context = await search_legal_context(section_query, n_results=5)
+                except Exception as e:
+                    logger.warning(f"Vector search failed: {e}, falling back to LLM knowledge")
+                    retrieved_context = ""
+            else:
+                retrieved_context = context
             
-            # Build prompt with context
-            prompt = f"""
-Provide a comprehensive explanation of the following legal section.
+            # Build prompt with context and fallback instruction
+            if retrieved_context and len(retrieved_context.strip()) > 50:
+                prompt = f"""
+Use the following retrieved information to answer the query.
 
-Section Query: {section_query}
+Query: {section_query}
 
-Relevant Legal Context:
-{context if context else "No additional context available"}
+Retrieved Context:
+{retrieved_context}
 
-Please provide:
+Provide:
 1. Section number and official title
-2. Full text of the section
-3. Simple explanation of what it means
-4. Penalties and punishments
-5. Key elements to prove the offense
-6. Practical examples
-7. Related sections
+2. Simple explanation
+3. Penalties and punishments
+4. Key elements
+5. Practical examples
+
+Respond in {language}.
+"""
+            else:
+                # Fallback to LLM's own knowledge
+                prompt = f"""
+You are a legal expert on Indian law. Answer this query using your knowledge.
+
+Query: {section_query}
+
+Provide a comprehensive explanation including penalties, practical examples, and key points.
+If about traffic laws, include Motor Vehicles Act penalties.
+If about IPC, include relevant provisions.
 
 Respond in {language}.
 """
             
             # Get response
-            response = await self.agent.run(prompt)
+            response = await self.agent.run([
+                {"role": "user", "content": prompt}
+            ])
             return response["text"]
             
         except Exception as e:
@@ -128,8 +146,8 @@ Respond in {language}.
         explanation = await self.explain_section(query, language, vector_context)
         
         return {
+            "response": explanation,
             "section_query": query,
-            "explanation": explanation,
             "language": language
         }
 

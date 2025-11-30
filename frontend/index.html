@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Legal Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚖️ AI Legal Engine</h1>
+            <p class="subtitle">Powered by Google Gemini & ChromaDB</p>
+            <div class="status" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="statusText">Checking connection...</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Chat Section -->
+            <div class="section chat-section">
+                <h2>💬 Ask a Legal Question</h2>
+                
+                <div class="language-selector">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">हिन्दी (Hindi)</option>
+                        <option value="Tamil">தமிழ் (Tamil)</option>
+                    </select>
+                </div>
+
+                <div class="chat-container" id="chatContainer">
+                    <div class="welcome-message">
+                        <p>👋 Welcome! Ask me anything about Indian law, IPC sections, legal procedures, and more.</p>
+                        <div class="example-queries">
+                            <p><strong>Try these examples:</strong></p>
+                            <button class="example-btn" onclick="askExample('What is IPC 420?')">What is IPC 420?</button>
+                            <button class="example-btn" onclick="askExample('Explain bail process')">Explain bail process</button>
+                            <button class="example-btn" onclick="askExample('What are fundamental rights?')">What are fundamental rights?</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="queryInput" 
+                        placeholder="Type your legal question here..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button id="sendBtn" onclick="sendQuery()">
+                        <span id="sendBtnText">Send</span>
+                        <span id="sendBtnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PDF Upload Section -->
+            <div class="section upload-section">
+                <h2>📄 Upload Legal Document</h2>
+                <p class="section-desc">Upload PDF documents to add them to the knowledge base</p>
+                
+                <div class="upload-area" id="uploadArea">
+                    <input 
+                        type="file" 
+                        id="pdfInput" 
+                        accept=".pdf"
+                        style="display: none;"
+                        onchange="handleFileSelect(event)"
+                    >
+                    <div class="upload-content" onclick="document.getElementById('pdfInput').click()">
+                        <div class="upload-icon">📎</div>
+                        <p class="upload-text">Click to select a PDF file</p>
+                        <p class="upload-subtext">or drag and drop here</p>
+                    </div>
+                </div>
+
+                <div id="uploadProgress" class="upload-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="uploadStatus">Uploading...</p>
+                </div>
+
+                <div id="uploadResult" class="upload-result" style="display: none;"></div>
+
+                <!-- Vector Store Stats -->
+                <div class="stats-card" id="statsCard">
+                    <h3>📊 Knowledge Base Stats</h3>
+                    <div id="statsContent">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -64,7 +64,7 @@ async def lifespan(app: FastAPI):
         logger.info("🚀 AI Legal Engine Ready!")
         logger.info("=" * 60)
         logger.info("Using FREE services:")
-        logger.info("  - Google Gemini (gemini-1.5-flash)")
+        logger.info("  - Google Gemini (gemini-2.5-flash)")
         logger.info("  - ChromaDB (local vector store)")
         logger.info("  - Sentence Transformers (local embeddings)")
         logger.info("=" * 60)
@@ -165,12 +165,12 @@ async def chat(request: ChatRequest):
         )
         
         # Extract response
-        if "explanation" in result:
+        if "response" in result:
+            response_text = result["response"]
+        elif "explanation" in result:
             response_text = result["explanation"]
         elif "answer" in result:
             response_text = result["answer"]
-        elif "response" in result:
-            response_text = result["response"]
         else:
             response_text = str(result)
         
@@ -188,7 +188,7 @@ async def chat(request: ChatRequest):
         return ChatResponse(
             response=response_text,
             confidence=result.get("confidence", 0.9),
-            source="gemini-1.5-flash",
+            source="gemini-2.5-flash",
             language=request.language
         )
         
@@ -258,6 +258,17 @@ async def get_document_stats():
             "success": True,
             "stats": stats
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get stats: {str(e)}")
+
+
+@app.get("/vector-store/stats")
+async def get_vector_store_stats():
+    """Get vector store statistics (alias for frontend compatibility)."""
+    try:
+        vector_store = get_vector_store()
+        stats = vector_store.get_stats()
+        return stats
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to get stats: {str(e)}")
 

@@ -25,14 +25,11 @@ class LegalClassifierAgent:
     
     def __init__(self):
         """Initialize the classifier agent."""
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        
         self.agent = GeminiChatAgent(
-            api_key=api_key,
-            model_name="gemini-1.5-flash",
-            system_instruction=self._get_system_instruction()
+            name="LegalClassifier",
+            instructions=self._get_system_instruction(),
+            model_name="gemini-2.5-flash",
+            temperature=0.3
         )
         
         logger.info("LegalClassifierAgent initialized with Gemini")
@@ -86,7 +83,7 @@ Be precise and accurate. Use extracted_info to capture key details from the quer
             # Use structured generation for reliable JSON
             response = await self.agent.generate_structured(
                 prompt=f"Classify this legal query:\n\nQuery: {query}",
-                schema={
+                response_schema={
                     "type": "object",
                     "properties": {
                         "category": {

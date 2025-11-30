@@ -25,14 +25,11 @@ class RouterAgent:
     
     def __init__(self):
         """Initialize the router agent."""
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        
         self.agent = GeminiChatAgent(
-            api_key=api_key,
-            model_name="gemini-1.5-flash",
-            system_instruction=self._get_system_instruction()
+            name="Router",
+            instructions=self._get_system_instruction(),
+            model_name="gemini-2.5-flash",
+            temperature=0.3
         )
         
         # Get specialized agents
@@ -76,7 +73,7 @@ Be decisive and accurate."""
             # Get routing decision
             response = await self.agent.generate_structured(
                 prompt=f"Route this query to the appropriate agent:\n\nQuery: {query}",
-                schema={
+                response_schema={
                     "type": "object",
                     "properties": {
                         "route": {
@@ -136,25 +133,24 @@ Be decisive and accurate."""
             exec_context = context or {}
             exec_context["language"] = language
             
-            # Execute with appropriate agent
-            if route_name == "SECTION_EXPERT":
-                result = await self.section_expert.run(query, exec_context)
-            elif route_name == "CLASSIFIER":
-                result = await self.classifier.run(query, exec_context)
-            else:
-                # Use general assistant
+            # Execute with appropriate agent based on routing
+            # Most queries should go to SECTION_EXPERT for actual answers
+            if route_name == "PDF_PROCESSOR":
+                # Only for document-specific queries
                 result = await self._handle_general_query(query, language)
-            
-            # Add routing metadata
-            result["routing"] = routing
-            
-            return result
+                result["routing"] = routing
+                return result
+            else:
+                # All other queries (CLASSIFIER, SECTION_EXPERT, etc.) → use section expert for answers
+                result = await self.section_expert.run(query, exec_context)
+                result["routing"] = routing
+                return result
             
         except Exception as e:
             logger.error(f"Error processing query: {str(e)}")
             return {
                 "error": str(e),
-                "message": "I encountered an error processing your request. Please try again.",
+                "response": "I encountered an error processing your request. Please try again.",
                 "original_query": query
             }
     
@@ -172,7 +168,9 @@ If this is a legal question, explain that you can help with:
 Respond in {language}.
 """
         
-        response = await self.agent.run(prompt)
+        response = await self.agent.run([
+            {"role": "user", "content": prompt}
+        ])
         
         return {
             "response": response["text"],
