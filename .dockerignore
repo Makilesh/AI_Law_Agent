@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+env/
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+README.md
+ARCHITECTURE.md
+MIGRATION.md
+QUICKSTART.md
+docs/
+
+# Database backups
+chroma_db_backup_*/
+*.db-journal
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+tests/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Downloaded models (will download in container)
+models/
+
+# Generated documents (runtime)
+downloads/
+exports/

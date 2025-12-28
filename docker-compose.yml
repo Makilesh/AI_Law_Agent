@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: ai_legal_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: >
+      redis-server
+      --appendonly yes
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    networks:
+      - ai_legal_network
+
+  # Optional: FastAPI service (uncomment if you want to run via Docker)
+  # fastapi:
+  #   build: .
+  #   container_name: ai_legal_api
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - ./chroma_db:/app/chroma_db
+  #     - ./seed_data:/app/seed_data
+  #   environment:
+  #     - REDIS_HOST=redis
+  #     - REDIS_PORT=6379
+  #     - CHROMA_PERSIST_DIR=/app/chroma_db
+  #   depends_on:
+  #     redis:
+  #       condition: service_healthy
+  #   restart: unless-stopped
+  #   command: uvicorn main:app --host 0.0.0.0 --port 8000
+  #   networks:
+  #     - ai_legal_network
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  ai_legal_network:
+    driver: bridge
