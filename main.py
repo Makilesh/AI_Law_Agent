@@ -16,14 +16,23 @@ from typing import List, Dict, Any, Optional
 from contextlib import asynccontextmanager
 from pathlib import Path
 import tempfile
+import uuid
+from datetime import datetime
 
-from fastapi import FastAPI, HTTPException, File, UploadFile, Request, Body
+from fastapi import FastAPI, HTTPException, File, UploadFile, Request, Body, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from dotenv import load_dotenv
 import uvicorn
 
-from models.schemas import ChatRequest, ChatResponse, PDFUploadResponse
+from models.schemas import (
+    ChatRequest, ChatResponse, PDFUploadResponse,
+    UserRegisterRequest, UserLoginRequest, TokenResponse, RefreshTokenRequest, UserInfoResponse,
+    ConversationListResponse, ConversationDetailResponse,
+    DocumentStartRequest, DocumentStartResponse, DocumentUpdateRequest, DocumentUpdateResponse,
+    DocumentPreviewResponse, DocumentGenerateResponse, DocumentListResponse
+)
 from agents.router import get_router_agent
 from agents.pdf_processor import get_pdf_processor
 from utils.vector_store import get_vector_store
@@ -35,6 +44,15 @@ from security.security_middleware import SecurityMiddleware
 from security.rate_limiter import get_rate_limiter
 from security.ip_blocker import get_ip_blocker
 from security.request_validator import get_request_validator
+
+# Phase 2 Imports: Authentication and Database
+from auth.user_manager import get_user_manager
+from auth.jwt_handler import get_jwt_handler
+from database.sqlite_db import get_database
+from document_templates import (
+    FIRTemplate, BailTemplate, AffidavitTemplate, 
+    ComplaintTemplate, LegalNoticeTemplate
+)
 
 # Load environment variables
 load_dotenv()
@@ -50,6 +68,13 @@ logger = logging.getLogger(__name__)
 router_agent = None
 pdf_processor = None
 conversation_history: List[Dict[str, str]] = []
+
+# Phase 2: Document generation sessions (in-memory for now)
+# Format: {document_id: {template: BaseTemplate, created_at: datetime, user_id: int}}
+active_documents: Dict[str, Dict[str, Any]] = {}
+
+# HTTP Bearer for JWT authentication
+security = HTTPBearer()
 
 
 @asynccontextmanager
@@ -254,6 +279,7 @@ async def chat(request: ChatRequest):
     Chat endpoint for legal queries.
     
     Routes queries to appropriate specialized agents.
+    Supports multi-turn dialogue with context awareness.
     """
     try:
         global conversation_history
@@ -268,11 +294,12 @@ async def chat(request: ChatRequest):
             "language": request.language
         })
         
-        # Process query with router
+        # Process query with router (now includes dialogue management)
         result = await router.process_query(
             query=request.query,
             language=request.language,
-            context={"history": conversation_history}
+            context={"history": conversation_history},
+            history=conversation_history  # Pass history for dialogue manager
         )
         
         # Extract response
@@ -289,7 +316,11 @@ async def chat(request: ChatRequest):
         conversation_history.append({
             "role": "assistant",
             "content": response_text,
-            "metadata": result.get("routing", {})
+            "metadata": {
+                "routing": result.get("routing", {}),
+                "dialogue_context": result.get("dialogue_context"),
+                "needs_clarification": result.get("needs_clarification", False)
+            }
         })
         
         # Keep last 10 messages
@@ -622,6 +653,525 @@ async def get_blocked_ips():
     except Exception as e:
         logger.error(f"Get blocked IPs error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to get blocked IPs: {str(e)}")
+
+
+# ============================================================================
+# PHASE 2: AUTHENTICATION ENDPOINTS
+# ============================================================================
+
+async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)) -> Dict[str, Any]:
+    """Dependency to get current authenticated user from JWT token."""
+    try:
+        jwt_handler = get_jwt_handler()
+        token = credentials.credentials
+        
+        # Verify and decode token
+        payload = jwt_handler.verify_token(token)
+        
+        if not payload:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid or expired token",
+                headers={"WWW-Authenticate": "Bearer"}
+            )
+        
+        return payload
+    
+    except Exception as e:
+        logger.error(f"Authentication error: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"}
+        )
+
+
+@app.post("/auth/register", response_model=UserInfoResponse)
+async def register_user(request: UserRegisterRequest):
+    """Register a new user."""
+    try:
+        user_manager = get_user_manager()
+        
+        # Create user
+        user = user_manager.create_user(
+            username=request.username,
+            email=request.email,
+            password=request.password
+        )
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Username or email already exists"
+            )
+        
+        logger.info(f"New user registered: {request.username}")
+        
+        return UserInfoResponse(
+            user_id=user["user_id"],
+            username=user["username"],
+            email=user["email"],
+            created_at=user["created_at"],
+            is_active=user["is_active"]
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Registration error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Registration failed: {str(e)}")
+
+
+@app.post("/auth/login", response_model=TokenResponse)
+async def login_user(request: UserLoginRequest):
+    """Login user and return JWT tokens."""
+    try:
+        user_manager = get_user_manager()
+        jwt_handler = get_jwt_handler()
+        
+        # Authenticate user
+        user = user_manager.authenticate(request.username, request.password)
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid username or password"
+            )
+        
+        # Generate tokens
+        access_token = jwt_handler.create_access_token(
+            {"user_id": user["user_id"], "username": user["username"]}
+        )
+        refresh_token = jwt_handler.create_refresh_token(
+            {"user_id": user["user_id"], "username": user["username"]}
+        )
+        
+        logger.info(f"User logged in: {user['username']}")
+        
+        return TokenResponse(
+            access_token=access_token,
+            refresh_token=refresh_token,
+            token_type="bearer",
+            expires_in=3600  # 1 hour
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Login error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Login failed: {str(e)}")
+
+
+@app.post("/auth/refresh", response_model=TokenResponse)
+async def refresh_token(request: RefreshTokenRequest):
+    """Refresh access token using refresh token."""
+    try:
+        jwt_handler = get_jwt_handler()
+        
+        # Verify refresh token
+        payload = jwt_handler.verify_token(request.refresh_token)
+        
+        if not payload:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid or expired refresh token"
+            )
+        
+        # Generate new access token
+        access_token = jwt_handler.create_access_token(
+            {"user_id": payload["user_id"], "username": payload["username"]}
+        )
+        
+        return TokenResponse(
+            access_token=access_token,
+            refresh_token=request.refresh_token,
+            token_type="bearer",
+            expires_in=3600
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Token refresh error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Token refresh failed: {str(e)}")
+
+
+@app.post("/auth/logout")
+async def logout_user(current_user: Dict = Depends(get_current_user)):
+    """Logout user (client should discard tokens)."""
+    logger.info(f"User logged out: {current_user.get('username')}")
+    return {"success": True, "message": "Logged out successfully"}
+
+
+@app.get("/auth/me", response_model=UserInfoResponse)
+async def get_current_user_info(current_user: Dict = Depends(get_current_user)):
+    """Get current user information."""
+    try:
+        user_manager = get_user_manager()
+        user = user_manager.get_user_by_id(current_user["user_id"])
+        
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        
+        return UserInfoResponse(
+            user_id=user["user_id"],
+            username=user["username"],
+            email=user["email"],
+            created_at=user["created_at"],
+            is_active=user["is_active"]
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Get user info error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to get user info: {str(e)}")
+
+
+# ============================================================================
+# PHASE 2: CONVERSATION MANAGEMENT ENDPOINTS
+# ============================================================================
+
+@app.get("/conversations/list", response_model=ConversationListResponse)
+async def list_conversations(current_user: Dict = Depends(get_current_user)):
+    """List all conversations for authenticated user."""
+    try:
+        db = get_database()
+        conversations = db.get_user_conversations(current_user["user_id"])
+        
+        return ConversationListResponse(
+            conversations=conversations,
+            total_count=len(conversations)
+        )
+    
+    except Exception as e:
+        logger.error(f"List conversations error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to list conversations: {str(e)}")
+
+
+@app.get("/conversations/{conversation_id}", response_model=ConversationDetailResponse)
+async def get_conversation(conversation_id: int, current_user: Dict = Depends(get_current_user)):
+    """Get conversation details with messages."""
+    try:
+        db = get_database()
+        conversation = db.get_conversation(conversation_id)
+        
+        if not conversation:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        # Verify ownership
+        if conversation["user_id"] != current_user["user_id"]:
+            raise HTTPException(status_code=403, detail="Access denied")
+        
+        messages = db.get_conversation_messages(conversation_id)
+        
+        return ConversationDetailResponse(
+            conversation_id=conversation["conversation_id"],
+            title=conversation["title"],
+            created_at=conversation["created_at"],
+            last_message_at=conversation["last_message_at"],
+            messages=messages
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Get conversation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to get conversation: {str(e)}")
+
+
+@app.post("/conversations/{conversation_id}/archive")
+async def archive_conversation(conversation_id: int, current_user: Dict = Depends(get_current_user)):
+    """Archive a conversation."""
+    try:
+        db = get_database()
+        conversation = db.get_conversation(conversation_id)
+        
+        if not conversation:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        if conversation["user_id"] != current_user["user_id"]:
+            raise HTTPException(status_code=403, detail="Access denied")
+        
+        # Archive conversation (set is_active = 0)
+        db.execute(
+            "UPDATE conversations SET is_active = 0 WHERE conversation_id = ?",
+            (conversation_id,)
+        )
+        
+        return {"success": True, "message": "Conversation archived"}
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Archive conversation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to archive conversation: {str(e)}")
+
+
+@app.delete("/conversations/{conversation_id}")
+async def delete_conversation(conversation_id: int, current_user: Dict = Depends(get_current_user)):
+    """Delete a conversation permanently."""
+    try:
+        db = get_database()
+        conversation = db.get_conversation(conversation_id)
+        
+        if not conversation:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        if conversation["user_id"] != current_user["user_id"]:
+            raise HTTPException(status_code=403, detail="Access denied")
+        
+        # Delete messages first
+        db.execute("DELETE FROM messages WHERE conversation_id = ?", (conversation_id,))
+        # Delete conversation
+        db.execute("DELETE FROM conversations WHERE conversation_id = ?", (conversation_id,))
+        
+        return {"success": True, "message": "Conversation deleted"}
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Delete conversation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to delete conversation: {str(e)}")
+
+
+# ============================================================================
+# PHASE 2: DOCUMENT GENERATION ENDPOINTS
+# ============================================================================
+
+def get_template_by_type(document_type: str):
+    """Factory function to get template by type."""
+    templates = {
+        "fir": FIRTemplate,
+        "bail": BailTemplate,
+        "affidavit": AffidavitTemplate,
+        "complaint": ComplaintTemplate,
+        "legal_notice": LegalNoticeTemplate
+    }
+    
+    template_class = templates.get(document_type.lower())
+    if not template_class:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid document type. Available types: {', '.join(templates.keys())}"
+        )
+    
+    return template_class()
+
+
+@app.post("/documents/start", response_model=DocumentStartResponse)
+async def start_document_generation(request: DocumentStartRequest):
+    """Start a new document generation session."""
+    try:
+        # Create template instance
+        template = get_template_by_type(request.document_type)
+        
+        # Generate unique document ID
+        document_id = str(uuid.uuid4())
+        
+        # Store in active documents
+        active_documents[document_id] = {
+            "template": template,
+            "created_at": datetime.now(),
+            "user_id": request.user_id,
+            "document_type": request.document_type
+        }
+        
+        # Get first field
+        next_field = template.get_next_required_field()
+        field_prompts = template.get_field_prompts()
+        field_prompt = field_prompts.get(next_field, "Please provide the required information")
+        
+        logger.info(f"Started document generation: {document_id} (type: {request.document_type})")
+        
+        return DocumentStartResponse(
+            document_id=document_id,
+            document_type=request.document_type,
+            next_field=next_field,
+            field_prompt=field_prompt,
+            completion_percentage=template.get_completion_percentage()
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Start document error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to start document: {str(e)}")
+
+
+@app.post("/documents/{document_id}/update", response_model=DocumentUpdateResponse)
+async def update_document_field(document_id: str, request: DocumentUpdateRequest):
+    """Update a field in the document."""
+    try:
+        # Get document from active documents
+        if document_id not in active_documents:
+            raise HTTPException(status_code=404, detail="Document not found or session expired")
+        
+        template = active_documents[document_id]["template"]
+        
+        # Set field value (with validation)
+        success, error = template.set_field(request.field_name, request.field_value)
+        
+        if not success:
+            return DocumentUpdateResponse(
+                success=False,
+                document_id=document_id,
+                next_field=request.field_name,
+                field_prompt=template.get_field_prompts().get(request.field_name, "Please provide valid input"),
+                completion_percentage=template.get_completion_percentage(),
+                is_complete=False,
+                error=error
+            )
+        
+        # Get next field
+        next_field = template.get_next_required_field()
+        field_prompts = template.get_field_prompts()
+        field_prompt = field_prompts.get(next_field) if next_field else None
+        
+        is_complete = template.is_complete()
+        
+        return DocumentUpdateResponse(
+            success=True,
+            document_id=document_id,
+            next_field=next_field,
+            field_prompt=field_prompt,
+            completion_percentage=template.get_completion_percentage(),
+            is_complete=is_complete,
+            error=None
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Update document error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to update document: {str(e)}")
+
+
+@app.get("/documents/{document_id}/preview", response_model=DocumentPreviewResponse)
+async def preview_document(document_id: str):
+    """Preview the current state of the document."""
+    try:
+        if document_id not in active_documents:
+            raise HTTPException(status_code=404, detail="Document not found or session expired")
+        
+        template = active_documents[document_id]["template"]
+        document_type = active_documents[document_id]["document_type"]
+        
+        preview_text = template.get_preview()
+        
+        return DocumentPreviewResponse(
+            document_id=document_id,
+            document_type=document_type,
+            preview_text=preview_text,
+            completion_percentage=template.get_completion_percentage(),
+            is_complete=template.is_complete(),
+            missing_fields=template.get_missing_fields()
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Preview document error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to preview document: {str(e)}")
+
+
+@app.post("/documents/{document_id}/generate", response_model=DocumentGenerateResponse)
+async def generate_document(document_id: str):
+    """Generate final DOCX document."""
+    try:
+        if document_id not in active_documents:
+            raise HTTPException(status_code=404, detail="Document not found or session expired")
+        
+        template = active_documents[document_id]["template"]
+        document_type = active_documents[document_id]["document_type"]
+        
+        # Check if complete
+        if not template.is_complete():
+            raise HTTPException(
+                status_code=400,
+                detail=f"Document incomplete. Missing fields: {', '.join(template.get_missing_fields())}"
+            )
+        
+        # Generate filename
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{document_type}_{timestamp}.docx"
+        output_path = Path(tempfile.gettempdir()) / filename
+        
+        # Generate DOCX
+        success = template.generate_docx(str(output_path))
+        
+        if not success:
+            raise HTTPException(status_code=500, detail="Failed to generate document")
+        
+        logger.info(f"Generated document: {filename}")
+        
+        # TODO: Save to database for authenticated users
+        # if active_documents[document_id].get("user_id"):
+        #     db = get_database()
+        #     db.save_generated_document(...)
+        
+        return DocumentGenerateResponse(
+            success=True,
+            document_id=document_id,
+            filename=filename,
+            download_url=f"/documents/{document_id}/download",
+            message="Document generated successfully"
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Generate document error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to generate document: {str(e)}")
+
+
+@app.get("/documents/{document_id}/download")
+async def download_document(document_id: str):
+    """Download generated document."""
+    try:
+        if document_id not in active_documents:
+            raise HTTPException(status_code=404, detail="Document not found")
+        
+        document_type = active_documents[document_id]["document_type"]
+        
+        # Find the generated file
+        temp_dir = Path(tempfile.gettempdir())
+        files = list(temp_dir.glob(f"{document_type}_*.docx"))
+        
+        if not files:
+            raise HTTPException(status_code=404, detail="Document file not found")
+        
+        # Get the most recent file
+        latest_file = max(files, key=lambda p: p.stat().st_mtime)
+        
+        return FileResponse(
+            path=str(latest_file),
+            filename=latest_file.name,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Download document error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to download document: {str(e)}")
+
+
+@app.get("/documents/list", response_model=DocumentListResponse)
+async def list_user_documents(current_user: Dict = Depends(get_current_user)):
+    """List all generated documents for authenticated user."""
+    try:
+        db = get_database()
+        documents = db.get_user_documents(current_user["user_id"])
+        
+        return DocumentListResponse(
+            documents=documents,
+            total_count=len(documents)
+        )
+    
+    except Exception as e:
+        logger.error(f"List documents error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to list documents: {str(e)}")
 
 
 def main():
