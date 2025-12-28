@@ -1,0 +1,114 @@
+COMMONLY REFERENCED IPC SECTIONS - INDIAN PENAL CODE
+
+SECTION 302 - MURDER
+Offense: Intentional killing of another person
+Penalty: Death penalty or life imprisonment and fine
+Elements: Intent to cause death, act causing death, victim dies
+Notes: One of the gravest offenses under IPC
+Bail: Generally non-bailable
+
+SECTION 304 - CULPABLE HOMICIDE NOT AMOUNTING TO MURDER
+Offense: Causing death without intention to kill
+Part I: Life imprisonment or up to 10 years imprisonment and fine
+Part II: Up to 10 years imprisonment and/or fine
+Notes: Lesser degree than murder, depends on intention and knowledge
+
+SECTION 307 - ATTEMPT TO MURDER
+Offense: Attempting to cause death of another person
+Penalty: Up to 10 years imprisonment and fine
+If hurt caused: Life imprisonment possible
+Notes: Act must be done with intention to cause death
+Bail: Non-bailable offense
+
+SECTION 376 - RAPE
+Offense: Sexual intercourse without consent
+Penalty: Minimum 7-10 years, can extend to life imprisonment
+Aggravated cases: Minimum 10 years to life imprisonment or death
+Notes: Non-bailable offense, victim identity protected
+Special courts: Fast-track trials mandated
+
+SECTION 420 - CHEATING AND DISHONESTLY INDUCING DELIVERY OF PROPERTY
+Offense: Deceiving someone to gain property or valuable security
+Penalty: Up to 7 years imprisonment and fine
+Elements: Deception, inducement, dishonest intention, delivery of property
+Examples: Fraud, fake promises, forgery in business
+Bail: Bailable in most cases
+Common Usage: Often cited in financial fraud, online scams, cheque bouncing
+
+SECTION 498A - CRUELTY BY HUSBAND OR RELATIVES
+Offense: Harassment or cruelty towards married woman by husband/in-laws
+Penalty: Up to 3 years imprisonment and fine
+Elements: Mental or physical cruelty, dowry demands
+Notes: Cognizable, non-bailable offense
+Scope: Includes harassment for dowry, mental torture
+
+SECTION 354 - ASSAULT OR CRIMINAL FORCE WITH INTENT TO OUTRAGE MODESTY
+Offense: Using criminal force with intent to outrage woman's modesty
+Penalty: Minimum 1 year, can extend to 5 years imprisonment and fine
+Notes: Non-bailable, cognizable offense
+Related: Section 354A (sexual harassment), 354B (assault to disrobe)
+
+SECTION 377 - UNNATURAL OFFENSES
+Status: Partially struck down by Supreme Court in 2018
+Current: Applies only to non-consensual acts and acts with minors/animals
+Historical: Previously criminalized consensual same-sex relations
+Notes: Landmark judgment decriminalized consensual adult relations
+
+SECTION 406 - CRIMINAL BREACH OF TRUST
+Offense: Dishonestly misappropriating property entrusted to you
+Penalty: Up to 3 years imprisonment and/or fine
+Elements: Entrustment, dishonest misappropriation or conversion
+Examples: Employee stealing from employer, agent misusing client funds
+Bail: Generally bailable
+
+SECTION 323 - VOLUNTARILY CAUSING HURT
+Offense: Causing physical hurt voluntarily
+Penalty: Up to 1 year imprisonment and/or fine up to Rs. 1,000
+Notes: Bailable, compoundable offense
+Difference from 325: Does not cause grievous hurt
+
+SECTION 325 - VOLUNTARILY CAUSING GRIEVOUS HURT
+Offense: Causing serious physical injury
+Penalty: Up to 7 years imprisonment and fine
+Grievous Hurt: Fractures, permanent disfigurement, loss of organ function
+Bail: Non-bailable in many cases
+
+SECTION 379 - THEFT
+Offense: Dishonestly taking movable property without consent
+Penalty: Up to 3 years imprisonment and/or fine
+Elements: Taking, dishonest intention, movable property, without consent
+Bail: Generally bailable
+
+SECTION 380 - THEFT IN DWELLING HOUSE
+Offense: Committing theft in a building used as dwelling
+Penalty: Up to 7 years imprisonment and fine
+Notes: More serious than simple theft due to violation of home
+
+SECTION 447 - CRIMINAL TRESPASS
+Offense: Entering property with intent to commit offense or intimidate
+Penalty: Up to 3 months imprisonment and/or fine up to Rs. 500
+Notes: Bailable offense
+
+SECTION 452 - HOUSE TRESPASS AFTER PREPARATION FOR HURT
+Offense: Trespassing with intent to cause hurt
+Penalty: Up to 7 years imprisonment and fine
+Notes: Non-bailable, more serious than simple trespass
+
+SECTION 504 - INTENTIONAL INSULT WITH INTENT TO PROVOKE BREACH OF PEACE
+Offense: Intentionally insulting someone to provoke them
+Penalty: Up to 2 years imprisonment and/or fine
+Notes: Bailable offense, commonly used
+
+SECTION 506 - CRIMINAL INTIMIDATION
+Offense: Threatening someone with injury to person, reputation, or property
+Penalty: Up to 2 years imprisonment and/or fine
+With death threat: Up to 7 years imprisonment
+Notes: Commonly used in threat cases
+
+GENERAL NOTES:
+- IPC enacted in 1860, still primary criminal law code
+- Bailable offenses: Accused can get bail as a right
+- Non-bailable: Court discretion required for bail
+- Cognizable: Police can arrest without warrant
+- Non-cognizable: Police need warrant to arrest
+- Compoundable: Can be settled between parties
