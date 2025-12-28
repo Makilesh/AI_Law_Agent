@@ -1,0 +1,744 @@
+# BHARATIYA NAGARIK SURAKSHA SANHITA 2023 (BNSS)
+# Replaces Code of Criminal Procedure 1973
+# Effective from: 1st July 2024
+
+## BNSS Section 173 - FIR (First Information Report)
+
+**Section Number:** BNSS Section 173
+**Former Section:** CrPC Section 154
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Every information relating to the commission of a cognizable offence, if given orally to an officer in charge of a police station, shall be reduced to writing by him or under his direction, and be read over to the informant; and every such information, whether given in writing or reduced to writing as aforesaid, shall be signed by the person giving it, and the substance thereof shall be entered in a book to be kept by such officer in such form as the State Government may prescribe in this behalf.
+
+**Key Provisions:**
+1. FIR must be registered for all cognizable offenses
+2. Can be filed orally or in writing
+3. Must be signed by the informant
+4. Copy must be given free of cost to informant
+5. Can be filed at any police station
+6. Zero FIR can be registered and transferred
+
+**Process:**
+1. Approach police station
+2. Give information about cognizable offense
+3. Information recorded in writing
+4. Read back to informant for verification
+5. Informant signs the FIR
+6. Copy provided to informant
+7. Investigation begins
+
+**Rights of Complainant:**
+- Right to free copy of FIR
+- Right to record statement
+- Right to know investigation progress
+- Right to legal assistance
+- Right to appeal if FIR not registered
+
+**Important Points:**
+- FIR is foundation of investigation
+- Cannot be amended except on court order
+- FIR itself not substantive evidence
+- Delay in filing FIR needs explanation
+- Police cannot refuse to register FIR for cognizable offense
+
+**Related Sections:**
+- BNSS 174: Information as to non-cognizable cases
+- BNSS 175: Police inquiry
+- BNSS 176: Investigation
+
+---
+
+## BNSS Section 35 - Arrest Without Warrant
+
+**Section Number:** BNSS Section 35
+**Former Section:** CrPC Section 41
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Any police officer may without an order from a Magistrate and without a warrant, arrest any person who has been concerned in any cognizable offence, or against whom a reasonable complaint has been made, or credible information has been received, or a reasonable suspicion exists, of his having been so concerned.
+
+**Conditions for Arrest:**
+The police officer:
+1. Has reason to believe person committed cognizable offense
+2. Has reasonable complaint or credible information
+3. Prevents person from committing further offense
+4. Prevents obstruction to police officer
+5. Prevents tampering with evidence
+6. Prevents influencing witnesses
+
+**Arrest Not Mandatory If:**
+- Offense punishable up to 7 years
+- Person not repeat offender
+- Person not likely to commit offense again
+- Sufficient grounds for investigation exist
+- Can be called for investigation without arrest
+
+**Rights of Arrested Person:**
+1. Right to be informed of grounds of arrest
+2. Right to bail (if offense is bailable)
+3. Right to legal aid
+4. Right to inform family member
+5. Right to medical examination
+6. Right against self-incrimination
+7. Right to be produced before magistrate within 24 hours
+
+**Arrest Procedure:**
+1. Inform person of grounds of arrest
+2. If resisting, use necessary force (not excessive)
+3. Inform family member within 8-12 hours
+4. Record reasons for arrest in case diary
+5. Prepare arrest memo
+6. Conduct medical examination
+7. Produce before magistrate within 24 hours
+
+**Important Supreme Court Guidelines:**
+- Arrest should not be punitive
+- Arrest only if necessary
+- Consider notice for appearance first
+- Record reasons for arrest
+- Magistrate to apply mind before remand
+
+**Related Sections:**
+- BNSS 36: Arrest how made
+- BNSS 37: Search of arrested person
+- BNSS 40: Medical examination of arrested person
+
+---
+
+## BNSS Section 187 - Bail
+
+**Section Number:** BNSS Section 187
+**Former Section:** CrPC Sections 436-450
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+When any person accused of, or suspected of, the commission of any non-bailable offence is arrested or detained without warrant by an officer in charge of a police station, or appears or is brought before a Court other than the High Court or Court of Session, he may be released on bail, but he shall not be so released if there appear reasonable grounds for believing that he has been guilty of an offence punishable with death or imprisonment for life.
+
+**Types of Bail:**
+1. **Regular Bail** - Before conviction
+2. **Anticipatory Bail** - Before arrest (Section 482)
+3. **Interim Bail** - Temporary bail during hearing
+
+**Bailable vs Non-Bailable:**
+
+**Bailable Offenses:**
+- Bail is matter of right
+- Police/Court must grant bail
+- Conditions can be imposed
+- Examples: Simple hurt, theft under certain value
+
+**Non-Bailable Offenses:**
+- Bail is discretionary
+- Court considers various factors
+- Examples: Murder, rape, serious crimes
+
+**Factors Considered for Bail:**
+1. Nature and gravity of offense
+2. Character and antecedents of accused
+3. Possibility of fleeing from justice
+4. Likelihood of repeating offense
+5. Tampering with evidence
+6. Influencing witnesses
+7. Public interest and safety
+
+**Bail Conditions:**
+- Execute bond with sureties
+- Surrender passport
+- Regular appearance before police/court
+- No contact with witnesses
+- No leaving city/state without permission
+- No commission of similar offense
+
+**Cancellation of Bail:**
+- Violation of bail conditions
+- Tampering with evidence
+- Threatening witnesses
+- Committing another offense
+- Non-appearance in court
+
+**Bail in Specific Cases:**
+- Women: Liberal bail provisions
+- Children: Bail almost always granted
+- Sick persons: Medical bail available
+- Undertrial prisoners: Bail after serving half of maximum sentence
+
+**Related Sections:**
+- BNSS 482: Anticipatory bail
+- BNSS 483: Bail bonds
+- BNSS 484: Discharge of sureties
+
+---
+
+## BNSS Section 193 - Charge Sheet
+
+**Section Number:** BNSS Section 193
+**Former Section:** CrPC Section 173
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Every investigation under this Chapter shall be completed without unnecessary delay. As soon as it is completed, the officer in charge of the police station shall forward to a Magistrate empowered to take cognizance of the offence on a police report, a report in the form prescribed.
+
+**Time Limits:**
+- Investigation to be completed within 90 days (if accused in custody)
+- If not completed, accused entitled to bail
+- Final report to be filed within 90 days
+- Extension possible with court permission
+
+**Contents of Charge Sheet:**
+1. Facts of the case
+2. Names of parties (accused and victims)
+3. Offences allegedly committed
+4. Evidence collected
+5. Witness statements
+6. Documents and material objects
+7. Opinion of investigating officer
+
+**Types of Final Reports:**
+1. **Charge Sheet:** When sufficient evidence found
+2. **Closure Report:** When no evidence found
+3. **Untraced Report:** When accused not found
+
+**After Filing Charge Sheet:**
+1. Court takes cognizance
+2. Process issued to accused
+3. Charges framed
+4. Trial begins
+5. Evidence presented
+6. Arguments heard
+7. Judgment delivered
+
+**Rights of Accused:**
+- Right to copies of charge sheet documents
+- Right to know evidence
+- Right to challenge charge sheet
+- Right to bail if investigation delayed
+- Right to fair and speedy trial
+
+**Related Sections:**
+- BNSS 176-192: Investigation provisions
+- BNSS 262-267: Charges
+- BNSS 268-285: Trial procedures
+
+---
+
+## BNSS Section 262 - Framing of Charges
+
+**Section Number:** BNSS Section 262
+**Former Section:** CrPC Sections 228-237
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+If, upon consideration of the record of the case and the documents submitted therewith, and after hearing the submissions of the accused and the prosecution in this behalf, the Judge considers that there is ground for presuming that the accused has committed an offence triable under this Chapter, which such Court is competent to try and which, in the opinion of the Court, could be adequately punished by it, the Court shall frame in writing a charge against the accused.
+
+**Stage of Framing Charges:**
+Comes after:
+1. Cognizance taken
+2. Process issued
+3. Accused appears
+4. Documents supplied
+
+Before:
+1. Recording evidence
+2. Trial proper
+
+**Procedure:**
+1. Court examines police report and documents
+2. Hears prosecution and defense
+3. Considers if prima facie case exists
+4. If yes, frames charges
+5. If no, discharges accused
+6. Charges read and explained to accused
+7. Accused pleads guilty or not guilty
+
+**Contents of Charge:**
+1. Name of offense
+2. Section of law violated
+3. Facts constituting offense
+4. Time and place of offense
+5. Names of victims/complainants
+
+**Multiple Charges:**
+- Can be tried together if connected
+- Separate charges for each distinct offense
+- Joinder of charges possible
+
+**Discharge vs Acquittal:**
+- **Discharge:** Before trial, no charges framed
+- **Acquittal:** After trial, not guilty verdict
+
+**Related Sections:**
+- BNSS 263: Charge to state offense clearly
+- BNSS 264: Particulars of charge
+- BNSS 265: Joinder of charges
+
+---
+
+## BNSS Section 482 - Anticipatory Bail
+
+**Section Number:** BNSS Section 482
+**Former Section:** CrPC Section 438
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+When any person has reason to believe that he may be arrested on accusation of having committed a non-bailable offence, he may apply to the High Court or the Court of Session for a direction under this section that in the event of such arrest, he shall be released on bail.
+
+**Who Can Apply:**
+- Any person anticipating arrest
+- In non-bailable offenses
+- Before actual arrest
+
+**Which Court:**
+- High Court OR
+- Court of Session
+
+**Grounds for Granting:**
+1. False implication
+2. Political vendetta
+3. Misuse of law
+4. Malicious prosecution
+5. Settle scores
+6. No criminal antecedents
+7. Cooperative in investigation
+
+**Conditions Imposed:**
+- Make available for interrogation
+- Not tamper with evidence
+- Not contact witnesses
+- Not leave country without permission
+- Not commit similar offense
+- Deposit passport
+- Report to police station
+
+**Cannot Be Granted In:**
+- Offenses against women under BNS 63-78
+- Economic offenses of serious nature
+- In certain cases under special laws
+- If likely to tamper with evidence
+
+**Duration:**
+- Can be for limited or unlimited period
+- Court discretion
+- Can be cancelled if conditions violated
+
+**Arrest After Anticipatory Bail:**
+- Police must inform court
+- Accused to be released on bail
+- Investigation continues
+
+**Important Judgments:**
+- Gurbaksh Singh Sibbia case laid down guidelines
+- Balance between personal liberty and investigation needs
+- Not to be used as blanket immunity
+
+**Related Sections:**
+- BNSS 187: Regular bail
+- BNSS 483: Bail bonds
+- BNSS 40: Rights of arrested person
+
+---
+
+## BNSS Section 397 - Appeals
+
+**Section Number:** BNSS Section 397
+**Former Section:** CrPC Sections 372-394
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Any person convicted on a trial held by a High Court in its extraordinary original criminal jurisdiction may appeal to the Supreme Court. Any person convicted on a trial held by a Sessions Judge or an Additional Sessions Judge or on a trial held by any other Court in which a sentence of imprisonment for more than seven years has been passed against him may appeal to the High Court.
+
+**Hierarchy of Appeals:**
+
+**From Magistrate Court:**
+→ Sessions Court
+
+**From Sessions Court:**
+→ High Court
+
+**From High Court:**
+→ Supreme Court
+
+**Who Can Appeal:**
+1. Convicted person
+2. Acquitted person (by prosecution)
+3. Person aggrieved by order
+
+**Types of Appeals:**
+1. **Against Conviction:** Challenging guilty verdict
+2. **Against Sentence:** Challenging quantum of punishment
+3. **Against Acquittal:** By prosecution (limited grounds)
+4. **Against Order:** Interlocutory orders
+
+**Time Limits:**
+- From Magistrate: 30 days
+- From Sessions Court: 30 days
+- From High Court: 60 days
+- From Supreme Court: 90 days
+- Delay can be condoned with sufficient cause
+
+**Grounds for Appeal:**
+1. Error in law
+2. Error in facts
+3. Improper appreciation of evidence
+4. Procedural irregularity
+5. Sentence excessive/inadequate
+6. Miscarriage of justice
+
+**Suspension of Sentence:**
+- Appeal doesn't automatically suspend sentence
+- Can apply for suspension
+- Court may grant bail pending appeal
+- Depends on nature of offense and sentence
+
+**Powers of Appellate Court:**
+1. Confirm, reverse, or alter decision
+2. Enhance or reduce sentence
+3. Order fresh trial
+4. Direct further investigation
+5. Acquit or convict
+
+**Revisional Powers:**
+- High Court and Sessions Court have revisional powers
+- Can revise subordinate court orders
+- Suo motu (on own motion) or on application
+
+**Related Sections:**
+- BNSS 398-420: Detailed appeal provisions
+- BNSS 491-496: Revision
+- BNSS 533-543: Transfer of cases
+
+---
+
+## BNSS Section 176 - Investigation
+
+**Section Number:** BNSS Section 176
+**Former Section:** CrPC Sections 156-157
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Any officer in charge of a police station may, without the order of a Magistrate, investigate any cognizable case which a Court having jurisdiction over the local area within the limits of such station would have power to inquire into or try under the provisions of Chapter XIII.
+
+**Investigation Process:**
+
+**Step 1: Information/FIR**
+- Receive information about cognizable offense
+- Register FIR under Section 173
+
+**Step 2: Preliminary Inquiry**
+- Visit scene of crime
+- Collect preliminary information
+- Decide whether to investigate
+
+**Step 3: Investigation Proper**
+- Examine witnesses
+- Collect evidence
+- Record statements
+- Inspect places
+- Conduct searches
+- Make arrests if necessary
+
+**Step 4: Forensic Examination**
+- Send materials to forensic lab
+- Medical examination if needed
+- Expert opinions
+
+**Step 5: Completion**
+- File charge sheet OR
+- File closure report
+
+**Powers of Investigating Officer:**
+1. Examine witnesses
+2. Arrest without warrant (if needed)
+3. Search with/without warrant
+4. Seize property
+5. Request forensic examination
+6. Call for documents
+
+**Time Limits:**
+- Complete within 90 days (if accused in custody)
+- Otherwise, no strict limit
+- Court can direct completion
+
+**Rights of Accused During Investigation:**
+1. Right against self-incrimination
+2. Right to lawyer during interrogation
+3. Right to medical examination
+4. Right to bail (if investigation delayed)
+5. Right to fair investigation
+
+**Judicial Supervision:**
+- Court can monitor investigation
+- Can direct specific actions
+- Can transfer investigation
+- Can order CBI/SIT investigation
+
+**Closure Report/Final Report:**
+If no evidence:
+- File closure report
+- Court examines report
+- Can accept or reject
+- Complainant can protest
+
+**Related Sections:**
+- BNSS 177-192: Investigation provisions
+- BNSS 97-129: Search and seizure
+- BNSS 193: Police report (charge sheet)
+
+---
+
+## BNSS Section 319 - Power to Examine Accused
+
+**Section Number:** BNSS Section 319
+**Former Section:** CrPC Section 313
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+For the purpose of enabling the accused to explain any circumstances appearing in the evidence against him, the Court may, at any stage of any inquiry or trial, without previously warning the accused, put such questions to him as the Court considers necessary, and shall, for the purpose aforesaid, question him generally on the case after the witnesses for the prosecution have been examined and before he is called on for his defence.
+
+**Purpose:**
+1. Give accused opportunity to explain incriminating circumstances
+2. Ensure fair trial
+3. Discover truth
+4. Give accused chance to present version
+
+**When Conducted:**
+- After prosecution evidence
+- Before defense evidence
+- Can be at any stage
+
+**Nature of Examination:**
+- Not oath
+- Not cross-examination
+- Conversational
+- Questions must be clear
+- Answers recorded
+
+**Questions Asked:**
+1. About incriminating circumstances
+2. About his defense
+3. About evidence against him
+4. About documents
+5. About witnesses
+
+**Rights of Accused:**
+1. Can answer or refuse
+2. Answers cannot be used against him unless voluntary
+3. Can consult lawyer before answering
+4. False answers not perjury (generally)
+
+**Court's Duty:**
+- Must conduct examination
+- Must ask relevant questions
+- Record answers accurately
+- Give fair opportunity
+
+**Confession During 313 Examination:**
+- Must be voluntary
+- Court must verify voluntariness
+- Can be used as evidence if voluntary
+- Can lead to conviction
+
+**Importance:**
+- Failure to conduct proper 313 examination is serious irregularity
+- Can vitiate trial
+- Supreme Court has emphasized its importance
+
+**Related Sections:**
+- BNSS 314-318: Examination of accused
+- BNSS 336: Evidence for defense
+- BNSS 342: Right to fair trial
+
+---
+
+## BNSS Section 125 - Maintenance of Wives, Children and Parents
+
+**Section Number:** BNSS Section 125
+**Former Section:** CrPC Section 125
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+If any person having sufficient means neglects or refuses to maintain his wife unable to maintain herself, or his legitimate or illegitimate minor child, whether married or not, unable to maintain itself, or his legitimate or illegitimate child (not being a married daughter) who has attained majority, where such child is, by reason of any physical or mental abnormality or injury unable to maintain itself, or his father or mother, unable to maintain himself or herself, a Magistrate of the first class may, upon proof of such neglect or refusal, order such person to make a monthly allowance for the maintenance of his wife or such child, father or mother, at such monthly rate not exceeding ten thousand rupees in the whole, as such Magistrate thinks fit.
+
+**Who Can Claim:**
+1. Wife unable to maintain herself
+2. Minor children (legitimate or illegitimate)
+3. Major children unable to maintain (due to disability)
+4. Aged parents unable to maintain themselves
+
+**Who Has Duty:**
+1. Husband (to wife)
+2. Father (to children)
+3. Children (to parents)
+
+**Conditions:**
+- Person has sufficient means
+- Claimant unable to maintain self
+- Neglect or refusal to maintain
+
+**Amount:**
+- Maximum Rs. 10,000 per month
+- Court decides based on:
+  - Income of person
+  - Needs of claimant
+  - Number of dependents
+  - Standard of living
+
+**Procedure:**
+1. Application to Magistrate
+2. Notice to respondent
+3. Evidence presented
+4. Order passed
+5. Payment monthly
+
+**When Wife Cannot Claim:**
+1. Living in adultery
+2. Refuses to live with husband without sufficient reason
+3. Living separately by mutual consent
+
+**Enforcement:**
+- If not paid, can be recovered as fine
+- Warrant against property
+- Imprisonment up to 1 month
+
+**Interim Maintenance:**
+- Can be granted during pendency
+- Up to 1/5th of claimed amount
+- From date of application
+
+**Appeal:**
+- Against order
+- To Sessions Court
+- Within 30 days
+
+**Important Points:**
+- Religion immaterial
+- Applies to all persons in India
+- Quick remedy
+- Civil remedy also available
+
+**Related Sections:**
+- Personal laws on maintenance
+- Hindu Marriage Act
+- Muslim Personal Law
+- Special Marriage Act
+
+---
+
+## BNSS Section 106 - Power to Search
+
+**Section Number:** BNSS Section 106
+**Former Section:** CrPC Sections 165, 100
+**Act Name:** Bharatiya Nagarik Suraksha Sanhita 2023
+**Law Type:** Criminal Procedure
+
+**Description:**
+Whenever an officer in charge of a police station or a police officer making an investigation has reasonable grounds for believing that anything necessary for the purposes of an investigation into any offence which he is authorized to investigate may be found in any place within the limits of the police station of which he is in charge, or to which he is attached, and that such thing cannot in his opinion be otherwise obtained without undue delay, such officer may, after recording in writing the grounds of his belief and specifying in such writing, so far as possible, the thing for which search is to be made, search, or cause search to be made, for such thing in any place within the limits of such station.
+
+**Types of Searches:**
+
+**1. Search with Warrant:**
+- Magistrate issues search warrant
+- Based on information and grounds
+- Specifies place and articles to be searched
+
+**2. Search without Warrant:**
+- By police officer
+- In urgent cases
+- Must record reasons in writing
+- Limited to specific circumstances
+
+**When Search Without Warrant Allowed:**
+1. During investigation of cognizable offense
+2. Reasonable belief that evidence/articles present
+3. Cannot be obtained without undue delay
+4. Within police station limits
+
+**Search Procedure:**
+1. Record grounds in writing
+2. Specify things to be searched
+3. Conduct search in presence of witnesses
+4. Prepare list of seized articles (panchnama)
+5. Give copy to occupant
+6. Send report to Magistrate
+
+**Rights of Person Being Searched:**
+1. Right to see written grounds
+2. Right to have witnesses present
+3. Right to receive list of seized articles
+4. Right to be present during search
+5. Right to challenge illegal search
+
+**Search of Persons:**
+- Must be done with decency
+- Female to be searched by female
+- In presence of female family member
+- Cannot be conducted in public view
+
+**Seizure During Search:**
+- Can seize articles connected with offense
+- Can seize stolen property
+- Must prepare seizure list
+- Give receipt to person
+
+**Illegal Search:**
+- Search without authority is illegal
+- Evidence obtained inadmissible (generally)
+- Officer liable for prosecution
+- Civil suit for damages possible
+
+**Important Supreme Court Guidelines:**
+- Search must be reasonable
+- Privacy rights to be respected
+- Proper procedure must be followed
+- Recording of reasons mandatory
+
+**Related Sections:**
+- BNSS 97-105: Search warrants
+- BNSS 107-129: Search and seizure provisions
+- BNSS 37: Search of arrested person
+
+---
+
+## Important Notes on BNSS 2023
+
+**Key Changes from CrPC 1973:**
+1. Streamlined procedures
+2. Use of technology mandated
+3. Video conferencing for trials
+4. Electronic service of summons
+5. Forensic investigation mandatory for serious offenses
+6. Timeline for investigations
+7. Victim compensation provisions
+8. Witness protection scheme
+
+**Focus Areas:**
+- Speedy justice
+- Victim-centric approach
+- Use of technology
+- Transparency
+- Accountability
+
+**Effective Date:** 1st July 2024
+
+**Cross-Reference Table (Common Sections):**
+- CrPC 154 → BNSS 173 (FIR)
+- CrPC 41 → BNSS 35 (Arrest)
+- CrPC 173 → BNSS 193 (Charge sheet)
+- CrPC 313 → BNSS 319 (Examination of accused)
+- CrPC 438 → BNSS 482 (Anticipatory bail)
+- CrPC 436-450 → BNSS 187 (Bail)
+- CrPC 372-394 → BNSS 397 (Appeals)
+- CrPC 125 → BNSS 125 (Maintenance)
+- CrPC 100, 165 → BNSS 106 (Search)
+
+For complete procedural provisions, refer to the official Bharatiya Nagarik Suraksha Sanhita Act 2023.

@@ -1,0 +1,602 @@
+# BHARATIYA NYAYA SANHITA 2023 (BNS)
+# Replaces Indian Penal Code 1860
+# Effective from: 1st July 2024
+
+## BNS Section 103 - Murder
+
+**Section Number:** BNS Section 103
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Murder
+
+**Description:**
+Whoever causes death by doing an act with the intention of causing death, or with the intention of causing such bodily injury as is likely to cause death, or with the knowledge that he is likely by such act to cause death, commits the offence of murder.
+
+**Punishment:**
+- Death penalty OR
+- Imprisonment for life
+- Fine may also be imposed
+
+**Key Elements:**
+1. Causing death of another person
+2. Intention to cause death or such bodily injury likely to cause death
+3. Knowledge that the act is likely to cause death
+4. Act must be the direct cause of death
+
+**Examples:**
+- Shooting someone with intent to kill
+- Stabbing in vital organs with knowledge it will cause death
+- Poisoning food with lethal substances
+- Strangulation leading to death
+
+**Related Sections:**
+- BNS 101: Culpable homicide
+- BNS 104: Culpable homicide not amounting to murder
+- BNS 105: Causing death by rash or negligent act
+
+**Bail Status:** Non-bailable offense
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 63 - Rape
+
+**Section Number:** BNS Section 63
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Rape
+
+**Description:**
+A man is said to commit "rape" if he penetrates his penis, to any extent, into the vagina, mouth, urethra or anus of a woman or makes her to do so with him or any other person; or inserts any object or a part of the body, not being the penis, into the vagina, the urethra or anus of a woman or makes her to do so with him or any other person; or manipulates any part of the body of a woman so as to cause penetration into the vagina, urethra, anus or any part of body of such woman or makes her to do so with him or any other person; or applies his mouth to the vagina, anus, urethra of a woman or makes her to do so with him or any other person, under the circumstances falling under any of the following seven descriptions:—
+(a) Against her will
+(b) Without her consent
+(c) With her consent, when consent obtained by putting her or any person in whom she is interested in fear of death or hurt
+(d) With her consent, when the man knows that he is not her husband
+(e) With her consent, when, at the time of giving consent, by reason of unsoundness of mind or intoxication or administration of stupefying substance, she is unable to understand the nature and consequences
+(f) With or without her consent, when she is under eighteen years of age
+(g) When she is unable to communicate consent
+
+**Punishment:**
+- Minimum 10 years imprisonment (can extend to life imprisonment)
+- Fine
+- In certain aggravated cases: Death penalty
+
+**Aggravated Circumstances (Enhanced Punishment):**
+- Rape by police officer, armed forces personnel, or public servant
+- Rape on pregnant woman
+- Rape on woman under 16 years
+- Gang rape
+- Repeat offenders
+
+**Key Elements:**
+1. Penetration (to any extent)
+2. Without consent or under specified circumstances
+3. Victim is a woman
+4. Perpetrator is a man
+
+**Related Sections:**
+- BNS 64: Punishment for rape
+- BNS 65: Gang rape
+- BNS 66: Punishment for causing death or persistent vegetative state
+- BNS 70-72: Sexual offences
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 316 - Cheating and Dishonestly Inducing Delivery of Property
+
+**Section Number:** BNS Section 316
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Cheating (equivalent to IPC 420)
+
+**Description:**
+Whoever cheats and thereby dishonestly induces the person deceived to deliver any property to any person, or to make, alter or destroy the whole or any part of a valuable security, or anything which is signed or sealed, and which is capable of being converted into a valuable security, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.
+
+**Punishment:**
+- Imprisonment up to 7 years
+- Fine (mandatory)
+
+**Key Elements:**
+1. Cheating as defined in Section 318
+2. Dishonest inducement
+3. Delivery of property or alteration of valuable security
+4. Deception leads to property transfer
+
+**Examples:**
+- Selling fake products as genuine
+- Online fraud and cyber scams
+- Investment fraud schemes
+- Identity theft for financial gain
+- Bounced cheque cases (if dishonest intent proven)
+- Fake job offer scams
+
+**Related Sections:**
+- BNS 318: Punishment for cheating
+- BNS 319: Cheating by personation
+- BNS 320: Dishonest inducement to deliver property
+
+**Bail Status:** Bailable (generally, unless specific circumstances)
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Magistrate of First Class
+
+**Recent Changes from IPC 420:**
+- Enhanced digital fraud provisions
+- Clearer definition of cyber-enabled cheating
+- Updated for modern financial instruments
+
+---
+
+## BNS Section 115 - Voluntarily Causing Grievous Hurt
+
+**Section Number:** BNS Section 115
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Voluntarily causing grievous hurt
+
+**Description:**
+Whoever, except in the case provided for by section 122, voluntarily causes grievous hurt, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.
+
+**What Constitutes Grievous Hurt:**
+1. Emasculation
+2. Permanent privation of the sight of either eye
+3. Permanent privation of the hearing of either ear
+4. Privation of any member or joint of the body
+5. Destruction or permanent impairing of the powers of any member or joint
+6. Permanent disfiguration of the head or face
+7. Fracture or dislocation of a bone or tooth
+8. Any hurt which endangers life or which causes the sufferer to be during the space of twenty days or upwards unable to follow his ordinary pursuits
+
+**Punishment:**
+- Imprisonment up to 7 years
+- Fine
+
+**Examples:**
+- Acid attack causing permanent disfigurement
+- Breaking bones in assault
+- Causing permanent disability
+- Loss of eye or hearing due to assault
+
+**Related Sections:**
+- BNS 114: Voluntarily causing hurt
+- BNS 116: Grievous hurt by dangerous weapons
+- BNS 117-121: Various forms of causing hurt
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** Yes (with permission of court)
+
+---
+
+## BNS Section 85 - Cruelty by Husband or Relatives
+
+**Section Number:** BNS Section 85
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Cruelty towards married woman (equivalent to IPC 498A)
+
+**Description:**
+Whoever, being the husband or the relative of the husband of a woman, subjects such woman to cruelty shall be punished with imprisonment for a term which may extend to three years and shall also be liable to fine.
+
+**What Constitutes Cruelty:**
+(a) Any willful conduct which is of such a nature as is likely to drive the woman to commit suicide or to cause grave injury or danger to life, limb or health (whether mental or physical) of the woman; or
+(b) Harassment of the woman where such harassment is with a view to coercing her or any person related to her to meet any unlawful demand for any property or valuable security or is on account of failure by her or any person related to her to meet such demand.
+
+**Punishment:**
+- Imprisonment up to 3 years
+- Fine (mandatory)
+
+**Key Elements:**
+1. Accused is husband or relative of husband
+2. Willful conduct causing or likely to cause harm
+3. Mental or physical cruelty
+4. Dowry-related harassment
+
+**Examples:**
+- Demanding dowry after marriage
+- Physical or mental torture
+- Harassment leading to suicide attempts
+- Denying basic necessities
+- Humiliation and verbal abuse
+
+**Related Sections:**
+- BNS 84: Dowry death
+- BNS 86: Dowry demands
+- BNS 87: Abetment of suicide
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Magistrate
+
+**Important Note:** This section has been subject to significant judicial interpretation regarding misuse. Courts have laid down guidelines for arrest and investigation.
+
+---
+
+## BNS Section 75 - Assault or Use of Criminal Force with Intent to Outrage Modesty
+
+**Section Number:** BNS Section 75
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Outraging modesty of a woman (equivalent to IPC 354)
+
+**Description:**
+Whoever assaults or uses criminal force to any woman, intending to outrage or knowing it to be likely that he will thereby outrage her modesty, shall be punished with imprisonment of either description for a term which shall not be less than one year but which may extend to five years, and shall also be liable to fine.
+
+**Punishment:**
+- Minimum 1 year imprisonment
+- Maximum 5 years imprisonment
+- Fine
+
+**Key Elements:**
+1. Assault or use of criminal force
+2. Against a woman
+3. Intent to outrage modesty OR knowledge likely to outrage modesty
+4. Actual outrage of modesty not necessary (attempt sufficient)
+
+**Examples:**
+- Inappropriate touching or groping
+- Making obscene gestures
+- Disrobing a woman against her will
+- Sexual harassment in public places
+- Stalking with sexual intent
+
+**Aggravated Forms:**
+- BNS 76: Sexual harassment - Up to 3 years
+- BNS 77: Voyeurism - Up to 3 years (first offense), up to 7 years (repeat)
+- BNS 78: Stalking - Up to 3 years (first offense), up to 5 years (repeat)
+
+**Related Sections:**
+- BNS 63-70: Sexual offences
+- BNS 79: Word, gesture or act intended to insult modesty
+
+**Bail Status:** Bailable (for basic offense), Non-bailable (for aggravated forms)
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Magistrate of First Class
+
+---
+
+## BNS Section 109 - Attempt to Murder
+
+**Section Number:** BNS Section 109
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Attempt to murder (equivalent to IPC 307)
+
+**Description:**
+Whoever does any act with such intention or knowledge, and under such circumstances that, if he by that act caused death, he would be guilty of murder, shall be punished with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine; and if hurt is caused to any person by such act, the offender shall be liable either to imprisonment for life, or to such punishment as is hereinbefore mentioned.
+
+**Punishment:**
+- Without causing hurt: Up to 10 years + fine
+- If hurt is caused: Life imprisonment OR up to 10 years + fine
+
+**Enhanced Punishment:**
+When committed by life convict: Death OR life imprisonment
+
+**Key Elements:**
+1. Act done with intention or knowledge
+2. Circumstances such that if death occurred, it would be murder
+3. Death not necessarily caused (attempt is enough)
+4. Overt act towards commission
+
+**Examples:**
+- Shooting at someone but missing
+- Stabbing with intent to kill but victim survives
+- Poisoning that doesn't result in death
+- Pushing from height but victim survives
+
+**Related Sections:**
+- BNS 103: Murder
+- BNS 110: Attempt to culpable homicide
+- BNS 111: Attempt to commit suicide to compel or restrain
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 303 - Theft
+
+**Section Number:** BNS Section 303
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Theft (equivalent to IPC 379)
+
+**Description:**
+Whoever intending to take dishonestly any movable property out of the possession of any person without that person's consent, moves that property in order to such taking, is said to commit theft.
+
+**Punishment:**
+- Imprisonment up to 3 years OR
+- Fine OR
+- Both
+
+**Key Elements:**
+1. Dishonest intention
+2. Moving of movable property
+3. Without consent of the owner
+4. Taking property out of possession
+
+**Examples:**
+- Shoplifting
+- Pickpocketing
+- Employee theft
+- Bicycle or vehicle theft
+- House burglary
+
+**Aggravated Forms:**
+- BNS 305: Theft in dwelling house - Up to 7 years
+- BNS 306: Theft by clerk or servant - Up to 7 years
+- BNS 308: Theft from carrier/mail - Up to 7 years
+
+**Related Sections:**
+- BNS 304: Punishment for theft
+- BNS 309: Extortion
+- BNS 311: Robbery
+- BNS 331: Criminal breach of trust
+
+**Bail Status:** Bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Any Magistrate
+
+---
+
+## BNS Section 311 - Robbery
+
+**Section Number:** BNS Section 311
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Robbery (equivalent to IPC 392)
+
+**Description:**
+In all robbery there is either theft or extortion. When theft is robbery: Theft is "robbery" if, in order to the committing of the theft, or in committing the theft, or in carrying away or attempting to carry away property obtained by the theft, the offender, for that end, voluntarily causes or attempts to cause to any person death or hurt or wrongful restraint, or fear of instant death or of instant hurt, or of instant wrongful restraint.
+
+**Punishment:**
+- Rigorous imprisonment up to 10 years
+- Fine
+
+**Enhanced Punishment:**
+- On highway between sunset and sunrise: Up to 14 years
+- Armed robbery: Up to 14 years
+
+**Key Elements:**
+1. Theft or extortion
+2. Use of force or threat of force
+3. Causing or attempting to cause death, hurt, or wrongful restraint
+4. Fear of instant harm
+
+**Examples:**
+- Snatching purse with force
+- Bank robbery at gunpoint
+- Highway robbery (dacoity if 5+ persons)
+- ATM robbery
+- Home invasion robbery
+
+**Related Sections:**
+- BNS 303-308: Theft offenses
+- BNS 309: Extortion
+- BNS 310: Dacoity (robbery by 5+ persons)
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 104 - Culpable Homicide Not Amounting to Murder
+
+**Section Number:** BNS Section 104
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Culpable homicide not amounting to murder (equivalent to IPC 304)
+
+**Description:**
+Whoever commits culpable homicide not amounting to murder shall be punished with imprisonment for life, or imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine, if the act by which the death is caused is done with the intention of causing death, or of causing such bodily injury as is likely to cause death; or with imprisonment of either description for a term which may extend to ten years, or with fine, or with both, if the act is done with the knowledge that it is likely to cause death, but without any intention to cause death, or to cause such bodily injury as is likely to cause death.
+
+**Punishment:**
+Part 1 (with intention):
+- Life imprisonment OR
+- Imprisonment up to 10 years
+- Fine
+
+Part 2 (with knowledge, without intention):
+- Imprisonment up to 10 years OR
+- Fine OR
+- Both
+
+**Difference from Murder:**
+Culpable homicide not amounting to murder occurs when:
+1. Provocation leading to sudden fight
+2. Exercise of right of private defense exceeded
+3. Act done in sudden and grave provocation
+4. Consent of victim (euthanasia cases)
+
+**Examples:**
+- Killing in sudden fight without premeditation
+- Death caused in exceeding right of self-defense
+- Death resulting from rash or negligent act
+- Honor killing (without premeditation)
+
+**Related Sections:**
+- BNS 101: Culpable homicide
+- BNS 103: Murder
+- BNS 105: Causing death by rash or negligent act
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 331 - Criminal Breach of Trust
+
+**Section Number:** BNS Section 331
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Criminal breach of trust (equivalent to IPC 406)
+
+**Description:**
+Whoever, being in any manner entrusted with property, or with any dominion over property, dishonestly misappropriates or converts to his own use that property, or dishonestly uses or disposes of that property in violation of any direction of law prescribing the mode in which such trust is to be discharged, or of any legal contract, express or implied, which he has made touching the discharge of such trust, or willfully suffers any other person so to do, commits "criminal breach of trust".
+
+**Punishment:**
+- Imprisonment up to 3 years OR
+- Fine OR
+- Both
+
+**Enhanced Punishment:**
+- By carrier, wharfinger, or warehouse keeper: Up to 7 years + fine
+- By clerk or servant: Up to 7 years + fine
+- By agent: Up to 10 years + fine
+- By public servant/banker/merchant/broker: Up to life + fine
+
+**Key Elements:**
+1. Entrustment of property
+2. Dishonest misappropriation or conversion
+3. Violation of trust
+4. Legal obligation to account for property
+
+**Examples:**
+- Employee embezzling company funds
+- Bank manager misusing deposits
+- Lawyer misappropriating client funds
+- Partner diverting partnership funds
+- Executor misusing estate property
+
+**Related Sections:**
+- BNS 316: Cheating
+- BNS 303: Theft
+- BNS 334-338: Various forms of criminal breach of trust
+
+**Bail Status:** Bailable (basic), Non-bailable (aggravated forms)
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Magistrate (basic), Court of Session (aggravated)
+
+---
+
+## BNS Section 61 - Kidnapping
+
+**Section Number:** BNS Section 61
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Kidnapping
+
+**Description:**
+Kidnapping is of two kinds: kidnapping from India, and kidnapping from lawful guardianship.
+
+Kidnapping from lawful guardianship: Whoever takes or entices any minor under sixteen years of age if a male, or under eighteen years of age if a female, or any person of unsound mind, out of the keeping of the lawful guardian of such minor or person of unsound mind, without the consent of such guardian, is said to kidnap such minor or person from lawful guardianship.
+
+**Punishment:**
+- Imprisonment up to 7 years
+- Fine
+
+**Enhanced Punishment:**
+- For begging: Up to 10 years + fine
+- For murder: Death OR life imprisonment
+- For ransom: Life imprisonment or 10 years + fine
+
+**Key Elements:**
+1. Taking or enticing
+2. Minor (under 16 for male, under 18 for female) OR person of unsound mind
+3. Out of keeping of lawful guardian
+4. Without consent of guardian
+
+**Related Sections:**
+- BNS 62: Abduction
+- BNS 87-94: Various kidnapping and abduction offenses
+- BNS 137: Kidnapping for ransom
+
+**Bail Status:** Non-bailable
+**Cognizable:** Yes
+**Compoundable:** No
+**Triable By:** Court of Session
+
+---
+
+## BNS Section 351 - Criminal Intimidation
+
+**Section Number:** BNS Section 351
+**Act Name:** Bharatiya Nyaya Sanhita 2023
+**Law Type:** Criminal
+**Offense:** Criminal intimidation (equivalent to IPC 506)
+
+**Description:**
+Whoever threatens another with any injury to his person, reputation or property, or to the person or reputation of any one in whom that person is interested, with intent to cause alarm to that person, or to cause that person to do any act which he is not legally bound to do, or to omit to do any act which that person is legally entitled to do, as the means of avoiding the execution of such threat, commits criminal intimidation.
+
+**Punishment:**
+- Imprisonment up to 2 years OR
+- Fine OR
+- Both
+
+**If threat is of death or grievous hurt:**
+- Imprisonment up to 7 years OR
+- Fine OR
+- Both
+
+**Key Elements:**
+1. Threat of injury to person, reputation, or property
+2. Intent to cause alarm
+3. Intent to compel to do or not do an act
+4. Means of avoiding execution of threat
+
+**Examples:**
+- Threatening physical harm to extort money
+- Threatening to defame unless demands met
+- Threatening property damage
+- Death threats
+- Blackmail and extortion
+
+**Related Sections:**
+- BNS 309: Extortion
+- BNS 350: Putting person in fear of injury
+- BNS 353: Criminal force
+
+**Bail Status:** Bailable (basic threat), Non-bailable (death/grievous hurt threat)
+**Cognizable:** Yes
+**Compoundable:** No (basic), Yes with court permission (serious threats)
+**Triable By:** Any Magistrate
+
+---
+
+## Important Notes on BNS 2023
+
+**Key Changes from IPC 1860:**
+1. Section numbers have changed (e.g., IPC 420 → BNS 316)
+2. Enhanced punishment for certain offenses
+3. New provisions for cyber crimes and digital offenses
+4. Clearer definitions and modern language
+5. Removal of sedition law
+6. Introduction of community service as punishment
+7. Enhanced protection for women and children
+8. Stricter provisions against organized crime
+
+**Effective Date:** 1st July 2024
+
+**Application:** BNS applies to offenses committed after 1st July 2024. For offenses before this date, IPC provisions continue to apply.
+
+**Cross-Reference Table (Common Sections):**
+- IPC 302 → BNS 103 (Murder)
+- IPC 304 → BNS 104 (Culpable homicide)
+- IPC 307 → BNS 109 (Attempt to murder)
+- IPC 354 → BNS 75 (Outraging modesty)
+- IPC 376 → BNS 63 (Rape)
+- IPC 379 → BNS 303 (Theft)
+- IPC 392 → BNS 311 (Robbery)
+- IPC 406 → BNS 331 (Criminal breach of trust)
+- IPC 420 → BNS 316 (Cheating)
+- IPC 498A → BNS 85 (Cruelty)
+- IPC 506 → BNS 351 (Criminal intimidation)
+
+For complete list of all BNS sections and detailed provisions, refer to the official Bharatiya Nyaya Sanhita Act 2023.
