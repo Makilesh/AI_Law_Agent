@@ -526,7 +526,7 @@ async def get_security_stats(request: Request):
                 "limits": {
                     "per_minute": rate_limiter.rate_per_minute,
                     "per_hour": rate_limiter.rate_per_hour,
-                    "burst": rate_limiter.burst_limit
+                    "burst": rate_limiter.burst
                 }
             },
             "status": {
@@ -691,18 +691,20 @@ async def register_user(request: UserRegisterRequest):
     """Register a new user."""
     try:
         user_manager = get_user_manager()
-        
-        # Create user
-        user = user_manager.create_user(
+
+        # Register user
+        success, message, user = user_manager.register_user(
             username=request.username,
             email=request.email,
-            password=request.password
+            password=request.password,
+            full_name=request.full_name if hasattr(request, 'full_name') else None,
+            phone=request.phone if hasattr(request, 'phone') else None
         )
-        
-        if not user:
+
+        if not success:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Username or email already exists"
+                detail=message
             )
         
         logger.info(f"New user registered: {request.username}")
@@ -727,26 +729,35 @@ async def login_user(request: UserLoginRequest):
     """Login user and return JWT tokens."""
     try:
         user_manager = get_user_manager()
-        jwt_handler = get_jwt_handler()
-        
-        # Authenticate user
-        user = user_manager.authenticate(request.username, request.password)
-        
-        if not user:
+        db = get_database()
+
+        # Get user from database to retrieve password hash
+        user_record = db.get_user_by_username(request.username)
+
+        if not user_record:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid username or password"
             )
-        
-        # Generate tokens
-        access_token = jwt_handler.create_access_token(
-            {"user_id": user["user_id"], "username": user["username"]}
+
+        # Authenticate user
+        success, message, tokens = user_manager.login_user(
+            username=request.username,
+            password=request.password,
+            password_hash_from_db=user_record["password_hash"]
         )
-        refresh_token = jwt_handler.create_refresh_token(
-            {"user_id": user["user_id"], "username": user["username"]}
-        )
-        
-        logger.info(f"User logged in: {user['username']}")
+
+        if not success:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail=message
+            )
+
+        # Extract tokens
+        access_token = tokens.get("access_token")
+        refresh_token = tokens.get("refresh_token")
+
+        logger.info(f"User logged in: {user_record['username']}")
         
         return TokenResponse(
             access_token=access_token,

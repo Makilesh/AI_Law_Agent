@@ -3,9 +3,17 @@ Redis Cache - Core caching functionality for AI Legal Engine.
 
 Provides Redis-based caching with connection pooling, error handling,
 and statistics tracking.
+
+NOTE: Redis is optional. If redis package is not installed, a dummy cache is used.
 """
 
-import redis
+try:
+    import redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+    redis = None
+
 import json
 import logging
 from typing import Any, Optional
@@ -43,6 +51,13 @@ class RedisCache:
         self.db = db or int(os.getenv("REDIS_DB", 0))
         self.password = password or os.getenv("REDIS_PASSWORD")
 
+        # Check if Redis package is available
+        if not REDIS_AVAILABLE:
+            logger.warning("⚠️ Redis package not installed - running without cache")
+            logger.info("Install with: pip install redis")
+            self.client = None
+            return
+
         # Connect to Redis
         try:
             self.client = redis.Redis(
@@ -60,7 +75,7 @@ class RedisCache:
             self.client.ping()
             logger.info(f"✅ Redis connected: {self.host}:{self.port}")
 
-        except redis.ConnectionError as e:
+        except Exception as e:
             logger.error(f"❌ Redis connection failed: {str(e)}")
             logger.warning("⚠️ Running without cache - performance will be degraded")
             self.client = None
