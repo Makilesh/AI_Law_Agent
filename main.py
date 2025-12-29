@@ -48,6 +48,9 @@ from security.request_validator import get_request_validator
 # Phase 2 Imports: Authentication and Database
 from auth.user_manager import get_user_manager
 from auth.jwt_handler import get_jwt_handler
+
+# Phase 3 Imports: Advanced RAG with Reranking
+from utils.reranker import get_reranker
 from database.sqlite_db import get_database
 from document_templates import (
     FIRTemplate, BailTemplate, AffidavitTemplate, 
@@ -271,6 +274,74 @@ async def health_check():
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Health check failed: {str(e)}")
+
+
+@app.get("/search-test")
+async def search_test(query: str = "What is BNS 103?"):
+    """
+    Test endpoint to compare vector search vs reranked results.
+    Shows the impact of reranking on search result quality.
+    
+    Args:
+        query: Search query (default: "What is BNS 103?")
+        
+    Returns:
+        Comparison of original and reranked results
+    """
+    try:
+        vector_store = get_vector_store()
+        reranker = get_reranker()
+        
+        # Perform vector search
+        vector_results = vector_store.query(query, n_results=10)
+        
+        # Rerank the results
+        reranked_results = reranker.rerank(query, vector_results)
+        
+        # Format for comparison
+        original_top_5 = []
+        for i, result in enumerate(vector_results[:5]):
+            original_top_5.append({
+                "position": i + 1,
+                "document_preview": result['document'][:200] + "...",
+                "distance": result.get('distance', 0.0),
+                "metadata": result.get('metadata', {})
+            })
+        
+        reranked_top_5 = []
+        for i, result in enumerate(reranked_results[:5]):
+            reranked_top_5.append({
+                "position": i + 1,
+                "original_position": result.get('original_position', -1) + 1,
+                "document_preview": result['document'][:200] + "...",
+                "rerank_score": result.get('rerank_score', 0.0),
+                "keyword_score": result.get('keyword_score', 0.0),
+                "position_score": result.get('position_score', 0.0),
+                "metadata": result.get('metadata', {})
+            })
+        
+        return {
+            "query": query,
+            "total_results": len(vector_results),
+            "original_top_5": original_top_5,
+            "reranked_top_5": reranked_top_5,
+            "reranking_impact": {
+                "position_changes": sum(
+                    1 for r in reranked_results[:5] 
+                    if r.get('original_position', 0) != reranked_results.index(r)
+                ),
+                "top_result_changed": (
+                    reranked_results[0].get('original_position', 0) != 0
+                    if reranked_results else False
+                )
+            }
+        }
+        
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Search test failed: {str(e)}"
+        )
 
 
 @app.post("/chat", response_model=ChatResponse)

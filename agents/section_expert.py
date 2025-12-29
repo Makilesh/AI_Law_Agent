@@ -10,7 +10,8 @@ from dotenv import load_dotenv
 import logging
 
 from utils.gemini_agent import GeminiChatAgent
-from utils.vector_store import search_legal_context
+from utils.vector_store import get_vector_store
+from utils.reranker import get_reranker
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -75,13 +76,42 @@ Focus on Indian Penal Code (IPC), Criminal Procedure Code (CrPC), and other Indi
             Detailed explanation of the section
         """
         try:
-            # Search for relevant legal context from database with fallback
+            # Search for relevant legal context from database with reranking
             retrieved_context = ""
             if not context:
                 try:
-                    retrieved_context = await search_legal_context(section_query, n_results=5)
+                    # Get vector store and reranker instances
+                    vector_store = get_vector_store()
+                    reranker = get_reranker()
+                    
+                    # Perform vector search
+                    search_results = vector_store.query(section_query, n_results=10)
+                    logger.info(f"Vector search returned {len(search_results)} results")
+                    
+                    if not search_results:
+                        logger.warning("No search results found")
+                        retrieved_context = ""
+                    else:
+                        # Rerank the results
+                        reranked_results = reranker.rerank(section_query, search_results)
+                        
+                        if reranked_results:
+                            logger.info(f"Reranked results. Top score: {reranked_results[0].get('rerank_score', 0):.4f}")
+                            
+                            # Use top 5 reranked results for context
+                            top_results = reranked_results[:5]
+                            
+                            # Combine documents into context
+                            retrieved_context = "\n\n".join([
+                                f"[Document {i+1}] (Relevance: {result.get('rerank_score', 0):.2f})\n{result['document']}"
+                                for i, result in enumerate(top_results)
+                            ])
+                        else:
+                            logger.warning("Reranking returned no results")
+                            retrieved_context = ""
+                    
                 except Exception as e:
-                    logger.warning(f"Vector search failed: {e}, falling back to LLM knowledge")
+                    logger.warning(f"Vector search/reranking failed: {e}, falling back to LLM knowledge")
                     retrieved_context = ""
             else:
                 retrieved_context = context
