@@ -57,6 +57,9 @@ from document_templates import (
     ComplaintTemplate, LegalNoticeTemplate
 )
 
+# Phase 4 Imports: Export and Engagement Features
+from utils.export_handler import get_export_handler
+
 # Load environment variables
 load_dotenv()
 
@@ -1288,6 +1291,246 @@ async def list_user_documents(current_user: Dict = Depends(get_current_user)):
         raise HTTPException(status_code=500, detail=f"Failed to list documents: {str(e)}")
 
 
+# ============================================================================
+# PHASE 4: EXPORT & ENGAGEMENT ENDPOINTS
+# ============================================================================
+
+@app.post("/export/response")
+async def export_response(
+    response_data: Dict[str, Any] = Body(...),
+    format: str = Body("json", embed=True)
+):
+    """
+    Export a single response to specified format.
+    
+    Formats: json, txt, md
+    """
+    try:
+        export_handler = get_export_handler()
+        
+        if format == "json":
+            content = export_handler.export_response_to_json(response_data)
+            media_type = "application/json"
+            filename = f"response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        elif format == "txt":
+            content = export_handler.export_response_to_txt(response_data)
+            media_type = "text/plain"
+            filename = f"response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        elif format == "md":
+            content = export_handler.export_response_to_markdown(response_data)
+            media_type = "text/markdown"
+            filename = f"response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        else:
+            raise HTTPException(status_code=400, detail="Invalid format. Use: json, txt, or md")
+        
+        return JSONResponse(
+            content={
+                "success": True,
+                "filename": filename,
+                "content": content,
+                "format": format
+            }
+        )
+        
+    except Exception as e:
+        logger.error(f"Export response error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Export failed: {str(e)}")
+
+
+@app.post("/export/conversation")
+async def export_conversation(
+    conversation_id: str = Body(..., embed=True),
+    format: str = Body("json", embed=True),
+    credentials: HTTPAuthorizationCredentials = Depends(security)
+):
+    """
+    Export a full conversation to specified format.
+    Requires authentication.
+    
+    Formats: json, txt, md
+    """
+    try:
+        # Verify token
+        user_manager = get_user_manager()
+        user_info = user_manager.verify_access_token(credentials.credentials)
+        
+        # Get conversation from database
+        db = get_database()
+        messages = db.get_conversation_messages(conversation_id, limit=1000)
+        
+        if not messages:
+            raise HTTPException(status_code=404, detail="Conversation not found")
+        
+        # Get conversation metadata
+        conversation_data = {
+            "id": conversation_id,
+            "title": f"Conversation {conversation_id}",
+            "created_at": messages[0].get("created_at") if messages else datetime.now().isoformat(),
+            "status": "active"
+        }
+        
+        export_handler = get_export_handler()
+        
+        if format == "json":
+            content = export_handler.export_conversation_to_json(conversation_data, messages)
+            media_type = "application/json"
+            filename = f"conversation_{conversation_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        elif format == "txt":
+            content = export_handler.export_conversation_to_txt(conversation_data, messages)
+            media_type = "text/plain"
+            filename = f"conversation_{conversation_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        elif format == "md":
+            content = export_handler.export_conversation_to_markdown(conversation_data, messages)
+            media_type = "text/markdown"
+            filename = f"conversation_{conversation_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        else:
+            raise HTTPException(status_code=400, detail="Invalid format. Use: json, txt, or md")
+        
+        return JSONResponse(
+            content={
+                "success": True,
+                "filename": filename,
+                "content": content,
+                "format": format,
+                "message_count": len(messages)
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Export conversation error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Export failed: {str(e)}")
+
+
+@app.post("/bookmarks/create")
+async def create_bookmark(
+    conversation_id: Optional[str] = Body(None),
+    message_id: Optional[str] = Body(None),
+    title: str = Body(...),
+    notes: Optional[str] = Body(None),
+    category: Optional[str] = Body("general"),
+    metadata: Optional[Dict[str, Any]] = Body(None),
+    credentials: HTTPAuthorizationCredentials = Depends(security)
+):
+    """
+    Create a bookmark for a conversation, specific message, or general legal topic.
+    Requires authentication.
+    """
+    try:
+        # Verify token
+        user_manager = get_user_manager()
+        user_info = user_manager.verify_access_token(credentials.credentials)
+        user_id = user_info["user_id"]
+        
+        # Create bookmark in database
+        db = get_database()
+        
+        bookmark_data = {
+            "conversation_id": conversation_id,
+            "message_id": message_id,
+            "title": title,
+            "notes": notes,
+            "category": category,
+            "metadata": metadata or {}
+        }
+        
+        # Insert bookmark using database method
+        bookmark_id = db.create_bookmark(user_id, bookmark_data)
+        
+        if not bookmark_id:
+            raise HTTPException(status_code=500, detail="Failed to create bookmark")
+        
+        return JSONResponse(
+            content={
+                "success": True,
+                "bookmark_id": bookmark_id,
+                "message": "Bookmark created successfully"
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Create bookmark error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to create bookmark: {str(e)}")
+
+
+@app.get("/bookmarks/list")
+async def list_bookmarks(
+    category: Optional[str] = None,
+    limit: int = 50,
+    credentials: HTTPAuthorizationCredentials = Depends(security)
+):
+    """
+    List all bookmarks for the authenticated user.
+    Optional category filter.
+    """
+    try:
+        # Verify token
+        user_manager = get_user_manager()
+        user_info = user_manager.verify_access_token(credentials.credentials)
+        user_id = user_info["user_id"]
+        
+        # Get bookmarks from database
+        db = get_database()
+        
+        # Get user bookmarks with optional category filter
+        bookmarks = db.get_user_bookmarks(user_id, category=category, limit=limit)
+        
+        return JSONResponse(
+            content={
+                "success": True,
+                "bookmarks": bookmarks,
+                "total": len(bookmarks)
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"List bookmarks error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to list bookmarks: {str(e)}")
+
+
+@app.delete("/bookmarks/{bookmark_id}")
+async def delete_bookmark(
+    bookmark_id: str,
+    credentials: HTTPAuthorizationCredentials = Depends(security)
+):
+    """
+    Delete a bookmark by ID.
+    Requires authentication.
+    """
+    try:
+        # Verify token
+        user_manager = get_user_manager()
+        user_info = user_manager.verify_access_token(credentials.credentials)
+        user_id = user_info["user_id"]
+        
+        # Delete bookmark from database
+        db = get_database()
+        
+        # Delete bookmark (checks user ownership)
+        success, message = db.delete_bookmark(bookmark_id, user_id)
+        
+        if not success:
+            raise HTTPException(status_code=404, detail=message)
+        
+        return JSONResponse(
+            content={
+                "success": True,
+                "message": "Bookmark deleted successfully"
+            }
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Delete bookmark error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to delete bookmark: {str(e)}")
+
+
 def main():
     """Run the FastAPI server."""
     host = os.getenv("HOST", "0.0.0.0")
@@ -1296,11 +1539,12 @@ def main():
     
     logger.info(f"Starting server on {host}:{port}")
     
+    # Disable reload for Windows compatibility with multiprocessing
     uvicorn.run(
         "main:app",
         host=host,
         port=port,
-        reload=debug,
+        reload=False,  # Disabled for compatibility
         log_level="info"
     )
 

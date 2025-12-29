@@ -401,6 +401,167 @@ class Database:
             logger.error(f"Get conversations error: {str(e)}")
             return []
 
+    def create_bookmark(self, user_id: int, bookmark_data: Dict) -> Optional[int]:
+        """
+        Create a new bookmark.
+
+        Args:
+            user_id: User ID
+            bookmark_data: Bookmark data dictionary with optional fields:
+                - conversation_id (int, optional)
+                - message_id (int, optional)
+                - title (str, required)
+                - notes (str, optional)
+                - category (str, optional)
+                - metadata (dict, optional)
+
+        Returns:
+            Bookmark ID or None
+        """
+        try:
+            cursor = self.conn.cursor()
+            now = datetime.utcnow().isoformat()
+
+            cursor.execute("""
+                INSERT INTO bookmarks (
+                    user_id, conversation_id, message_id, title, 
+                    notes, category, created_at, metadata
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                user_id,
+                bookmark_data.get('conversation_id'),
+                bookmark_data.get('message_id'),
+                bookmark_data['title'],
+                bookmark_data.get('notes'),
+                bookmark_data.get('category'),
+                now,
+                json.dumps(bookmark_data.get('metadata', {}))
+            ))
+
+            self.conn.commit()
+            bookmark_id = cursor.lastrowid
+            logger.info(f"Bookmark created: ID {bookmark_id} for user {user_id}")
+            return bookmark_id
+
+        except Exception as e:
+            logger.error(f"Create bookmark error: {str(e)}")
+            return None
+
+    def get_user_bookmarks(self, user_id: int, category: Optional[str] = None, limit: int = 50) -> List[Dict]:
+        """
+        Get user's bookmarks.
+
+        Args:
+            user_id: User ID
+            category: Optional category filter
+            limit: Maximum number of bookmarks
+
+        Returns:
+            List of bookmark dictionaries
+        """
+        try:
+            cursor = self.conn.cursor()
+            
+            if category:
+                cursor.execute("""
+                    SELECT * FROM bookmarks
+                    WHERE user_id = ? AND category = ?
+                    ORDER BY created_at DESC
+                    LIMIT ?
+                """, (user_id, category, limit))
+            else:
+                cursor.execute("""
+                    SELECT * FROM bookmarks
+                    WHERE user_id = ?
+                    ORDER BY created_at DESC
+                    LIMIT ?
+                """, (user_id, limit))
+
+            bookmarks = [dict(row) for row in cursor.fetchall()]
+            
+            # Parse metadata JSON
+            for bookmark in bookmarks:
+                if bookmark.get('metadata'):
+                    try:
+                        bookmark['metadata'] = json.loads(bookmark['metadata'])
+                    except:
+                        bookmark['metadata'] = {}
+            
+            return bookmarks
+
+        except Exception as e:
+            logger.error(f"Get bookmarks error: {str(e)}")
+            return []
+
+    def get_bookmark_by_id(self, bookmark_id: int, user_id: int) -> Optional[Dict]:
+        """
+        Get a specific bookmark by ID (with user ownership check).
+
+        Args:
+            bookmark_id: Bookmark ID
+            user_id: User ID (for ownership verification)
+
+        Returns:
+            Bookmark dictionary or None
+        """
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute("""
+                SELECT * FROM bookmarks
+                WHERE id = ? AND user_id = ?
+            """, (bookmark_id, user_id))
+            
+            row = cursor.fetchone()
+            if row:
+                bookmark = dict(row)
+                if bookmark.get('metadata'):
+                    try:
+                        bookmark['metadata'] = json.loads(bookmark['metadata'])
+                    except:
+                        bookmark['metadata'] = {}
+                return bookmark
+            return None
+
+        except Exception as e:
+            logger.error(f"Get bookmark by ID error: {str(e)}")
+            return None
+
+    def delete_bookmark(self, bookmark_id: int, user_id: int) -> Tuple[bool, str]:
+        """
+        Delete a bookmark.
+
+        Args:
+            bookmark_id: Bookmark ID
+            user_id: User ID (for ownership verification)
+
+        Returns:
+            Tuple of (success, message)
+        """
+        try:
+            cursor = self.conn.cursor()
+            
+            # Verify ownership first
+            cursor.execute("""
+                SELECT id FROM bookmarks WHERE id = ? AND user_id = ?
+            """, (bookmark_id, user_id))
+            
+            if not cursor.fetchone():
+                return False, "Bookmark not found or access denied"
+            
+            # Delete the bookmark
+            cursor.execute("""
+                DELETE FROM bookmarks WHERE id = ? AND user_id = ?
+            """, (bookmark_id, user_id))
+            
+            self.conn.commit()
+            logger.info(f"Bookmark deleted: ID {bookmark_id} by user {user_id}")
+            return True, "Bookmark deleted successfully"
+
+        except Exception as e:
+            logger.error(f"Delete bookmark error: {str(e)}")
+            return False, f"Failed to delete bookmark: {str(e)}"
+
     def close(self):
         """Close database connection."""
         if self.conn:
