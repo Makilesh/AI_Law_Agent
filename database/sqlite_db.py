@@ -234,6 +234,29 @@ class Database:
             logger.error(f"Get user error: {str(e)}")
             return None
 
+    def get_user_by_id(self, user_id: int) -> Optional[Dict]:
+        """
+        Get user by ID.
+
+        Args:
+            user_id: User ID
+
+        Returns:
+            User dictionary or None
+        """
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+            row = cursor.fetchone()
+
+            if row:
+                return dict(row)
+            return None
+
+        except Exception as e:
+            logger.error(f"Get user by ID error: {str(e)}")
+            return None
+
     def update_last_login(self, user_id: int):
         """Update user's last login time."""
         try:

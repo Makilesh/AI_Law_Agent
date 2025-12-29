@@ -664,17 +664,17 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
     try:
         jwt_handler = get_jwt_handler()
         token = credentials.credentials
-        
-        # Verify and decode token
-        payload = jwt_handler.verify_token(token)
-        
-        if not payload:
+
+        # Verify and decode token (returns tuple: is_valid, payload)
+        is_valid, payload = jwt_handler.verify_token(token)
+
+        if not is_valid or not payload:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid or expired token",
                 headers={"WWW-Authenticate": "Bearer"}
             )
-        
+
         return payload
     
     except Exception as e:
@@ -691,9 +691,10 @@ async def register_user(request: UserRegisterRequest):
     """Register a new user."""
     try:
         user_manager = get_user_manager()
+        db = get_database()
 
-        # Register user
-        success, message, user = user_manager.register_user(
+        # Register user (validate and prepare user data)
+        success, message, user_data = user_manager.register_user(
             username=request.username,
             email=request.email,
             password=request.password,
@@ -706,15 +707,24 @@ async def register_user(request: UserRegisterRequest):
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=message
             )
-        
-        logger.info(f"New user registered: {request.username}")
-        
+
+        # Insert user into database
+        db_success, db_message, user_id = db.create_user(user_data)
+
+        if not db_success:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=db_message
+            )
+
+        logger.info(f"New user registered: {request.username} (ID: {user_id})")
+
         return UserInfoResponse(
-            user_id=user["user_id"],
-            username=user["username"],
-            email=user["email"],
-            created_at=user["created_at"],
-            is_active=user["is_active"]
+            user_id=user_id,
+            username=user_data["username"],
+            email=user_data["email"],
+            created_at=user_data["created_at"],
+            is_active=user_data["is_active"]
         )
     
     except HTTPException:
@@ -729,9 +739,10 @@ async def login_user(request: UserLoginRequest):
     """Login user and return JWT tokens."""
     try:
         user_manager = get_user_manager()
+        jwt_handler = get_jwt_handler()
         db = get_database()
 
-        # Get user from database to retrieve password hash
+        # Get user from database to retrieve password hash and user_id
         user_record = db.get_user_by_username(request.username)
 
         if not user_record:
@@ -740,24 +751,27 @@ async def login_user(request: UserLoginRequest):
                 detail="Invalid username or password"
             )
 
-        # Authenticate user
-        success, message, tokens = user_manager.login_user(
-            username=request.username,
-            password=request.password,
-            password_hash_from_db=user_record["password_hash"]
-        )
-
-        if not success:
+        # Verify password
+        password_handler = user_manager.password_handler
+        if not password_handler.verify_password(request.password, user_record["password_hash"]):
+            logger.warning(f"Failed login attempt for: {request.username}")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail=message
+                detail="Invalid username or password"
             )
 
-        # Extract tokens
-        access_token = tokens.get("access_token")
-        refresh_token = tokens.get("refresh_token")
+        # Generate tokens with actual user_id
+        access_token = jwt_handler.create_access_token(
+            user_id=str(user_record["id"]),  # Convert to string for JWT
+            username=user_record["username"]
+        )
 
-        logger.info(f"User logged in: {user_record['username']}")
+        refresh_token = jwt_handler.create_refresh_token(
+            user_id=str(user_record["id"]),
+            username=user_record["username"]
+        )
+
+        logger.info(f"User logged in: {user_record['username']} (ID: {user_record['id']})")
         
         return TokenResponse(
             access_token=access_token,
@@ -818,14 +832,21 @@ async def logout_user(current_user: Dict = Depends(get_current_user)):
 async def get_current_user_info(current_user: Dict = Depends(get_current_user)):
     """Get current user information."""
     try:
-        user_manager = get_user_manager()
-        user = user_manager.get_user_by_id(current_user["user_id"])
-        
+        db = get_database()
+
+        # Get user_id from JWT payload (sub claim)
+        user_id = current_user.get("sub")
+        if not user_id:
+            raise HTTPException(status_code=401, detail="Invalid token payload")
+
+        # Fetch user from database
+        user = db.get_user_by_id(int(user_id))
+
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
-        
+
         return UserInfoResponse(
-            user_id=user["user_id"],
+            user_id=user["id"],
             username=user["username"],
             email=user["email"],
             created_at=user["created_at"],
@@ -848,8 +869,11 @@ async def list_conversations(current_user: Dict = Depends(get_current_user)):
     """List all conversations for authenticated user."""
     try:
         db = get_database()
-        conversations = db.get_user_conversations(current_user["user_id"])
-        
+
+        # Get user_id from JWT payload (sub claim)
+        user_id = int(current_user.get("sub"))
+        conversations = db.get_user_conversations(user_id)
+
         return ConversationListResponse(
             conversations=conversations,
             total_count=len(conversations)
@@ -871,7 +895,8 @@ async def get_conversation(conversation_id: int, current_user: Dict = Depends(ge
             raise HTTPException(status_code=404, detail="Conversation not found")
         
         # Verify ownership
-        if conversation["user_id"] != current_user["user_id"]:
+        user_id = int(current_user.get("sub"))
+        if conversation["user_id"] != user_id:
             raise HTTPException(status_code=403, detail="Access denied")
         
         messages = db.get_conversation_messages(conversation_id)
@@ -900,10 +925,12 @@ async def archive_conversation(conversation_id: int, current_user: Dict = Depend
         
         if not conversation:
             raise HTTPException(status_code=404, detail="Conversation not found")
-        
-        if conversation["user_id"] != current_user["user_id"]:
+
+        # Verify ownership
+        user_id = int(current_user.get("sub"))
+        if conversation["user_id"] != user_id:
             raise HTTPException(status_code=403, detail="Access denied")
-        
+
         # Archive conversation (set is_active = 0)
         db.execute(
             "UPDATE conversations SET is_active = 0 WHERE conversation_id = ?",
@@ -928,10 +955,12 @@ async def delete_conversation(conversation_id: int, current_user: Dict = Depends
         
         if not conversation:
             raise HTTPException(status_code=404, detail="Conversation not found")
-        
-        if conversation["user_id"] != current_user["user_id"]:
+
+        # Verify ownership
+        user_id = int(current_user.get("sub"))
+        if conversation["user_id"] != user_id:
             raise HTTPException(status_code=403, detail="Access denied")
-        
+
         # Delete messages first
         db.execute("DELETE FROM messages WHERE conversation_id = ?", (conversation_id,))
         # Delete conversation
@@ -1173,7 +1202,10 @@ async def list_user_documents(current_user: Dict = Depends(get_current_user)):
     """List all generated documents for authenticated user."""
     try:
         db = get_database()
-        documents = db.get_user_documents(current_user["user_id"])
+
+        # Get user_id from JWT payload (sub claim)
+        user_id = int(current_user.get("sub"))
+        documents = db.get_user_documents(user_id)
         
         return DocumentListResponse(
             documents=documents,
