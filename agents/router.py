@@ -29,7 +29,7 @@ class RouterAgent:
         self.agent = GeminiChatAgent(
             name="Router",
             instructions=self._get_system_instruction(),
-            model_name="gemini-2.5-flash",
+            model_name="gemini-1.5-flash",
             temperature=0.3
         )
         
