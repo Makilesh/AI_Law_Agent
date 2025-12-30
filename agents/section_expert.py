@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import logging
 
-from utils.gemini_agent import GeminiChatAgent
+from utils.model_manager import GeminiChatAgent
 from utils.vector_store import get_vector_store
 from utils.reranker import get_reranker
 

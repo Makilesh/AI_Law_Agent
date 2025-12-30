@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 from utils.vector_store import get_vector_store
-from utils.gemini_agent import GeminiChatAgent
+from utils.model_manager import GeminiChatAgent
 
 load_dotenv()
 logger = logging.getLogger(__name__)

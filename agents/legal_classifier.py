@@ -10,7 +10,7 @@ from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import logging
 
-from utils.gemini_agent import GeminiChatAgent
+from utils.model_manager import GeminiChatAgent
 from models.schemas import ClassifierResult
 
 load_dotenv()

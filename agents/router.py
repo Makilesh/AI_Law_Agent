@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional, List
 from dotenv import load_dotenv
 import logging
 
-from utils.gemini_agent import GeminiChatAgent
+from utils.model_manager import GeminiChatAgent
 from agents.legal_classifier import get_classifier_agent
 from agents.section_expert import get_section_expert
 from dialogue.dialogue_manager import get_dialogue_manager

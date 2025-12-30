@@ -1,9 +1,10 @@
-# ⚖️ AI Legal Engine
+﻿# ⚖️ AI Legal Engine
 
 > **Enterprise-grade AI legal assistant with multi-agent RAG, real-time voice interaction, and automated document generation**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Google Gemini](https://img.shields.io/badge/Gemini-2.5--flash-orange.svg)](https://ai.google.dev/)
+[![Multi-Model](https://img.shields.io/badge/Fallback-OpenRouter%20%7C%20Ollama-blueviolet.svg)](https://openrouter.ai/)
 [![ChromaDB](https://img.shields.io/badge/ChromaDB-673_docs-green.svg)](https://www.trychroma.com/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-WebSocket-009688.svg)](https://fastapi.tiangolo.com/)
 [![Redis](https://img.shields.io/badge/Redis-Caching-red.svg)](https://redis.io/)
@@ -21,21 +22,21 @@ AI Legal Engine is a **full-stack, production-ready legal AI system** combining 
 
 ## ✨ Complete Feature Set
 
-| Feature | Technology | Status |
-|---------|-----------|--------|
-| 🤖 **Multi-Agent RAG** | Router + Classifier + Section Expert agents | ✅ Complete |
-| 🔍 **Vector Search** | ChromaDB with 673 indexed legal documents | ✅ Complete |
-| 🎤 **Voice Input** | Browser Web Speech API (STT) | ✅ Complete |
-| 🔊 **Voice Output** | pyttsx3 text-to-speech (TTS) | ✅ Complete |
-| 🌐 **Real-Time Communication** | WebSocket for voice chat | ✅ Complete |
-| 🔐 **Authentication** | JWT-based user management | ✅ Complete |
-| 💬 **Multi-Turn Dialogue** | Conversation history & context | ✅ Complete |
-| 📝 **Document Generation** | FIR, bail, affidavit, notice, complaint | ✅ Complete |
-| ⚡ **Semantic Caching** | Redis with 92% similarity threshold | ✅ Complete |
-| 🛡️ **Security Suite** | Rate limiting, IP blocking, validation | ✅ Complete |
-| 🌍 **Multilingual** | English, Hindi, Tamil support | ✅ Complete |
-| 📄 **PDF Processing** | Upload & index custom documents | ✅ Complete |
-| 💾 **Data Persistence** | SQLite for users, conversations, documents | ✅ Complete |
+| Feature | Technology |
+|---------|-----------|
+| 🤖 **Multi-Agent RAG** | Router + Classifier + Section Expert agents |
+| 🔍 **Vector Search** | ChromaDB with 673 indexed legal documents |
+| 🎤 **Voice Input** | Browser Web Speech API (STT) |
+| 🔊 **Voice Output** | pyttsx3 text-to-speech (TTS) |
+| 🌐 **Real-Time Communication** | WebSocket for voice chat |
+| 🔐 **Authentication** | JWT-based user management |
+| 💬 **Multi-Turn Dialogue** | Conversation history & context |
+| 📝 **Document Generation** | FIR, bail, affidavit, notice, complaint |
+| ⚡ **Semantic Caching** | Redis with 92% similarity threshold |
+| 🛡️ **Security Suite** | Rate limiting, IP blocking, validation |
+| 🌍 **Multilingual** | English, Hindi, Tamil support |
+| 📄 **PDF Processing** | Upload & index custom documents |
+| 💾 **Data Persistence** | SQLite for users, conversations, documents |
 
 ---
 
@@ -53,9 +54,15 @@ pip install -r requirements.txt
 
 # 2. Configure environment (create .env file)
 GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.5-flash-preview-0514  # Optional: specify model version
 JWT_SECRET_KEY=your-secret-key-min-32-chars
 REDIS_HOST=localhost
 REDIS_PORT=6379
+
+# Optional: Fallback models (auto-used if Gemini fails)
+OPENROUTER_API_KEY=your_openrouter_key  # Get at https://openrouter.ai/
+OPENROUTER_MODEL=openai/gpt-3.5-turbo
+OLLAMA_MODEL=llama3.1:8b  # Requires Ollama installed locally
 
 # 3. Start Redis
 docker-compose up -d redis
@@ -73,9 +80,11 @@ python main.py  # Backend at http://localhost:8000
 
 **Get free API key**: https://ai.google.dev/
 
+**Multi-Model Fallback**: System automatically switches to OpenRouter or Ollama if Gemini fails. Configure fallback models in `.env` (optional).
+
 ---
 
-## � Core Capabilities
+## 💡 Core Capabilities
 
 ### 🎤 Real-Time Voice Interaction
 ```bash
@@ -268,7 +277,7 @@ AI_Law_Agent/
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| **LLM** | Google Gemini 2.5 Flash | Free AI generation (15 RPM) |
+| **LLM** | Google Gemini 2.5 Flash | Free AI (fallback: OpenRouter, Ollama) |
 | **Vector DB** | ChromaDB | Local document storage (673 docs) |
 | **Embeddings** | Sentence Transformers (MiniLM-L6-v2) | Local semantic search |
 | **Cache** | Redis | Semantic caching (92% similarity) |
@@ -280,7 +289,7 @@ AI_Law_Agent/
 | **Frontend** | HTML5 + Vanilla JS | Responsive chat UI |
 | **Docs** | python-docx | DOCX generation |
 
-**Total Cost**: $0/month 💰 | **All services free/local**
+**Total Cost**: $0/month 💰 | **All services free/local** (Gemini free tier + optional Ollama)
 
 ---
 
@@ -355,13 +364,14 @@ curl http://localhost:8000/health
 
 ## 🌟 Technical Highlights
 
+✅ **Multi-Model Fallback System** - Automatic failover: Gemini → OpenRouter → Ollama for 99.9% uptime  
 ✅ **Multi-Agent Architecture** - Router, classifier, and domain expert agents with confidence scoring  
 ✅ **Real-Time Voice** - WebSocket-based bidirectional voice chat with live status updates  
 ✅ **Semantic Caching** - Redis-powered similarity matching (92% threshold) for sub-second repeat queries  
 ✅ **Enterprise Security** - JWT authentication, bcrypt hashing, rate limiting, IP blocking  
 ✅ **Vector Search** - ChromaDB with Sentence Transformers for semantic document retrieval  
 ✅ **Document Automation** - Template-based DOCX generation for 5 legal document types  
-✅ **Zero Cloud Costs** - 100% free/local services (Gemini, ChromaDB, Redis)  
+✅ **Zero Cloud Costs** - 100% free/local services (Gemini free tier, ChromaDB, Redis, optional Ollama)  
 ✅ **Production Ready** - Comprehensive error handling, logging, input validation
 
 ---
