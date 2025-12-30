@@ -167,34 +167,60 @@ curl -X POST http://localhost:8000/upload-pdf \
 | `/documents/{id}/generate` | POST | Generate DOCX |
 | `/upload-pdf` | POST | Upload legal documents |
 | `/health` | GET | System health check |
-| `/cache/stats` | GET | Cache performance |
-| `/security/stats` | GET | Security metrics |
+| `/cache/stats` | GET | Cache performance metrics |
+| `/security/stats` | GET | Security analytics |
 
-Full API docs: `http://localhost:8000/docs`
-                  │
-         ┌────────▼─────────┐
-         │  ChromaDB Store  │
-         │  (23 seed docs)  │
-         └──────────────────┘
-                  │
-         ┌────────▼─────────┐
-         │ Sentence Trans.  │
-         │ (MiniLM-L6-v2)  │
-         └──────────────────┘
-                  │
-         ┌────────▼─────────┐
-         │  Gemini 2.5      │
-         │  Flash (Free)    │
-         └──────────────────┘
+**Full API documentation**: `http://localhost:8000/docs` (Swagger UI)
+
+---
+
+## 🏗️ System Architecture
+
+```
+┌──────────────────────────────────────────────────────┐
+│  Frontend (HTML/JS/CSS)                              │
+│  • Chat UI with voice button                         │
+│  • WebSocket connection                              │
+│  • Web Speech API (browser STT)                      │
+└────────────────┬─────────────────────────────────────┘
+                 │ REST API / WebSocket
+┌────────────────▼─────────────────────────────────────┐
+│  FastAPI Backend (Python)                            │
+│  ├─ Authentication (JWT)                             │
+│  ├─ Rate Limiting & Security                         │
+│  ├─ WebSocket Handler (voice)                        │
+│  └─ Multi-Agent Routing                              │
+└────────────────┬─────────────────────────────────────┘
+                 │
+    ┌────────────┼────────────┐
+    │            │            │
+┌───▼────┐  ┌────▼─────┐  ┌──▼──────┐
+│ Router │  │Classifier│  │ Section │
+│ Agent  │  │  Agent   │  │ Expert  │
+└────────┘  └──────────┘  └────┬────┘
+                                │
+               ┌────────────────┴────────────┐
+               │                             │
+         ┌─────▼──────┐              ┌───────▼──────┐
+         │ ChromaDB   │              │ Gemini 2.5   │
+         │ (673 docs) │              │ Flash (Free) │
+         └────────────┘              └──────────────┘
+         
+┌──────────────────────────────────────────────────────┐
+│  Storage Layer                                       │
+│  • SQLite (users, conversations, documents)          │
+│  • Redis (semantic cache, 92% similarity)            │
+│  • ChromaDB (vector embeddings)                      │
+└──────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📁 Project Architecture
+## 📁 Project Structure
 
 ```
 AI_Law_Agent/
-├── main.py                     # FastAPI server (1670 lines)
+├── main.py                     # FastAPI server 
 ├── agents/                     # Multi-agent RAG system
 │   ├── router.py              # Intelligent query routing
 │   ├── legal_classifier.py   # Legal domain classification
@@ -291,27 +317,22 @@ curl -X POST http://localhost:8000/upload-pdf \
 
 ---
 
-## 🧪 Testing
+## 🧪 Validation
 
 ```bash
-# Test IPC query
+# Verify legal query accuracy
 curl -X POST http://localhost:8000/chat \
   -H "Content-Type: application/json" \
-  -d '{"query":"What is IPC 420?","language":"English"}'
+  -d '{"query":"What is BNS Section 103?","language":"English"}'
 
-# Test traffic law query
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"query":"helmet fine penalty","language":"English"}'
-
-# Upload document
+# Validate document upload pipeline
 curl -X POST http://localhost:8000/upload-pdf \
   -F "file=@legal_doc.pdf"
 
-# Check health
+# Check system health
 curl http://localhost:8000/health
 
-# Interactive voice testing
+# Interactive voice validation
 # Open frontend/voice_test.html in browser
 ```
 
