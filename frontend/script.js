@@ -1,4 +1,10 @@
 const API_BASE_URL = 'http://localhost:8000';
+const WS_BASE_URL = 'ws://localhost:8000';
+
+// Voice chat variables
+let voiceWebSocket = null;
+let isVoiceActive = false;
+let voiceStatusIndicator = null;
 
 // Check server status on load
 async function checkServerStatus() {
@@ -250,9 +256,211 @@ function showUploadResult(message, type) {
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', () => {
     checkServerStatus();
+    checkVoiceAvailability();
     
     // Refresh stats every 30 seconds
     setInterval(() => {
         loadVectorStoreStats();
     }, 30000);
 });
+
+// ================== VOICE CHAT FUNCTIONALITY ==================
+
+// Check if voice I/O is available
+async function checkVoiceAvailability() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/voice/status`);
+        const data = await response.json();
+        
+        const voiceBtn = document.getElementById('voiceBtn');
+        if (data.voice_available) {
+            voiceBtn.style.display = 'block';
+            voiceBtn.title = 'Voice Chat Available - Click to start';
+        } else {
+            voiceBtn.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('Voice check failed:', error);
+        document.getElementById('voiceBtn').style.display = 'none';
+    }
+}
+
+// Toggle voice chat on/off
+function toggleVoiceChat() {
+    if (isVoiceActive) {
+        stopVoiceChat();
+    } else {
+        startVoiceChat();
+    }
+}
+
+// Start voice chat
+function startVoiceChat() {
+    const voiceBtn = document.getElementById('voiceBtn');
+    const voiceBtnIcon = document.getElementById('voiceBtnIcon');
+    const voiceStatus = document.getElementById('voiceStatus');
+    
+    try {
+        // Connect WebSocket
+        voiceWebSocket = new WebSocket(`${WS_BASE_URL}/ws/voice`);
+        
+        voiceWebSocket.onopen = () => {
+            console.log('Voice WebSocket connected');
+            isVoiceActive = true;
+            
+            // Update UI
+            voiceBtn.classList.add('active');
+            voiceBtnIcon.textContent = '🔴';
+            voiceBtn.title = 'Voice Chat Active - Click to stop';
+            voiceStatus.style.display = 'flex';
+            updateVoiceStatus('🎤', 'Connected', 'success');
+            
+            // Show info message
+            addVoiceMessage('system', '🎤 Voice chat connected! Speak your legal question...');
+        };
+        
+        voiceWebSocket.onmessage = (event) => {
+            handleVoiceMessage(JSON.parse(event.data));
+        };
+        
+        voiceWebSocket.onerror = (error) => {
+            console.error('Voice WebSocket error:', error);
+            updateVoiceStatus('❌', 'Connection error', 'error');
+            stopVoiceChat();
+        };
+        
+        voiceWebSocket.onclose = () => {
+            console.log('Voice WebSocket closed');
+            if (isVoiceActive) {
+                stopVoiceChat();
+            }
+        };
+        
+    } catch (error) {
+        console.error('Failed to start voice chat:', error);
+        alert('Failed to connect to voice service. Please check if the server is running.');
+    }
+}
+
+// Stop voice chat
+function stopVoiceChat() {
+    const voiceBtn = document.getElementById('voiceBtn');
+    const voiceBtnIcon = document.getElementById('voiceBtnIcon');
+    const voiceStatus = document.getElementById('voiceStatus');
+    
+    if (voiceWebSocket) {
+        voiceWebSocket.close();
+        voiceWebSocket = null;
+    }
+    
+    isVoiceActive = false;
+    
+    // Update UI
+    voiceBtn.classList.remove('active');
+    voiceBtnIcon.textContent = '🎤';
+    voiceBtn.title = 'Voice Chat - Click to start';
+    voiceStatus.style.display = 'none';
+    
+    addVoiceMessage('system', '🔴 Voice chat disconnected');
+}
+
+// Handle incoming voice messages
+function handleVoiceMessage(message) {
+    const { type, content, metadata } = message;
+    
+    switch (type) {
+        case 'status':
+            handleVoiceStatus(content);
+            break;
+            
+        case 'transcript':
+            // Show what user said
+            addMessage('user', content);
+            updateVoiceStatus('⏳', 'Processing...', 'processing');
+            break;
+            
+        case 'response':
+            // Show AI response
+            const responseData = {
+                response: content,
+                confidence: metadata?.confidence || 0.0,
+                source: metadata?.source || 'voice',
+                language: 'English'
+            };
+            addMessage('assistant', responseData);
+            break;
+            
+        case 'error':
+            updateVoiceStatus('❌', content, 'error');
+            addVoiceMessage('error', `Error: ${content}`);
+            break;
+            
+        default:
+            console.log('Unknown voice message type:', type);
+    }
+}
+
+// Handle voice status updates
+function handleVoiceStatus(status) {
+    switch (status) {
+        case 'connected':
+            updateVoiceStatus('✅', 'Connected', 'success');
+            break;
+        case 'listening':
+            updateVoiceStatus('🎤', 'Listening...', 'listening');
+            break;
+        case 'processing':
+            updateVoiceStatus('⏳', 'Processing...', 'processing');
+            break;
+        case 'speaking':
+            updateVoiceStatus('🔊', 'Speaking...', 'speaking');
+            break;
+        case 'ready':
+            updateVoiceStatus('✅', 'Ready', 'success');
+            break;
+    }
+}
+
+// Update voice status display
+function updateVoiceStatus(icon, text, statusClass) {
+    const voiceStatusIcon = document.getElementById('voiceStatusIcon');
+    const voiceStatusText = document.getElementById('voiceStatusText');
+    const voiceStatus = document.getElementById('voiceStatus');
+    
+    voiceStatusIcon.textContent = icon;
+    voiceStatusText.textContent = text;
+    
+    // Remove all status classes
+    voiceStatus.classList.remove('success', 'error', 'listening', 'processing', 'speaking');
+    
+    // Add new status class
+    if (statusClass) {
+        voiceStatus.classList.add(statusClass);
+    }
+}
+
+// Add voice-specific system message
+function addVoiceMessage(type, text) {
+    const chatContainer = document.getElementById('chatContainer');
+    
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message voice-system-message ${type}`;
+    messageDiv.innerHTML = `<em>${text}</em>`;
+    
+    chatContainer.appendChild(messageDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+// Send text query via voice WebSocket
+function sendVoiceTextQuery(query) {
+    if (voiceWebSocket && voiceWebSocket.readyState === WebSocket.OPEN) {
+        const language = document.getElementById('language').value;
+        voiceWebSocket.send(JSON.stringify({
+            type: 'text',
+            content: query,
+            language: language
+        }));
+        return true;
+    }
+    return false;
+}

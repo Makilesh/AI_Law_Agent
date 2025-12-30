@@ -45,16 +45,30 @@
                     </div>
 
                     <div class="input-area">
+                        <button 
+                            id="voiceBtn" 
+                            class="voice-btn"
+                            onclick="toggleVoiceChat()"
+                            title="Voice Chat (Click to start/stop)"
+                        >
+                            <span id="voiceBtnIcon">🎤</span>
+                        </button>
                         <input 
                             type="text" 
                             id="queryInput" 
-                            placeholder="Type your legal question here..."
+                            placeholder="Type your legal question here or use voice..."
                             onkeypress="handleKeyPress(event)"
                         >
                         <button id="sendBtn" onclick="sendQuery()">
                             <span id="sendBtnText">Send</span>
                             <span id="sendBtnLoader" class="loader" style="display: none;"></span>
                         </button>
+                    </div>
+
+                    <!-- Voice Status Indicator -->
+                    <div id="voiceStatus" class="voice-status" style="display: none;">
+                        <span id="voiceStatusIcon">🎤</span>
+                        <span id="voiceStatusText">Ready</span>
                     </div>
                 </div>
             </div>

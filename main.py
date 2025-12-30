@@ -1576,7 +1576,8 @@ async def voice_websocket(websocket: WebSocket):
         try:
             if router_agent is None:
                 router_agent = get_router_agent()
-            result = router_agent.process_query(query, language)
+            # router_agent.process_query is async, must await it
+            result = await router_agent.process_query(query, language)
             return {
                 "response": result.get("response", "I couldn't process that query."),
                 "confidence": result.get("confidence", 0.0),
