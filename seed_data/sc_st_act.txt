@@ -1,0 +1,408 @@
+=== SCHEDULED CASTES AND SCHEDULED TRIBES (PREVENTION OF ATROCITIES) ACT, 1989 ===
+
+**Act Number:** 33 of 1989
+**Enacted:** September 11, 1989
+**Effective Date:** January 30, 1990
+**Major Amendments:** 2015, 2018, 2019
+**Total Sections:** 23 sections across 8 chapters
+**Law Type:** Criminal Law - Social Justice and Protection
+
+The Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 (SC/ST Act) is a special legislation enacted to prevent atrocities and provide protection to members of Scheduled Castes and Scheduled Tribes. The Act recognizes that members of these communities face systemic discrimination, violence, and social boycott, and provides for enhanced punishment beyond the Indian Penal Code (now BNS). It establishes Special Courts for trial and provides for relief and rehabilitation of victims.
+
+**Key Features:**
+- Enhanced protection beyond BNS/IPC for SC/ST members
+- Strict punishments (minimum 6 months to life imprisonment)
+- Anticipatory bail prohibited for accused
+- Investigation to be completed within 30 days
+- Mandatory constitution of Special Courts
+- Economic and social rehabilitation of victims
+- Presumption in favor of victim
+
+---
+
+=== SC/ST Act Section 2(1): Definitions of Scheduled Caste and Scheduled Tribe ===
+
+**Section Number:** Section 2(1)(sc) and Section 2(1)(st)
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Who is protected under the Act
+
+**Description:**
+Section 2(1) defines Scheduled Caste and Scheduled Tribe by reference to Article 341 and Article 342 of the Constitution of India. "Scheduled Castes" means castes, races or tribes or parts of castes, races or tribes deemed under Article 341 to be Scheduled Castes in relation to the State concerned. "Scheduled Tribes" means tribes or tribal communities or parts of tribes or tribal communities deemed under Article 342 to be Scheduled Tribes for that State or Union Territory.
+
+The lists of Scheduled Castes and Scheduled Tribes are notified by the President of India for each State and Union Territory. These lists vary across states.
+
+**Key Elements:**
+1. SC and ST defined by reference to Presidential notification under Constitution
+2. Lists differ for each state and union territory
+3. Person must belong to notified SC/ST community in the relevant state
+4. Caste certificate issued by competent authority is proof
+5. Act protects only members of notified SC/ST communities
+
+**Who is Protected:**
+- Person belonging to caste/tribe notified as SC in the state where they reside
+- Person belonging to tribe/tribal community notified as ST
+- Protection applies in state/UT where person's caste/tribe is notified as SC/ST
+
+**Practical Examples:**
+- Person belonging to Chamaar caste (notified SC in Uttar Pradesh) - Protected
+- Person belonging to Madiga caste (notified SC in Andhra Pradesh) - Protected
+- Person belonging to Bhil tribe (notified ST in Rajasthan, MP, Gujarat) - Protected
+- Person belonging to Gond tribe (notified ST in multiple states) - Protected
+- Person claiming SC status without valid caste certificate - Must prove SC status
+- Person's caste is SC in State A but not notified in State B where offense occurred - Protection may not apply in State B
+
+**Caste Certificate:**
+- Issued by Tehsildar or District Magistrate or other competent authority
+- Required as proof of SC/ST status
+- False caste certificate is punishable offense
+
+**Related Sections:**
+- Constitution Article 341: SC lists
+- Constitution Article 342: ST lists
+- Constitution Article 15(4), 16(4): Reservations for SC/ST
+- Constitution Article 17: Abolition of untouchability
+
+**Important Notes:**
+- Protection applies only to members of notified SC/ST communities
+- Burden on victim to prove SC/ST status
+- Caste certificate essential for claiming protection under the Act
+- SC/ST status determined by birth, not by conversion or adoption
+
+---
+
+=== SC/ST Act Section 3: Atrocities Against SC/ST Members ===
+
+**Section Number:** Section 3(1) and Section 3(2)
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Offense:** Commission of atrocities against SC/ST persons
+
+**Description:**
+Section 3 is the core provision of the Act, listing various acts that constitute "atrocities" against members of Scheduled Castes and Scheduled Tribes. Section 3(1) lists specific offenses committed by non-SC/ST persons against SC/ST persons with enhanced punishments. Section 3(2) lists offenses that are not covered in the BNS/IPC but are punishable under this Act.
+
+The Act recognizes that caste-based violence and discrimination require special criminal provisions with deterrent punishments. The offenses range from physical violence and sexual exploitation to social humiliation and economic exploitation.
+
+**Major Atrocities Under Section 3(1):**
+
+**1. Section 3(1)(i): Forced to Drink or Eat Obnoxious Substance**
+- Forcing SC/ST person to drink or eat inedible or obnoxious substance
+- Example: Forcing to eat human excreta, drink urine
+- Punishment: Minimum 6 months, may extend to 5 years, and fine
+
+**2. Section 3(1)(ii): Acts with Intent to Cause Injury**
+- Causing injury, insult, or annoyance by dumping excreta, waste matter, carcasses, or other obnoxious substance
+- Example: Throwing garbage in SC/ST person's house, dumping dead animal
+- Punishment: Minimum 6 months to 5 years and fine
+
+**3. Section 3(1)(v): Wrongful Dispossession from Land**
+- Wrongfully occupying or cultivating land owned or allotted to SC/ST person
+- Forcibly dispossessing SC/ST person from land
+- Example: Upper caste landlord occupying SC person's land
+- Punishment: Minimum 6 months to 5 years and fine
+
+**4. Section 3(1)(x): Sexual Exploitation**
+- Assaulting or using force on SC/ST woman with intent to dishonor or outrage her modesty
+- Sexual exploitation or touching private parts
+- Compelling SC/ST woman to devadasi practice
+- Example: Sexual harassment, molestation of SC/ST woman
+- Punishment: Minimum 6 months to 5 years and fine
+
+**5. Section 3(1)(xi): Insult on Caste Grounds in Public View**
+- Intentionally insulting or intimidating with intent to humiliate SC/ST member in public place
+- Example: Calling casteist slurs in public, prohibiting from entering temple
+- Punishment: Minimum 6 months to 5 years and fine
+
+**6. Section 3(1)(xii): Intimidation**
+- Intimidating or preventing SC/ST person from exercising electoral rights
+- Preventing from accessing public place or using common property resources
+- Example: Preventing SC person from voting, using public well
+- Punishment: Minimum 6 months to 5 years and fine
+
+**7. Section 3(1)(xiii): False Implication**
+- Instituting false, malicious, or vexatious legal proceedings against SC/ST person
+- Filing false evidence
+- Purpose: Harassment and economic drain
+- Punishment: Minimum 6 months to 5 years and fine
+
+**8. Section 3(1)(xiv): False Information**
+- Giving false or frivolous information to public servant
+- Causes SC/ST person to be arrested or searched
+- Punishment: Minimum 6 months to 5 years and fine
+
+**9. Section 3(1)(xv): Public Servant Insult**
+- Intentionally insulting or intimidating SC/ST public servant in discharge of duty
+- Example: Casteist remarks against SC/ST government employee
+- Punishment: Minimum 6 months to 5 years and fine
+
+**10. Section 3(1)(wa): Atrocity in Public View**
+- Garlanding with footwear
+- Parading naked or semi-naked
+- Compelling to parade with painted face or body
+- Forcibly removing clothes
+- Tonsuring or removing hair
+- Examples: Public humiliation rituals based on caste
+- Punishment: Minimum 6 months to 5 years and fine
+
+**Additional Serious Offenses:**
+
+**11. Section 3(1)(wb): Sexual Offenses**
+- Devadasi practice
+- Sexual intercourse with SC/ST woman against her will
+- Not being spouse, commits penetrative sexual intercourse with SC/ST woman
+- Punishment: Life imprisonment and fine
+
+**12. Section 3(1)(wc): Touch Offenses**
+- Intentionally touches SC/ST woman inappropriately or applies substance on her body
+- Punishment: Imprisonment up to 3 years and fine
+
+**13. Section 3(1)(wd): Use of Position for Sexual Exploitation**
+- Uses position of dominance for sexual exploitation of SC/ST woman
+- Punishment: Imprisonment for 5 years to life and fine
+
+**14. Section 3(1)(ze): Abuse of Dominant Position**
+- Taking advantage of social, economic, or political dominance to prevent SC/ST person from using public place or common property
+- Punishment: Minimum 1 year to 5 years and fine
+
+**15. Section 3(1)(zf): Forcing Labor**
+- Compelling SC/ST person to do manual scavenging
+- Compelling to remove carcasses or dig graves
+- Punishment: Imprisonment for 1 to 5 years and fine
+
+**16. Section 3(1)(zg): Denying Customary Rights**
+- Denying SC/ST person customary right of passage to public place
+- Obstructing use of public place
+- Denying access to water source or burial ground
+- Punishment: Imprisonment for 3 months to 3 years and fine
+
+**Section 3(2) - Additional Offenses:**
+
+**1. Section 3(2)(i): Manual Scavenging**
+- Employing SC/ST person for manual scavenging
+- Punishment: Imprisonment for 1 year to 5 years and fine (minimum ₹40,000)
+
+**2. Section 3(2)(v): Social and Economic Boycott**
+- Imposing social or economic boycott against SC/ST persons
+- Ostracism, preventing from accessing services
+- Punishment: Minimum 6 months to 5 years and fine
+
+**3. Section 3(2)(vii): Mass Atrocity**
+- Causing mass violence against SC/ST community
+- Destruction of property, eviction from village
+- Punishment: Life imprisonment and fine, plus compensation
+
+**Practical Examples:**
+- Upper caste men parade SC man with blackened face through village for alleged offense - Section 3(1)(wa), 6 months to 5 years
+- Landlord forces SC agricultural laborer to eat inedible substance - Section 3(1)(i), 6 months to 5 years
+- Village panchayat declares social boycott of SC family for marrying outside caste - Section 3(2)(v), 6 months to 5 years
+- Person calls SC public servant casteist slur while on duty - Section 3(1)(xv), 6 months to 5 years
+- Person rapes ST woman in village - Section 3(1)(wb), life imprisonment
+- Landlord forces SC person to remove dead animal carcass - Section 3(1)(zf), 1 to 5 years
+
+**Related Sections:**
+- SC/ST Act Section 4: Punishment for atrocities
+- BNS Sections: Corresponding offenses with lower punishment
+- Constitution Article 17: Abolition of untouchability
+
+**Cognizable:** Yes
+**Bailable:** No
+**Compoundable:** No
+
+**Important Notes:**
+- Offenses under SC/ST Act carry higher punishment than corresponding BNS offenses
+- If same act punishable under BNS and SC/ST Act, SC/ST Act provisions prevail
+- Accused not entitled to anticipatory bail (Section 18)
+- Investigation must be completed within 30 days
+- Presumption that accused had knowledge of victim's SC/ST status
+
+---
+
+=== SC/ST Act Section 4: Punishment for Atrocities ===
+
+**Section Number:** Section 4
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Punishment for offenses listed in Section 3
+
+**Description:**
+Section 4 prescribes the punishment for offenses listed in Section 3. The punishments range from a minimum of 6 months to life imprisonment, depending on the gravity of the offense. Section 4 also provides for enhanced punishment if the offense is committed by public servants or if the accused holds a position of dominance over the victim.
+
+**Punishment Structure:**
+
+**1. General Offenses (Section 3(1)(i)-(xv)):**
+- Imprisonment: Not less than 6 months but may extend to 5 years
+- Fine: As specified for each offense
+
+**2. Sexual Offenses (Section 3(1)(wb)):**
+- Imprisonment: Life imprisonment (remainder of natural life)
+- Fine: Substantial fine
+
+**3. Mass Atrocities (Section 3(2)(vii)):**
+- Imprisonment: Life imprisonment
+- Fine: Plus compensation to victims
+
+**4. Enhanced Punishment for Public Servants (Section 5):**
+- If offense committed by public servant, punishment enhanced by at least 1 year
+- May extend to 2 years additional imprisonment
+
+**Related Sections:**
+- SC/ST Act Section 3: Offenses
+- SC/ST Act Section 5: Public servant enhanced punishment
+- BNS: Corresponding offenses (lower punishment)
+
+**Important Notes:**
+- Minimum sentences cannot be reduced by court
+- Sentences under SC/ST Act are in addition to BNS sentences if both apply
+- Court must record reasons if awarding less than maximum punishment
+
+---
+
+=== SC/ST Act Section 18: Anticipatory Bail Not Available ===
+
+**Section Number:** Section 18
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Prohibition of anticipatory bail
+
+**Description:**
+Section 18 explicitly excludes the application of Section 438 of the Code of Criminal Procedure (CrPC), which provides for anticipatory bail (now Section 482 of BNSS). This means that a person accused of an offense under the SC/ST Act cannot seek anticipatory bail (pre-arrest bail) from any court.
+
+The prohibition is based on the rationale that caste-based atrocities are serious offenses requiring strict deterrence, and allowing anticipatory bail would defeat the purpose of the Act by enabling powerful accused to evade arrest and intimidate victims.
+
+**Key Provisions:**
+
+1. **No Anticipatory Bail:** Section 438 CrPC (Section 482 BNSS) shall not apply to accused of offense under SC/ST Act
+2. **Arrest Without Warrant:** Police can arrest accused without warrant (cognizable offense)
+3. **Regular Bail:** Accused can apply for regular bail after arrest under Section 437 CrPC (Section 483 BNSS)
+
+**Supreme Court Interpretation:**
+
+The Supreme Court has held that:
+- Prohibition on anticipatory bail applies only if prima facie case is established
+- If complaint does not disclose prima facie case under SC/ST Act, anticipatory bail can be granted
+- Courts must examine if ingredients of SC/ST Act offense are satisfied before denying anticipatory bail
+- Mechanical denial of anticipatory bail without examining prima facie case is wrong
+
+**Practical Examples:**
+- SC person files complaint under Section 3(1)(xi) for casteist insult, accused seeks anticipatory bail - Not available if prima facie case
+- Person accused of atrocity under Section 3, applies for anticipatory bail - High Court/Sessions Court must refuse if prima facie case
+- Complaint filed against person under SC/ST Act but no prima facie case made out - Court may grant anticipatory bail
+- Person arrested for Section 3(1)(v) offense (land dispossession), applies for regular bail after arrest - Can apply for regular bail under CrPC/BNSS
+
+**Related Sections:**
+- BNSS Section 482: Anticipatory bail provision (not applicable to SC/ST Act)
+- BNSS Section 483: Regular bail provision (applicable after arrest)
+- SC/ST Act Section 3: Offenses (triggering anticipatory bail bar)
+- SC/ST Act Section 18A: Procedure for arrest
+
+**Important Notes:**
+- 2018 Amendment removed the requirement of preliminary inquiry before arrest
+- Police can arrest without obtaining prior approval (2018 Amendment)
+- Regular bail can be sought after arrest
+- Denial of anticipatory bail not automatic - prima facie case must exist
+- Burden on prosecution to show prima facie case for denying anticipatory bail
+
+---
+
+=== SC/ST Act Section 8: Designation of Special Courts ===
+
+**Section Number:** Section 8
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Special Courts for trial of atrocities
+
+**Description:**
+Section 8 mandates that the State Government shall, with the concurrence of the Chief Justice of the High Court, designate a Court of Session to be a Special Court for each district to provide speedy trial of offenses under the Act. The Special Court has jurisdiction to try offenses under the Act and has the same powers as a Sessions Court.
+
+**Composition and Powers:**
+- Judge of rank of Sessions Judge designated as Special Court
+- Special Public Prosecutor appointed to conduct cases
+- Same powers as Sessions Court under BNSS
+
+**Jurisdiction:**
+- Exclusive jurisdiction over SC/ST Act offenses
+- Trial must be completed within 2 months (extendable)
+- Witness examination expedited
+
+**Related Sections:**
+- SC/ST Act Section 14: Special Public Prosecutor
+- BNSS: Trial procedure provisions
+
+**Important Notes:**
+- At least one Special Court mandatory per district
+- Special Court trial is mandatory, regular court cannot try SC/ST Act offenses
+- Appeal lies to High Court
+
+---
+
+=== SC/ST Act Section 15: Externment of Offenders ===
+
+**Section Number:** Section 15
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Removal of offender from locality
+
+**Description:**
+Section 15 empowers the District Magistrate to externment (remove) a person from the district or a specified area if satisfied that such person is likely to commit an atrocity against SC/ST persons. Externment is a preventive measure to protect SC/ST communities from repeat offenders or persons who pose a threat.
+
+**Grounds for Externment:**
+- Person has been convicted of offense under SC/ST Act
+- Person is likely to commit atrocity again
+- Person's presence is likely to cause harm or fear to SC/ST persons
+
+**Duration:**
+- Externment for period not exceeding 2 years
+- Can be renewed for further periods
+
+**Related Sections:**
+- CrPC Section 144: Preventive orders
+- SC/ST Act Section 3: Offenses
+
+**Important Notes:**
+- Externment is preventive, not punitive
+- Person can challenge externment order before High Court
+- Violation of externment order is punishable
+
+---
+
+=== SC/ST Act Section 21: Economic and Social Rehabilitation ===
+
+**Section Number:** Section 21
+**Act Name:** SC and ST (Prevention of Atrocities) Act, 1989
+**Law Type:** Criminal Law - Social Justice
+**Subject:** Relief and rehabilitation of victims
+
+**Description:**
+Section 21 obligates the State Government to provide economic and social rehabilitation to victims of atrocities. This includes monetary relief, land allotment, housing, and other facilities to enable victims to rebuild their lives after suffering atrocities.
+
+**Relief Measures:**
+- Immediate financial assistance
+- Compensation for property loss
+- Land allotment
+- Housing assistance
+- Livelihood support
+- Medical treatment
+- Legal aid
+
+**Procedure:**
+- District Level Vigilance and Monitoring Committee assesses relief
+- Relief disbursed within 30 days
+- Additional relief from accused after conviction
+
+**Related Sections:**
+- SC/ST Act Rules: Relief amounts and procedure
+- SC/ST Act Section 17: Compensation from convicted accused
+
+**Important Notes:**
+- Relief is in addition to compensation under victim compensation scheme
+- State Government bears cost of relief
+- Compensation from convicted person is additional
+- Relief aims to restore victim's dignity and livelihood
+
+---
+
+**End of SC/ST Act Seed File**
+**Total Sections Covered:** 8 key sections covering offenses, punishment, procedure, and relief
+**Cross-References:** Constitution (Articles 341, 342, 17), BNS, BNSS
+**Law Type:** Criminal Law - Social Justice
+**Effective Date:** January 30, 1990; Major Amendments: 2015, 2018, 2019

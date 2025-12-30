@@ -1,0 +1,556 @@
+=== BHARATIYA SAKSHYA ADHINIYAM, 2023 (BSA) ===
+
+**Act Number:** 47 of 2023
+**Effective Date:** July 1, 2024
+**Replaces:** Indian Evidence Act, 1872
+**Total Sections:** 170 sections across 12 chapters
+**Law Type:** Evidence Law
+
+The Bharatiya Sakshya Adhiniyam, 2023 (BSA) is an Act of the Parliament of India that consolidates and provides general rules and principles of evidence for fair trial. It replaces the Indian Evidence Act, 1872 and introduces significant reforms including treating electronic records as primary evidence and modernizing confession laws.
+
+---
+
+=== BSA Section 3: Interpretation Clause ===
+
+**Section Number:** Section 3
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Definitions and interpretation
+
+**Description:**
+Section 3 of the BSA provides the interpretation clause that defines fundamental terms used throughout the Act. This section establishes the foundation for understanding evidence law by clarifying what constitutes a court, fact, relevant fact, document, and evidence. These definitions are critical for proper application of evidentiary rules in judicial proceedings.
+
+The section ensures uniformity in interpretation across all courts in India and prevents ambiguity in the application of evidence law. It defines "court" to include all judges and magistrates exercising judicial functions, "fact" to mean anything perceived by senses or mental condition, and "evidence" to mean statements and documents allowed or required by courts.
+
+**Key Elements:**
+1. Court includes all judges, magistrates, and persons authorized by law to take evidence
+2. Fact means and includes any state of things capable of being perceived by senses, or any mental condition
+3. Relevant fact means one connected with another in ways specified in the Act
+4. Document means any matter expressed or described upon any substance by letters, figures, marks, or electronic means
+5. Evidence means statements made before court and documents produced for inspection
+
+**Practical Examples:**
+- A judge in a sessions court, a magistrate in a criminal trial, and an arbitrator taking evidence are all "courts" under this definition
+- Temperature readings from a thermometer, a person's mental state of fear, and electronic data on a server are all "facts"
+- A contract document, an email, a WhatsApp message, and a voice recording are all "documents" admissible as evidence
+
+**Related Sections:**
+- BSA Section 57: Primary evidence (defines what constitutes original documents)
+- BSA Section 58: Secondary evidence (defines copies and oral accounts)
+- BNSS Section 277: Examination of witnesses (procedure for taking evidence)
+
+**Important Notes:**
+- The BSA expands the definition of "document" to explicitly include electronic and digital records
+- This section applies to all judicial proceedings in or before any court, including courts-martial
+- Does not apply to affidavits presented to courts or proceedings before arbitrators without court involvement
+
+---
+
+=== BSA Section 22: Admissions and Confessions ===
+
+**Section Number:** Section 22
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Admission defined and relevance
+
+**Description:**
+Section 22 of the BSA deals with admissions, which are statements oral or documentary suggesting any inference as to any fact in issue or relevant fact. An admission is different from a confession in that it need not acknowledge guilt but merely admits some fact that may be used against the person making it.
+
+Admissions are relevant and can be proved against the person making them or their representative in interest. They may be used as substantive evidence and not merely for contradiction. However, admissions are not conclusive proof and can be explained or contradicted by the person who made them.
+
+**Key Elements:**
+1. Admission is a statement suggesting an inference about a fact in issue or relevant fact
+2. May be oral, documentary, or contained in electronic form
+3. Made by party to proceeding or their authorized agent
+4. Relevant as evidence against the person making it
+5. Not conclusive but may be explained or contradicted
+
+**Admissibility Criteria:**
+- Statement must relate to fact in issue or relevant fact
+- Made voluntarily and not under coercion or threat
+- Made by person with personal knowledge or authority
+- Need not be against interest at the time it was made
+
+**Practical Examples:**
+- In a cheating case, the accused's email to victim saying "I will return your money" is an admission that money was taken
+- In a property dispute, a party's statement in earlier court proceedings that land belongs to opponent is a relevant admission
+- In a breach of contract case, defendant's acknowledgment in a letter that goods were received is an admission of receipt
+
+**Related Sections:**
+- BSA Section 23: Confession to police officer (specialized type of admission in criminal cases)
+- BSA Section 24: Proof of admissions against persons making them
+- BSA Section 41: Relevancy of certain evidence for proving admissions
+
+**Important Notes:**
+- Admissions are substantive evidence, unlike prior statements used only for contradiction
+- Party making admission can still prove the admitted fact is untrue
+- Admissions by agents or authorized representatives bind the principal
+
+---
+
+=== BSA Section 23: Confession to Police Officer ===
+
+**Section Number:** Section 23
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Inadmissibility of confessions to police
+
+**Description:**
+Section 23 of the BSA consolidates the law related to confessions made to police officers. It provides that no confession made to a police officer shall be proved against a person accused of any offense. Similarly, no confession made by a person while in police custody shall be proved unless made in the immediate presence of a Magistrate.
+
+This section protects accused persons from coercion and ensures confessions are made voluntarily. The proviso creates an important exception: when a fact is discovered as a result of information given by the accused in custody, so much of that information as distinctly relates to the discovered fact may be proved.
+
+Previously, these provisions were spread across Sections 25, 26, and 27 of the Indian Evidence Act, 1872. The BSA has consolidated them into a single section for clarity and ease of application.
+
+**Key Elements:**
+1. Confessions to police officers are inadmissible as evidence
+2. Confessions in police custody are inadmissible unless made before a Magistrate
+3. The Magistrate must record the confession and ensure it was voluntary
+4. Exception: Information leading to discovery of facts can be proved
+5. Only the portion of information distinctly relating to discovered fact is admissible
+
+**Practical Examples:**
+- Accused tells police "I murdered X and buried the body near the river" - This confession is inadmissible
+- Based on accused's information, police discover the body near the river - The information "body buried near river" is admissible under the discovery exception
+- Accused makes confession to police, then repeats it before Magistrate who records it - The confession before Magistrate is admissible
+- Accused in police custody tells sub-inspector about stolen property location, police recover it - Only information about location is admissible, not the admission of theft
+
+**Related Sections:**
+- BSA Section 22: Admissions (general category of statements)
+- BSA Section 24: Proof of confessions
+- BNSS Section 183: Recording of confessions by Magistrate
+- BNS (relevant substantive offenses for which confessions may be made)
+
+**Cognizance:** Discovery information admissible even if confession inadmissible
+
+**Important Notes:**
+- Confession to police officer is inadmissible even if voluntary
+- "Police officer" includes any officer subordinate to the Superintendent of Police
+- Magistrate recording confession must explain to accused that they are not bound to confess
+- Discovery exception (formerly Section 27 IEA) is a proviso to the general rule of inadmissibility
+- Disclosure statement alone cannot be the sole basis of conviction, only corroborative evidence
+
+---
+
+=== BSA Section 24: Confession Caused by Inducement, Threat or Promise ===
+
+**Section Number:** Section 24
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Involuntary confessions inadmissible
+
+**Description:**
+Section 24 provides that a confession made by an accused person is irrelevant in a criminal proceeding if it appears to the court that it was caused by inducement, threat, or promise. The inducement, threat, or promise must have reference to the charge against the accused and must come from a person in authority.
+
+The test is whether the confession was voluntary. If the accused was influenced by hope of advantage or fear of harm regarding the charge, the confession is tainted and inadmissible. The court must be satisfied that the confession was free and voluntary before admitting it as evidence.
+
+**Key Elements:**
+1. Confession must be voluntary to be admissible
+2. Inducement, threat, or promise must relate to the charge
+3. Must proceed from person in authority (police, magistrate, prosecutor, etc.)
+4. Test: Would the inducement reasonably cause the accused to confess?
+5. Burden on prosecution to prove confession was voluntary
+
+**Examples of Invalid Confessions:**
+- Police officer tells accused "Confess and we will not arrest your family" - Inadmissible due to threat
+- Magistrate says "If you confess, I will recommend lenient sentence" - Inadmissible due to inducement
+- Co-accused already convicted tells accused "Just confess, it will be easier" - Admissible, as co-accused is not a person in authority
+- After police torture accused for 3 days, accused confesses to crime - Inadmissible due to coercion even if no explicit threat
+
+**Related Sections:**
+- BSA Section 23: Confession to police officer
+- BSA Section 22: Admissions
+- BSA Section 45: Relevancy of judgments
+
+**Important Notes:**
+- Burden of proving voluntariness is on prosecution
+- Confession must be free from any external influence related to the charge
+- Even slight inducement can invalidate a confession
+- Subsequent confession may be valid if sufficient time passed and influence removed
+
+---
+
+=== BSA Section 27: Expert Opinion ===
+
+**Section Number:** Section 27
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Opinion of experts admissible
+
+**Description:**
+Section 27 of the BSA makes expert opinion relevant when the court has to form an opinion on matters requiring special knowledge. The opinion of experts on foreign law, science, art, handwriting, finger impressions, and other specialized subjects is admissible as relevant evidence. This section recognizes that courts cannot have expertise in every field and must rely on qualified experts.
+
+An expert is a person who has special skill, training, or experience in a particular field that qualifies them to give an opinion. The expert's opinion is admissible but not binding on the court. The court evaluates the expert's qualifications, the basis of their opinion, and can accept or reject it.
+
+**Key Elements:**
+1. Expert opinion admissible on matters requiring special knowledge
+2. Includes opinions on foreign law, science, art, handwriting, finger impressions
+3. Expert must have special skill, training, or experience in the relevant field
+4. Court not bound by expert opinion but gives it due weight
+5. Expert may be cross-examined on qualifications and basis of opinion
+
+**Subjects for Expert Opinion:**
+1. Foreign law (advocate or legal expert from that country)
+2. Science and technology (engineers, scientists, doctors)
+3. Handwriting and signature verification (handwriting experts)
+4. Fingerprints and forensic evidence (forensic experts)
+5. Mental condition (psychiatrists, psychologists)
+6. Electronic evidence authentication (cyber forensic experts)
+
+**Practical Examples:**
+- In a murder case, forensic expert testifies that fingerprints on weapon match the accused - Expert opinion relevant
+- In a forgery case, handwriting expert compares disputed signature with specimen signatures - Opinion admissible
+- In a medical negligence case, doctor testifies about standard of care expected from surgeons - Expert opinion relevant
+- In a cyber fraud case, digital forensic expert explains how IP address traces to accused's device - Technical opinion admissible
+- In a patent dispute, engineer explains technical aspects of the invention - Expert opinion relevant
+
+**Related Sections:**
+- BSA Section 28: Facts bearing upon opinions of experts
+- BSA Section 29: Opinion as to handwriting
+- BSA Section 62-63: Electronic records requiring expert certification
+- BNSS Section 291: Examination of experts
+
+**Important Notes:**
+- Expert opinion is opinion evidence, not factual evidence
+- Court should evaluate basis of expert's opinion and methodology used
+- Conflicting expert opinions require court to weigh credibility and reasoning
+- Expert witness may be appointed by court or called by parties
+- Under Section 63(4)(c), electronic evidence requires expert certification
+
+---
+
+=== BSA Section 62-63: Electronic Evidence and Digital Records ===
+
+**Section Number:** Section 62 and Section 63
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Admissibility of electronic and digital records
+
+**Description:**
+Sections 62 and 63 of the BSA govern the admissibility of electronic records as evidence. These sections replace and modernize Section 65A and 65B of the Indian Evidence Act, 1872. The BSA introduces a major reform by treating electronic and digital records as primary evidence rather than secondary evidence.
+
+Section 62 provides that nothing in the BSA shall deny the admissibility of electronic or digital records merely on the ground that they are in electronic or digital form. Section 63 provides for special provisions regarding electronic records, including certification requirements and authentication procedures.
+
+The BSA expands the scope to include electronic records in semiconductor memories, optical media, magnetic media, and any communication devices like smartphones, laptops, and servers.
+
+**Key Elements:**
+1. Electronic records are primary evidence, not secondary evidence
+2. Admissibility not to be denied solely because record is in electronic form
+3. Applies to information stored in semiconductor memory or communication devices
+4. Certification required under Section 63(4)(c) with Part A (party submitting) and Part B (expert)
+5. Computer output admissible if produced during regular use and computer functioning properly
+
+**Admissibility Criteria:**
+- Electronic record must be produced from computer in regular use
+- Computer must have been operating properly during relevant period
+- Information must be of kind regularly fed into the computer
+- Certificate in Form specified under Section 63(4)(c) must be provided
+- Expert must certify authenticity and proper functioning of the system
+
+**Practical Examples:**
+- Email correspondence in a cheating case showing fraudulent promises - Admissible with proper certification
+- WhatsApp messages showing conspiracy between accused persons - Admissible as primary evidence
+- CCTV footage showing accused committing theft - Admissible with expert certification of authenticity
+- Bank transaction records in electronic form showing money transfer - Admissible as computer-generated evidence
+- GPS location data from mobile phone showing accused was at crime scene - Admissible with proper expert certificate
+- Voice recording from smartphone showing extortion demand - Admissible as electronic record
+
+**Related Sections:**
+- BSA Section 57: Primary evidence (electronic records now included)
+- BSA Section 27: Expert opinion (expert certification required for electronic evidence)
+- BSA Section 58: Secondary evidence
+- IT Act Section 65B: Previous law on electronic evidence (now replaced)
+
+**Important Notes:**
+- Major change from Indian Evidence Act: Electronic records upgraded from secondary to primary evidence
+- Certificate under Section 63(4)(c) has two parts: Part A by party submitting, Part B by expert
+- Lack of clear definition of "expert" has created implementation challenges
+- Limited forensic labs in India (only seven outside major cities) makes expert certification difficult
+- Electronic records include emails, WhatsApp, social media posts, CCTV, GPS data, transaction logs
+- Chain of custody must be maintained to prove record was not tampered with
+
+---
+
+=== BSA Section 114: Presumptions Court May Make ===
+
+**Section Number:** Section 114
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Discretionary presumptions
+
+**Description:**
+Section 114 empowers courts to presume the existence of certain facts based on human conduct, nature, and public affairs. These presumptions are discretionary (may presume) rather than mandatory (shall presume). The court may draw reasonable inferences from proven facts based on common sense and human experience.
+
+The section lists specific presumptions courts may make, including presumptions about judicial and official acts, common course of business, and human conduct. However, courts are not bound to draw these presumptions and may refuse if circumstances indicate otherwise.
+
+**Key Presumptions Courts May Make:**
+1. That judicial and official acts have been regularly performed
+2. That common course of natural events has followed in particular cases
+3. That evidence withheld would be unfavorable if produced
+4. That accomplice is unworthy of credit unless corroborated
+5. That a document produced from proper custody is genuine
+6. That a man who has control over a woman's will uses it for his own advantage
+7. That parties to judicial proceedings act in good faith
+
+**Presumption of Regularity:**
+- Courts may presume official acts were done in accordance with law
+- Judicial proceedings properly conducted unless shown otherwise
+- Public officers performed duties regularly
+
+**Adverse Inference:**
+- If party fails to produce evidence in their control, court may presume it would be unfavorable
+- Applies when party could have produced evidence but chose not to
+- Particularly relevant in cases where crucial evidence is deliberately withheld
+
+**Practical Examples:**
+- Accused does not produce original documents though they are in his possession - Court may presume documents would show his guilt
+- Police officer's testimony about arrest procedure - Court may presume arrest was conducted regularly unless proved otherwise
+- Wife claims husband forced her to sign property deed - Court may presume husband used his influence over wife's will
+- Prosecution relies solely on accomplice testimony without corroboration - Court may presume accomplice is unreliable
+- Ancient document produced from proper custody without tampering - Court may presume document is genuine
+- Computer printout from bank produced in business records case - Court may presume it was generated in regular course of business
+
+**Related Sections:**
+- BSA Section 115: Presumptions court shall make (mandatory presumptions)
+- BSA Section 116: Estoppel
+- BSA Section 4: May presume, shall presume, conclusive proof (definitions)
+- BSA Section 22: Admissions
+
+**Important Notes:**
+- Section 114 presumptions are discretionary, not mandatory (court "may" presume)
+- Court must consider all circumstances before drawing presumption
+- Presumptions are rebuttable - opposite party can lead evidence to disprove
+- Adverse inference most commonly applied when crucial evidence withheld
+- Presumption of regularity does not apply if irregularity is proved
+
+---
+
+=== BSA Section 118: Who May Testify ===
+
+**Section Number:** Section 118
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Competency of witnesses
+
+**Description:**
+Section 118 establishes the general principle that all persons are competent to testify unless the court considers they are prevented from understanding the questions or giving rational answers due to tender age, extreme old age, disease (mental or physical), or any other cause. This is a liberal provision ensuring maximum availability of evidence.
+
+The section abolishes most historical disqualifications (such as conviction, interest in the case, relationship to parties) and makes competency the rule rather than the exception. The only ground for incompetency is inability to understand questions or give rational answers.
+
+**Key Elements:**
+1. All persons competent to testify unless incapable of understanding
+2. Age alone is not a disqualification (children can testify if they understand)
+3. Mental or physical condition may affect competency if severe enough
+4. Interest in the outcome does not disqualify witness (goes to credibility, not competency)
+5. Court determines competency as a preliminary question
+
+**Grounds for Incompetency:**
+1. Tender age preventing understanding (very young children)
+2. Extreme old age with mental deterioration
+3. Mental illness or intellectual disability affecting comprehension
+4. Physical disability preventing communication (unless accommodations possible)
+5. Intoxication or drug influence at time of testimony
+
+**Practical Examples:**
+- 8-year-old child witnessed assault - Court may allow testimony after assessing if child understands questions and can give rational answers
+- Person with hearing and speech disability - Competent to testify with sign language interpreter or written responses
+- Accused's wife in criminal case - Competent to testify (relationship does not disqualify, though spousal privilege may apply)
+- Person convicted of perjury in past - Competent to testify (past conviction affects credibility, not competency)
+- Person with financial interest in outcome of case - Competent to testify (interest affects weight of evidence, not admissibility)
+- Severely mentally ill person unable to understand questions - Incompetent to testify
+
+**Related Sections:**
+- BSA Section 119: Dumb witnesses (how persons unable to speak may testify)
+- BSA Section 120: Parties to civil proceedings and their spouses
+- BSA Section 128: Privilege of witness (grounds for refusing to answer)
+- BNSS Section 314: Examination of witnesses (procedure)
+
+**Important Notes:**
+- Competency is presumed; party challenging must prove witness is incompetent
+- Court should conduct preliminary examination to determine competency
+- Child witnesses should be examined in child-friendly manner
+- Persons with disabilities entitled to reasonable accommodations to testify
+- Incompetency must exist at time of testimony, not at time of event witnessed
+- Mental illness does not automatically disqualify - must affect ability to understand and respond
+
+---
+
+=== BSA Section 137: Examination of Witnesses ===
+
+**Section Number:** Section 137
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Order and mode of examination
+
+**Description:**
+Section 137 prescribes the order in which witnesses are to be examined. The examination consists of three stages: examination-in-chief (by the party calling the witness), cross-examination (by the adverse party), and re-examination (by the party who called the witness). This structured approach ensures fairness and allows each party to test the evidence.
+
+The section ensures that witnesses are thoroughly examined and their credibility is tested through cross-examination. The sequence is mandatory and designed to elicit truth while protecting the rights of all parties.
+
+**Three Stages of Examination:**
+
+1. **Examination-in-Chief:**
+   - Conducted by party who calls the witness
+   - Purpose: Elicit evidence supporting that party's case
+   - Generally, leading questions not permitted
+   - Witness states facts within their personal knowledge
+
+2. **Cross-Examination:**
+   - Conducted by adverse party
+   - Purpose: Test credibility, elicit favorable facts, impeach witness
+   - Leading questions permitted and encouraged
+   - May cover facts stated in examination-in-chief and relevant to case
+
+3. **Re-Examination:**
+   - Conducted by party who called witness
+   - Purpose: Clarify answers given in cross-examination
+   - Limited to matters arising from cross-examination
+   - Court may permit questions on new matters with permission
+
+**Key Principles:**
+1. Examination-in-chief must precede cross-examination
+2. Cross-examination is a matter of right, not discretion
+3. Re-examination limited to explaining cross-examination answers
+4. Court may permit additional examination at any stage in interest of justice
+5. Witness may be recalled for further examination with court permission
+
+**Practical Examples:**
+- In a cheating case, prosecution calls victim as witness - Victim testifies about fraudulent promises (examination-in-chief), defense questions victim's credibility and brings out inconsistencies (cross-examination), prosecution clarifies apparent contradictions (re-examination)
+- In a contract dispute, plaintiff calls expert on handwriting - Expert explains methodology in chief, defendant cross-examines on qualifications and technique, plaintiff re-examines to clarify limitations acknowledged in cross
+- Murder trial witness testifies seeing accused at crime scene - Prosecution elicits identification in chief, defense cross-examines on lighting conditions and distance, prosecution re-examines to explain witness was wearing glasses
+- Document expert testifies signature is forged - Expert explains comparison in chief, defense cross-examines on training and error rates, prosecution re-examines on specific points of similarity
+
+**Related Sections:**
+- BSA Section 138: Order of examinations (detailed rules)
+- BSA Section 141: Leading questions (when permitted and prohibited)
+- BSA Section 145: Cross-examination as to previous statements in writing
+- BSA Section 155: Impeaching credit of witness
+- BNSS Section 314: Examination of witnesses by court
+
+**Important Notes:**
+- Cross-examination is fundamental right and cannot be denied without good reason
+- Witness cannot be cross-examined on their character unless it is directly in issue
+- Leading questions permitted in cross-examination but not examination-in-chief
+- Court may limit cross-examination if irrelevant, repetitive, or harassing
+- Re-examination cannot introduce new facts not arising from cross-examination
+
+---
+
+=== BSA Section 155: Impeaching Credit of Witness ===
+
+**Section Number:** Section 155
+**Act Name:** Bharatiya Sakshya Adhiniyam, 2023
+**Law Type:** Evidence Law
+**Subject:** Attacking witness credibility
+
+**Description:**
+Section 155 provides the methods by which the credit of a witness may be impeached by the adverse party. The section allows the opposing party to challenge the witness's truthfulness and reliability through various means. Impeachment goes to the weight of evidence rather than its admissibility.
+
+A witness may be impeached by showing they have made prior inconsistent statements, have a motive to lie, have a general reputation for untruthfulness, or have been previously convicted of an offense. The purpose is to allow the trier of fact to properly evaluate the witness's testimony.
+
+**Methods of Impeaching Witness:**
+
+1. **Prior Inconsistent Statements:**
+   - Show witness made different statement on earlier occasion
+   - Must give witness opportunity to explain the inconsistency
+   - Can use written or oral prior statements
+
+2. **Bias or Interest:**
+   - Show witness has motive to favor one party
+   - Financial interest in outcome
+   - Relationship with party creating bias
+
+3. **General Reputation:**
+   - Prove witness has general reputation for untruthfulness
+   - Cannot prove specific acts of misconduct (unless relevant to case)
+   - Character evidence limited to reputation for truthfulness
+
+4. **Prior Conviction:**
+   - Show witness previously convicted of offense
+   - Particularly relevant if conviction involved dishonesty
+   - Goes to witness's general credibility
+
+5. **Physical or Mental Incapacity:**
+   - Show witness was unable to observe or remember accurately
+   - Poor eyesight, intoxication, mental condition
+   - Physical position preventing proper observation
+
+**Practical Examples:**
+- Witness testifies accused was wearing red shirt; lawyer shows police statement where witness said blue shirt - Impeachment by prior inconsistent statement
+- Key witness in civil case is plaintiff's business partner who will benefit from judgment - Impeachment by showing bias and interest
+- Witness claims to have seen incident from 200 meters away in darkness - Impeachment by showing physical impossibility of clear observation
+- Witness in fraud case has previous conviction for perjury - Impeachment by prior conviction affecting credibility
+- Witness testifies about events but medical records show they were heavily sedated - Impeachment by showing incapacity to observe
+
+**Procedural Requirements:**
+- Witness must be given opportunity to explain prior inconsistency
+- Prior statement must be proved if witness denies making it
+- Questions on character limited to general reputation, not specific acts
+- Cross-examiner not bound by witness's answers on collateral matters
+
+**Related Sections:**
+- BSA Section 145: Cross-examination on previous statements in writing
+- BSA Section 146: Questions about prior statements must be relevant
+- BSA Section 147: Proof of contradictory statements
+- BSA Section 52: Character in civil cases when relevant
+- BSA Section 53-54: Character in criminal cases
+
+**Important Notes:**
+- Impeachment affects weight of testimony, not its admissibility
+- Party calling witness generally cannot impeach their own witness (exception: hostile witness)
+- Prior conviction admissible to impeach but cannot be sole basis for disbelieving witness
+- Mere relationship or interest does not automatically destroy credibility
+- Court must weigh impeachment evidence and decide what weight to give testimony
+- Effective cross-examination on prior inconsistent statements requires proper foundation
+
+---
+
+=== BSA General Provisions: Relevancy and Admissibility ===
+
+**Subject:** General principles of evidence law
+
+**Description:**
+The Bharatiya Sakshya Adhiniyam, 2023 establishes comprehensive rules for determining what evidence is relevant and admissible in judicial proceedings. The Act balances the need for thorough fact-finding with protection against unreliable or prejudicial evidence. Key principles include relevancy (evidence must relate to facts in issue), admissibility (relevant evidence must also satisfy technical requirements), and exclusionary rules (certain relevant evidence is excluded for policy reasons).
+
+**Fundamental Principles:**
+
+1. **Relevancy:** Evidence must make a fact in issue more or less probable. Irrelevant evidence is inadmissible regardless of its reliability.
+
+2. **Admissibility:** Relevant evidence may still be excluded if obtained improperly, privileged, or more prejudicial than probative.
+
+3. **Best Evidence Rule:** Original documents preferred over copies, though electronic records now treated as primary evidence.
+
+4. **Burden of Proof:** Party asserting a fact must prove it, except for presumptions and facts requiring negative proof.
+
+5. **Standard of Proof:** Beyond reasonable doubt in criminal cases, preponderance of probabilities in civil cases.
+
+**Exclusionary Rules:**
+- Confessions to police inadmissible (Section 23)
+- Character evidence generally inadmissible except when character in issue
+- Privileged communications protected (lawyer-client, spousal, official secrets)
+- Evidence obtained through torture or coercion excluded
+- Hearsay generally inadmissible except for specific exceptions
+
+**Relationship to Other Criminal Justice Acts:**
+
+The BSA works in conjunction with:
+- **Bharatiya Nyaya Sanhita (BNS):** Defines offenses and punishments (substantive law)
+- **Bharatiya Nagarik Suraksha Sanhita (BNSS):** Governs criminal procedure (procedural law)
+- **BSA:** Governs what evidence can be used to prove offenses (evidence law)
+
+Together, these three acts form the new criminal justice framework replacing IPC, CrPC, and Evidence Act.
+
+**Important Notes:**
+- BSA applies to all judicial proceedings including civil, criminal, and administrative
+- Electronic evidence given equal status to physical evidence
+- Expert opinion increasingly important for technical and scientific evidence
+- Procedural rules for examination of witnesses must comply with BNSS
+- Courts have inherent power to exclude evidence causing unfair prejudice
+
+---
+
+**End of BSA Seed File**
+**Total Sections Covered:** 10 key sections
+**Cross-References:** BNS, BNSS, IT Act
+**Law Type:** Evidence Law
+**Effective Date:** July 1, 2024

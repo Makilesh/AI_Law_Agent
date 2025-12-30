@@ -1,0 +1,567 @@
+=== CONSTITUTION OF INDIA - DIRECTIVE PRINCIPLES OF STATE POLICY ===
+
+**Part:** Part IV of the Constitution of India
+**Articles:** Articles 36 to 51
+**Adopted:** November 26, 1949
+**Effective:** January 26, 1950
+**Amendments:** Various amendments have modified implementation
+**Law Type:** Constitutional Law - Non-Justiciable Principles
+
+The Directive Principles of State Policy (DPSP) are guidelines or principles given to the central and state governments of India, to be kept in mind while framing laws and policies. Although not enforceable by courts, these principles are fundamental in the governance of the country and it is the duty of the State to apply these principles in making laws. The DPSP aim to create social and economic democracy in India.
+
+**Key Features:**
+- Non-justiciable (cannot be enforced in courts)
+- Fundamental in governance of the country
+- Positive obligations on the State
+- Complement to Fundamental Rights
+- Based on socialist and Gandhian philosophy
+- Aim to establish welfare state
+
+---
+
+=== Article 38: State to Secure Social Order for Welfare ===
+
+**Article Number:** Article 38
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Social justice and minimization of inequalities
+
+**Constitutional Text:**
+Article 38(1): The State shall strive to promote the welfare of the people by securing and protecting as effectively as it may a social order in which justice, social, economic and political, shall inform all the institutions of the national life.
+
+Article 38(2): The State shall, in particular, strive to minimise the inequalities in income, and endeavour to eliminate inequalities in status, facilities and opportunities, not only amongst individuals but also amongst groups of people residing in different areas or engaged in different vocations.
+
+**Principle:**
+Article 38 directs the State to create a social order that secures justice in all spheres - social, economic, and political. It also mandates the State to minimize inequalities in income and eliminate inequalities in status, facilities, and opportunities.
+
+**Significance:**
+- Establishes welfare state as constitutional goal
+- Recognizes three dimensions of justice: social, economic, political
+- Addresses both individual and group inequalities
+- Covers geographical (different areas) and vocational (different occupations) disparities
+
+**Current Implementation:**
+- Progressive taxation to reduce income inequality
+- Reservation policies for SC/ST/OBC in education and employment
+- Rural development schemes (MGNREGA, Pradhan Mantri Gram Sadak Yojana)
+- Special category status for backward states
+- Minimum wage legislation
+- Land reforms and ceiling laws
+
+**Examples:**
+- MGNREGA provides 100 days of guaranteed wage employment to reduce rural-urban income gap
+- Income tax slabs with higher rates for higher income brackets to minimize income inequality
+- Special economic packages for backward regions like North-East, J&K
+- Reservation in education and jobs to eliminate status inequalities based on caste
+
+**Related Articles:**
+- Article 14: Equality before law (Fundamental Right)
+- Article 39: Certain principles of policy (elaborates on economic justice)
+- Article 46: Promotion of SC/ST interests (specific implementation)
+
+**Important Notes:**
+- Non-justiciable but court can use it to interpret Fundamental Rights
+- Supreme Court has held DPSP and Fundamental Rights must be harmoniously construed
+- Economic inequalities addressed through fiscal and monetary policies
+- Social inequalities through affirmative action programs
+
+---
+
+=== Article 39: Certain Principles of Policy ===
+
+**Article Number:** Article 39
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Economic and social justice principles
+
+**Constitutional Mandates:**
+
+Article 39 directs the State to secure:
+
+**(a) Equal means of livelihood for men and women:**
+- Equal opportunities for employment
+- Equal pay for equal work
+
+**(b) Distribution of material resources for common good:**
+- Ownership and control of material resources distributed to subserve common good
+- Prevents concentration of wealth in few hands
+
+**(c) Prevention of concentration of wealth:**
+- Economic system does not result in concentration of wealth and means of production to common detriment
+
+**(d) Equal pay for equal work:**
+- Men and women have right to equal pay for equal work
+
+**(e) Protection of children and youth:**
+- Health and strength of workers, men and women, and tender age of children not abused
+- Citizens not forced by economic necessity to enter avocations unsuited to their age or strength
+
+**(f) Child care and development:**
+- Children given opportunities and facilities to develop in healthy manner in conditions of freedom and dignity
+- Childhood and youth protected against exploitation and moral and material abandonment
+
+**Significance:**
+Article 39 is cornerstone of economic democracy and social justice. It prevents concentration of wealth, ensures equitable distribution of resources, and protects vulnerable sections (women, children, workers).
+
+**Current Implementation:**
+
+**Article 39(a) - Equal means of livelihood:**
+- Equal Remuneration Act, 1976: Equal pay for equal work
+- Anti-discrimination laws in employment
+- Gender equality in government jobs
+
+**Article 39(b) - Distribution of resources:**
+- Nationalization of banks, insurance, coal mines
+- Public Distribution System (PDS)
+- Land ceiling laws
+
+**Article 39(c) - Prevention of concentration:**
+- Monopolies and Restrictive Trade Practices Act (now Competition Act, 2002)
+- Wealth tax, estate duty (now abolished)
+- Cooperative sector development
+
+**Article 39(e) and (f) - Child protection:**
+- Child Labour (Prohibition and Regulation) Act
+- Right to Education Act, 2009
+- POCSO Act, 2012
+- Integrated Child Development Services (ICDS)
+- Mid-Day Meal Scheme
+
+**Practical Examples:**
+- Equal Remuneration Act mandates same salary for male and female teachers doing same work
+- Nationalization of banks in 1969 and 1980 to ensure credit access to rural areas and small businesses
+- RTE Act provides free and compulsory education to children aged 6-14 years
+- MGNREGA ensures livelihood to rural workers
+- Prohibition of child labor in hazardous industries
+
+**Related Articles:**
+- Article 14, 15, 16: Equality (Fundamental Rights)
+- Article 23, 24: Prohibition of trafficking and child labor (Fundamental Rights)
+- Article 38: Social order for welfare
+- Article 41, 42: Work, education, public assistance
+
+**Important Notes:**
+- Article 39(b) and (c) were added by 42nd Amendment (1976) to promote socialist goals
+- Equal pay for equal work now recognized as Fundamental Right flowing from Article 14
+- Courts use Article 39 to interpret labor and economic legislation
+- Balancing individual property rights with community interests
+
+---
+
+=== Article 39A: Free Legal Aid ===
+
+**Article Number:** Article 39A
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Equal justice and free legal aid
+
+**Constitutional Text:**
+"The State shall secure that the operation of the legal system promotes justice, on a basis of equal opportunity, and shall, in particular, provide free legal aid, by suitable legislation or schemes or in any other way, to ensure that opportunities for securing justice are not denied to any citizen by reason of economic or other disabilities."
+
+**Principle:**
+Article 39A mandates the State to ensure equal access to justice for all citizens regardless of their economic status. It requires the State to provide free legal aid to economically weaker sections so that justice is not denied due to poverty.
+
+**Origin:**
+Added by the 42nd Amendment Act, 1976. It bridges the gap between Fundamental Rights (Part III) and DPSP (Part IV) by making access to justice a constitutional obligation.
+
+**Significance:**
+- Justice should be affordable and accessible to all
+- Economic disability should not be a barrier to justice
+- Legal system must promote substantive justice, not just procedural justice
+- State has positive duty to facilitate access to courts
+
+**Current Implementation:**
+
+**Legal Services Authorities Act, 1987:**
+- National Legal Services Authority (NALSA)
+- State Legal Services Authorities (SALSA)
+- District Legal Services Authorities (DALSA)
+- Taluka Legal Services Committees
+
+**Who Gets Free Legal Aid:**
+- SC/ST members
+- Women and children
+- Persons with disabilities
+- Industrial workmen
+- Victims of mass disasters, violence, trafficking
+- Person in custody
+- Persons with annual income below ₹3 lakhs (varies by state)
+
+**Services Provided:**
+- Free legal advice and consultation
+- Drafting of legal documents
+- Free representation in courts by panel lawyers
+- Lok Adalats (people's courts) for amicable settlement
+
+**Practical Examples:**
+- Accused in criminal case who cannot afford lawyer is provided free legal aid through DLSA
+- Woman victim of domestic violence gets free legal representation for filing DV case
+- Victim of road accident gets free legal aid to claim compensation
+- Poor person gets free legal advice from legal aid clinic
+- Lok Adalat settles cheque bounce, motor accident, matrimonial cases without court fees
+
+**Related Articles:**
+- Article 14: Equality before law
+- Article 21: Right to life and personal liberty (includes access to justice)
+- Article 22(1): Right to consult and be defended by lawyer (Fundamental Right)
+- Article 38: Social order for welfare
+
+**Important Notes:**
+- Article 39A recognized as part of Article 21 (Fundamental Right) by Supreme Court
+- Free legal aid is both a DPSP and a Fundamental Right
+- Legal aid includes pre-litigation advice and out-of-court settlement
+- Lok Adalats provide speedy and free dispute resolution
+
+---
+
+=== Article 41: Right to Work, Education, and Public Assistance ===
+
+**Article Number:** Article 41
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Social security and welfare
+
+**Constitutional Text:**
+"The State shall, within the limits of its economic capacity and development, make effective provision for securing the right to work, to education and to public assistance in cases of unemployment, old age, sickness and disablement, and in other cases of undeserved want."
+
+**Principle:**
+Article 41 directs the State to provide:
+1. Right to work (employment opportunities)
+2. Right to education
+3. Public assistance in cases of unemployment, old age, sickness, disability, and undeserved want
+
+**Significance:**
+- Recognizes social security as State's obligation
+- Addresses lifecycle vulnerabilities (unemployment, old age, sickness, disability)
+- Qualification: "within limits of economic capacity and development" - acknowledges resource constraints
+- Basis for welfare state policies
+
+**Current Implementation:**
+
+**Right to Work:**
+- Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA), 2005: 100 days guaranteed wage employment
+- Employment exchanges and job fairs
+- Skill development programs (Pradhan Mantri Kaushal Vikas Yojana)
+- Self-employment schemes (MUDRA, Stand-Up India)
+
+**Right to Education:**
+- Right to Education Act, 2009: Free and compulsory education for children aged 6-14 years
+- Mid-Day Meal Scheme
+- Sarva Shiksha Abhiyan
+- National Education Policy, 2020
+- Scholarships for SC/ST/OBC/Minority students
+
+**Public Assistance - Unemployment:**
+- Unemployment allowance in some states
+- Employment insurance schemes
+- Unemployment benefits for registered unemployed
+
+**Public Assistance - Old Age:**
+- National Social Assistance Program (NSAP)
+- Indira Gandhi National Old Age Pension Scheme: ₹200-500/month for persons above 60 years BPL
+- Pradhan Mantri Vaya Vandana Yojana (pension scheme)
+- Senior Citizens Savings Scheme
+
+**Public Assistance - Sickness:**
+- Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY): Health insurance of ₹5 lakhs per family
+- Employees' State Insurance (ESI) for organized sector workers
+- Rashtriya Swasthya Bima Yojana (RSBY) for BPL families
+
+**Public Assistance - Disability:**
+- Indira Gandhi National Disability Pension Scheme: ₹300-500/month
+- Rights of Persons with Disabilities Act, 2016: Reservation in jobs and education
+- Deendayal Disabled Rehabilitation Scheme
+- Accessible India Campaign
+
+**Practical Examples:**
+- Unemployed rural worker gets 100 days work under MGNREGA at minimum wage
+- Children in government schools get free education and mid-day meal under RTE Act
+- 65-year-old BPL person receives ₹500 monthly pension under old age pension scheme
+- Poor family gets ₹5 lakh health cover under Ayushman Bharat for hospital treatment
+- Person with disability gets monthly pension and reservation in government jobs
+
+**Related Articles:**
+- Article 21A: Right to education (Fundamental Right - added by 86th Amendment)
+- Article 38: Social order for welfare
+- Article 42: Just and humane conditions of work
+- Article 43: Living wage for workers
+
+**Important Notes:**
+- Right to education elevated to Fundamental Right through Article 21A (2002)
+- "Within limits of economic capacity" allows State to implement progressively
+- Courts cannot mandate State to provide employment or pension but can direct policy formulation
+- Supreme Court has recognized right to life (Article 21) includes right to livelihood
+
+---
+
+=== Article 44: Uniform Civil Code ===
+
+**Article Number:** Article 44
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Uniform civil code for all citizens
+
+**Constitutional Text:**
+"The State shall endeavour to secure for the citizens a uniform civil code throughout the territory of India."
+
+**Principle:**
+Article 44 directs the State to work towards enacting a uniform civil code applicable to all citizens regardless of religion. A uniform civil code would mean one law for all citizens in matters of marriage, divorce, inheritance, adoption, and succession.
+
+**Current Status:**
+India does not have a uniform civil code. Different personal laws apply to different religious communities:
+- Hindus: Hindu Marriage Act, Hindu Succession Act, Hindu Adoption and Maintenance Act
+- Muslims: Muslim Personal Law (Shariat) Application Act
+- Christians: Indian Christian Marriage Act, Indian Divorce Act, Indian Succession Act
+- Parsis: Parsi Marriage and Divorce Act
+
+**Exceptions (Uniform Laws):**
+- Goa: Goa has uniform civil code inherited from Portuguese rule
+- Special Marriage Act, 1954: Provides secular marriage option for all religions
+
+**Debates and Controversies:**
+**Arguments For Uniform Civil Code:**
+- Promotes national integration and unity
+- Ensures gender justice (many personal laws discriminate against women)
+- Treats all citizens equally regardless of religion
+- Simplifies legal system
+- Removes anomalies in personal laws
+
+**Arguments Against:**
+- Violates religious freedom (Article 25)
+- Diversity is India's strength, personal laws respect pluralism
+- Sensitive issue requiring consensus
+- Constitutional framers deliberately made it non-justiciable to allow gradual evolution
+
+**Judicial Pronouncements:**
+Supreme Court has repeatedly urged Parliament to enact uniform civil code:
+- Mohd. Ahmed Khan v. Shah Bano Begum (1985): SC upheld Muslim woman's right to maintenance under CrPC despite Muslim personal law
+- Sarla Mudgal v. Union of India (1995): SC called for UCC to prevent bigamy by conversion
+- John Vallamattom v. Union of India (2003): SC reiterated need for UCC
+
+**Partial Reforms:**
+- Muslim Women (Protection of Rights on Divorce) Act, 1986
+- Triple Talaq banned by Muslim Women (Protection of Rights on Marriage) Act, 2019
+- Hindu Succession (Amendment) Act, 2005: Equal inheritance rights for daughters
+
+**Practical Examples:**
+- Hindu man cannot marry second time without divorcing first wife (Hindu Marriage Act prohibits bigamy), but Muslim man can marry up to 4 wives (under Muslim personal law) - Different laws for different religions
+- Hindu daughter gets equal share in ancestral property (after 2005 amendment), but Muslim daughter gets half of son's share (under Shariat) - Gender discrimination in personal laws
+- Christian couples need court approval for divorce, Hindu couples can divorce by mutual consent - Different divorce procedures
+- In Goa, all citizens follow same civil code for marriage, divorce, succession regardless of religion - Uniform law example
+
+**Related Articles:**
+- Article 25-28: Freedom of religion (Fundamental Rights)
+- Article 13: Laws inconsistent with Fundamental Rights void
+- Article 14, 15: Equality (Fundamental Rights)
+
+**Important Notes:**
+- Article 44 is non-justiciable, so courts cannot force State to enact UCC
+- UCC is political and social issue requiring consensus
+- Some personal law reforms have been achieved through legislation
+- Balance needed between religious freedom and gender justice/national integration
+
+---
+
+=== Article 45: Free and Compulsory Education for Children ===
+
+**Article Number:** Article 45 (Original)
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Education for children
+
+**Original Text (1950-2002):**
+"The State shall endeavour to provide, within a period of ten years from the commencement of this Constitution, for free and compulsory education for all children until they complete the age of fourteen years."
+
+**Current Status:**
+Article 45 was substituted by the 86th Constitutional Amendment Act, 2002. The original Article 45's objective has been achieved through:
+- Article 21A (Fundamental Right): Right to free and compulsory education for children aged 6-14 years
+- Article 45 (revised): Early childhood care and education for children below 6 years
+
+**Revised Article 45 (after 2002):**
+"The State shall endeavour to provide early childhood care and education for all children until they complete the age of six years."
+
+**Implementation:**
+
+**Article 21A (Fundamental Right - Added 2002):**
+- Right to Education Act, 2009 (RTE Act)
+- Free and compulsory education for children aged 6-14 years (Classes I to VIII)
+- No child to be denied admission for lack of age proof or documents
+- No capitation fee or screening test for admission
+- 25% reservation for economically weaker sections in private schools
+
+**Article 45 (DPSP - Early Childhood Care):**
+- Integrated Child Development Services (ICDS)
+- Anganwadi centers for pre-school education
+- Nutrition, health checkups, and immunization for children below 6 years
+- National Policy for Children, 2013
+
+**Practical Examples:**
+- 8-year-old child gets admission in government school without paying any fee (Article 21A)
+- Private school admits 25% students from EWS category without fee under RTE Act
+- 3-year-old child attends Anganwadi for pre-school education and gets nutritious food (Article 45)
+- Mid-day meal provided to all children in primary schools to improve nutrition and attendance
+
+**Related Articles:**
+- Article 21A: Right to education (Fundamental Right)
+- Article 41: Right to education (general DPSP)
+- Article 46: Promotion of educational interests of SC/ST
+
+**Important Notes:**
+- Original Article 45 goal (10 years for universal education) took 50+ years to achieve
+- Elevated to Fundamental Right recognizing importance of education
+- Article 45 now focuses on early childhood (0-6 years), complementing Article 21A (6-14 years)
+- RTE Act is direct implementation of Article 21A and original Article 45
+
+---
+
+=== Article 46: Promotion of SC/ST and Weaker Sections ===
+
+**Article Number:** Article 46
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Educational and economic interests of SC/ST/OBC
+
+**Constitutional Text:**
+"The State shall promote with special care the educational and economic interests of the weaker sections of the people, and, in particular, of the Scheduled Castes and the Scheduled Tribes, and shall protect them from social injustice and all forms of exploitation."
+
+**Principle:**
+Article 46 directs the State to:
+1. Promote educational interests of weaker sections (especially SC/ST)
+2. Promote economic interests of weaker sections
+3. Protect them from social injustice
+4. Protect them from all forms of exploitation
+
+**Significance:**
+- Recognizes historical discrimination against SC/ST
+- Mandates affirmative action for weaker sections
+- Combines educational, economic, and social protection
+- Basis for reservation policies and protective legislation
+
+**Current Implementation:**
+
+**Educational Promotion:**
+- Reservation in educational institutions (15% for SC, 7.5% for ST)
+- Pre-matric and post-matric scholarships for SC/ST students
+- Free textbooks, uniforms, hostels for SC/ST students
+- Kasturba Gandhi Balika Vidyalayas for SC/ST girls
+- Coaching and allied schemes for SC/ST students preparing for competitive exams
+
+**Economic Promotion:**
+- Reservation in government jobs (15% for SC, 7.5% for ST)
+- National Scheduled Castes Finance and Development Corporation (NSFDC)
+- National Scheduled Tribes Finance and Development Corporation (NSTFDC)
+- Concessional loans for self-employment and entrepreneurship
+- Land allotment and redistribution to landless SC/ST
+
+**Protection from Social Injustice:**
+- SC and ST (Prevention of Atrocities) Act, 1989
+- Protection of Civil Rights Act, 1955 (against untouchability)
+- Manual Scavengers Act, 2013
+- Prohibition of discrimination in access to public places
+
+**Protection from Exploitation:**
+- Bonded Labour System (Abolition) Act, 1976
+- Minimum Wages Act protecting agricultural laborers (predominantly SC/ST)
+- Vigilance committees at district level to prevent atrocities
+
+**Practical Examples:**
+- SC student gets admission in IIT under reserved category (15% quota)
+- ST student receives ₹50,000 annual scholarship for engineering degree
+- SC entrepreneur gets concessional loan of ₹10 lakhs from NSFDC for starting business
+- SC agricultural laborer allocated 5 acres of surplus land under land reforms
+- ST family gets protection under SC/ST Atrocities Act when facing caste-based violence
+- Manual scavenger rehabilitated with alternative livelihood under rehabilitation scheme
+
+**Related Articles:**
+- Article 15(4), 15(5): Reservation in educational institutions (Fundamental Right)
+- Article 16(4), 16(4A), 16(4B): Reservation in government jobs (Fundamental Right)
+- Article 17: Abolition of untouchability (Fundamental Right)
+- Article 335: Claims of SC/ST in services and posts
+- Article 341, 342: Power to notify SC/ST
+
+**Important Notes:**
+- Article 46 is basis for affirmative action policies
+- Reservation in education and jobs is implementation of Article 46
+- Supreme Court has upheld reservations as valid under Article 46 and Article 15(4), 16(4)
+- Creamy layer concept does not apply to SC/ST (applies only to OBC)
+- Protection from atrocities is both preventive and punitive
+
+---
+
+=== Article 47: Duty to Raise Nutrition and Standard of Living ===
+
+**Article Number:** Article 47
+**Part:** Part IV - Directive Principles of State Policy
+**Subject:** Public health and prohibition
+
+**Constitutional Text:**
+"The State shall regard the raising of the level of nutrition and the standard of living of its people and the improvement of public health as among its primary duties and, in particular, the State shall endeavour to bring about prohibition of the consumption except for medicinal purposes of intoxicating drinks and of drugs which are injurious to health."
+
+**Principle:**
+Article 47 directs the State to:
+1. Raise level of nutrition of people
+2. Raise standard of living
+3. Improve public health
+4. Bring about prohibition of intoxicating drinks and harmful drugs
+
+**Significance:**
+- Recognizes nutrition, living standards, and health as State's primary duties
+- Links prohibition of alcohol/drugs to public health
+- Basis for welfare schemes related to food, health, and prohibition
+
+**Current Implementation:**
+
+**Raising Nutrition:**
+- Public Distribution System (PDS): Subsidized food grains (rice, wheat, sugar) to BPL families
+- Mid-Day Meal Scheme: Nutritious meal to school children
+- Integrated Child Development Services (ICDS): Supplementary nutrition to children and mothers
+- National Food Security Act, 2013: Legal right to subsidized food grains
+- Poshan Abhiyaan (National Nutrition Mission): Reduce malnutrition
+
+**Raising Standard of Living:**
+- Pradhan Mantri Awas Yojana: Housing for all
+- Pradhan Mantri Ujjwala Yojana: LPG connections for BPL women
+- Swachh Bharat Abhiyan: Sanitation and clean India
+- Jal Jeevan Mission: Piped water supply to all households
+- Saubhagya Scheme: Electricity for all
+
+**Improving Public Health:**
+- National Health Mission (NHM)
+- Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY): Health insurance
+- Free immunization programs (polio, measles, etc.)
+- Janani Suraksha Yojana: Safe motherhood
+- TB and malaria eradication programs
+- National AIDS Control Program
+
+**Prohibition of Intoxicating Drinks:**
+- Some states have total prohibition (Gujarat, Bihar, Nagaland, Mizoram)
+- Some states have partial prohibition or dry days
+- Liquor sale regulated through licensing and excise duties
+- Minimum drinking age laws (varies by state: 18-25 years)
+
+**Prohibition of Injurious Drugs:**
+- Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS Act)
+- Drugs and Cosmetics Act, 1940
+- Cigarettes and Other Tobacco Products Act, 2003 (COTPA): Prohibition of tobacco ads, sale to minors
+- Food Safety and Standards Act, 2006
+
+**Practical Examples:**
+- BPL family gets 5 kg rice and 5 kg wheat per month at ₹2-3 per kg under PDS
+- School child gets nutritious meal daily (dal, rice, vegetables) under mid-day meal scheme
+- Poor family gets health insurance of ₹5 lakhs under Ayushman Bharat for free hospital treatment
+- Gujarat has total prohibition, sale and consumption of alcohol banned
+- Tobacco sale to minors prohibited under COTPA, violation punishable
+- NDPS Act prohibits possession, sale, consumption of narcotic drugs like heroin, cocaine
+
+**Related Articles:**
+- Article 21: Right to life (includes right to health and nutrition)
+- Article 39(e), (f): Protection of children and workers
+- Article 42: Maternity relief
+
+**Important Notes:**
+- Prohibition is State subject (State List), so states decide on alcohol policy
+- Total prohibition attempted by some states but challenging to enforce
+- Public health improved through universal immunization and health schemes
+- Nutrition programs target vulnerable groups (children, pregnant women, BPL families)
+- Courts have recognized right to health as part of Article 21 (Fundamental Right) using Article 47
+
+---
+
+**End of Constitution DPSP Seed File**
+**Total Articles Covered:** 8 key articles covering welfare, justice, education, prohibition, SC/ST protection
+**Cross-References:** Fundamental Rights (Part III), various implementing legislation
+**Law Type:** Constitutional Law - Non-Justiciable Directive Principles
+**Effective Date:** January 26, 1950

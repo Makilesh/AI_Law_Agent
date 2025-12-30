@@ -1,0 +1,544 @@
+=== INDIAN CONTRACT ACT, 1872 ===
+
+**Act Number:** 9 of 1872
+**Enacted:** April 25, 1872
+**Effective:** September 1, 1872
+**Amendments:** Multiple amendments, major amendment in 2017
+**Total Sections:** 238 sections across 11 chapters
+**Law Type:** Commercial and Civil Law
+
+The Indian Contract Act, 1872 is the principal law governing contracts in India. It defines and lists the essentials of a valid contract, rules for performance, breach, and remedies. The Act applies to all of India except the State of Jammu and Kashmir (until 2019 when all India laws became applicable). The Act codifies the law relating to contracts and is based on English common law principles.
+
+**Key Features:**
+- Defines contract, agreement, offer, acceptance, consideration
+- Lists essentials of valid contract
+- Covers special contracts: indemnity, guarantee, bailment, pledge, agency
+- Provides remedies for breach: damages, specific performance, injunction, rescission
+- Based on freedom of contract principle
+- Applies to all types of contracts unless specifically excluded
+
+---
+
+=== Contract Act Section 2(h): Definition of Contract ===
+
+**Section Number:** Section 2(h)
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** What constitutes a contract
+
+**Legal Definition:**
+"An agreement enforceable by law is a contract."
+
+**Explanation:**
+A contract is an agreement that creates legal obligations between parties. For an agreement to become a contract, it must be enforceable by law, meaning if one party fails to perform, the other can seek legal remedy. Not all agreements are contracts - only those that satisfy the requirements of Section 10 are enforceable contracts.
+
+**Key Elements:**
+1. Agreement (offer + acceptance)
+2. Enforceable by law
+3. Creates legal obligations
+4. Breach leads to legal remedy
+
+**Contract vs Agreement:**
+- Agreement: Meeting of minds, may or may not be enforceable
+- Contract: Agreement + enforceability by law
+
+**Practical Examples:**
+- A agrees to sell his car to B for ₹5 lakhs, B accepts - Agreement becomes contract (enforceable)
+- Father promises to give ₹10,000 to son if he tops class - Social/domestic agreement, not enforceable contract
+- Company agrees to supply goods to buyer for agreed price - Commercial contract (enforceable)
+- Invitation to dinner is accepted - Social agreement, not contract
+
+**Related Sections:**
+- Section 10: What agreements are contracts
+- Section 2(a): Offer/Proposal
+- Section 2(b): Acceptance
+- Section 2(e): Agreement defined
+
+**Important Notes:**
+- All contracts are agreements, but not all agreements are contracts
+- Enforceability is essence of contract
+- Void agreements (Section 23-30) are not contracts
+- Voidable contracts (Section 19) are contracts until avoided
+
+---
+
+=== Contract Act Section 10: Essentials of a Valid Contract ===
+
+**Section Number:** Section 10
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** Requirements for valid contract
+
+**Legal Text:**
+"All agreements are contracts if they are made by the free consent of parties competent to contract, for a lawful consideration and with a lawful object, and are not hereby expressly declared to be void."
+
+**Six Essentials of Valid Contract:**
+
+**1. Offer and Acceptance (Agreement):**
+- There must be a lawful offer by one party
+- Lawful acceptance of that offer by other party
+- Offer and acceptance must create agreement
+
+**2. Intention to Create Legal Relations:**
+- Parties must intend legal consequences
+- Social and domestic agreements usually lack this intent
+- Commercial agreements presumed to have this intent
+
+**3. Lawful Consideration:**
+- Something in return (quid pro quo)
+- Can be money, goods, services, or forbearance
+- Must be lawful (not forbidden by law)
+- Need not be adequate but must exist
+
+**4. Capacity of Parties:**
+- Parties must be competent to contract (Section 11)
+- Minors, persons of unsound mind, persons disqualified by law cannot contract
+
+**5. Free Consent:**
+- Consent must be free from coercion, undue influence, fraud, misrepresentation, mistake
+- Vitiated consent makes contract voidable (Section 19)
+
+**6. Lawful Object:**
+- Purpose of contract must be lawful
+- Not forbidden by law, not fraudulent, not immoral, not opposed to public policy
+
+**Additionally:**
+- Agreement not expressly declared void (Sections 23-30)
+
+**Practical Examples:**
+
+**Valid Contracts:**
+- A agrees to sell laptop to B for ₹40,000, B agrees to buy - All essentials satisfied
+- Employer agrees to pay ₹50,000 salary to employee for one month work - Valid contract
+- Landlord agrees to rent flat to tenant for ₹20,000/month - Valid contract
+
+**Invalid Contracts:**
+- A (minor aged 16) agrees to buy car - No capacity, void
+- A threatens B to enter into contract - No free consent, voidable
+- A agrees to pay B ₹10,000 to commit theft - Unlawful object, void
+- A agrees to marry B without any consideration - No consideration, void (exception: natural love and affection)
+- A agrees to sell goods to B without B's acceptance - No acceptance, not a contract
+
+**Related Sections:**
+- Section 11: Who are competent to contract
+- Section 13: Consensus ad idem (meeting of minds)
+- Section 14: Free consent
+- Section 23: Lawful consideration and object
+- Section 25: Agreement without consideration is void
+
+**Important Notes:**
+- All six essentials must be present simultaneously
+- Absence of any essential makes contract void or voidable
+- Burden of proof: Party claiming contract must prove all essentials
+- Presumptions: Consideration presumed to exist unless disproved
+
+---
+
+=== Contract Act Section 2(d) and Section 25: Consideration ===
+
+**Section Number:** Section 2(d) - Definition, Section 25 - Exception
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** Consideration - quid pro quo
+
+**Definition (Section 2(d)):**
+"When, at the desire of the promisor, the promisee or any other person has done or abstained from doing, or does or abstains from doing, or promises to do or to abstain from doing, something, such act or abstinence or promise is called a consideration for the promise."
+
+**Essentials of Valid Consideration:**
+1. At the desire of the promisor (not voluntary)
+2. Given by promisee or any other person
+3. Can be past, present, or future
+4. Can be act, abstinence, or promise
+5. Need not be adequate but must have some value
+6. Must be real, not illusory
+7. Must be lawful
+
+**Types of Consideration:**
+
+**1. Past Consideration:**
+- Act done before the promise
+- Example: A saves B from drowning. Later B promises to pay ₹10,000 to A - Past consideration
+
+**2. Present/Executed Consideration:**
+- Act and promise simultaneous
+- Example: A pays cash and buys goods immediately - Present consideration
+
+**3. Future/Executory Consideration:**
+- Promise to do something in future
+- Example: A promises to deliver goods next month, B promises to pay on delivery - Future consideration
+
+**General Rule (Section 25):**
+"An agreement made without consideration is void."
+
+**Exceptions to "No Consideration = Void" Rule (Section 25):**
+
+**1. Natural Love and Affection (Section 25(1)):**
+- Agreement in writing and registered
+- Made on account of natural love and affection
+- Between parties standing in near relation
+- Example: Father gifts property to son in writing without consideration - Valid
+
+**2. Compensation for Past Voluntary Service (Section 25(2)):**
+- Promise to compensate for something voluntarily done in past
+- Promisor was legally compellable to pay at the time service rendered
+- Example: A finds B's lost goods and returns them. B promises to pay ₹5,000 - Valid without fresh consideration
+
+**3. Promise to Pay Time-Barred Debt (Section 25(3)):**
+- Promise in writing to pay debt barred by limitation
+- No consideration needed
+- Example: Debt is 10 years old (barred by limitation), debtor promises in writing to pay - Valid
+
+**Other Exceptions:**
+- Completed gift needs no consideration
+- Agency does not require consideration
+- Charity subscription enforced in certain cases
+
+**Practical Examples:**
+
+**Valid Consideration:**
+- A agrees to sell car to B for ₹5 lakhs - Money is consideration
+- A agrees to work for B, B agrees to pay salary - Work is consideration for salary
+- A promises not to sue B, B promises to pay compensation - Forbearance to sue is valid consideration
+
+**No Consideration:**
+- Father promises to give ₹1 lakh to son for nothing - Void for want of consideration (unless in writing for natural love and affection)
+- A promises to give gift to B, no writing, no consideration - Void
+- A promises to pay B ₹10,000 without any reason - Void for lack of consideration
+
+**Inadequate Consideration:**
+- A sells his ₹10 lakh car to B for ₹1 lakh - Inadequate but valid consideration (court will not inquire into adequacy)
+
+**Related Sections:**
+- Section 2(d): Consideration defined
+- Section 10: Essentials of contract (includes consideration)
+- Section 23: Lawful consideration
+- Section 185: Agent's remuneration (agency doesn't need consideration)
+
+**Important Notes:**
+- Consideration is the price for the promise
+- Consideration can move from promisee or any other person (stranger to consideration can provide it)
+- Consideration need not move to promisor (can benefit a third party)
+- Consideration must be real and not illusory
+- Past consideration is valid in India (different from English law which requires present/future consideration)
+
+---
+
+=== Contract Act Section 11: Capacity to Contract ===
+
+**Section Number:** Section 11
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** Who can enter into contracts
+
+**Legal Text:**
+"Every person is competent to contract who is of the age of majority according to the law to which he is subject, and who is of sound mind, and is not disqualified from contracting by any law to which he is subject."
+
+**Three Categories of Persons Competent to Contract:**
+
+**1. Person Who Has Attained Age of Majority:**
+- Age of majority: 18 years (Indian Majority Act, 1875)
+- If guardian appointed by court: 21 years
+- Minor (person below age of majority) cannot contract
+
+**2. Person of Sound Mind:**
+- Understands the contract and can form rational judgment about its effects
+- Person of unsound mind cannot contract
+- Temporary unsoundness: Contract during lucid interval is valid
+
+**3. Person Not Disqualified by Law:**
+- Alien enemy during war
+- Foreign sovereigns and ambassadors
+- Convicts serving sentence
+- Insolvents (for certain contracts)
+- Corporations (can contract only within their charter/memorandum)
+
+**Minors and Contracts:**
+
+**General Rule:**
+- Minor's agreement is void ab initio (from beginning)
+- Minor cannot bind himself by contract
+- Minor can be beneficiary but not liable
+
+**Exceptions (Minor's Benefit):**
+- Contract for necessaries: Minor liable to pay reasonable price (not contract price)
+- Minor can be appointed as agent
+- Minor can be beneficiary of trust, gift, marriage settlement
+- Partnership: Minor can be admitted to benefits of partnership but not liable
+
+**Examples - Minors:**
+- 17-year-old minor borrows ₹50,000 from lender - Contract void, minor not liable to repay
+- Minor orders food in restaurant (necessary) - Liable to pay reasonable price for food
+- Minor's property used as security for loan - Property cannot be attached for loan repayment
+- Minor lies about age and enters into contract - Still void, minor not estopped (prevented) from pleading minority
+
+**Persons of Unsound Mind:**
+
+**Unsound Mind Includes:**
+- Mentally ill persons
+- Persons under influence of drugs/alcohol (if it affects understanding)
+- Persons suffering from dementia, Alzheimer's
+- Idiots and lunatics
+
+**Lucid Interval:**
+- If person of generally unsound mind has lucid interval (temporary soundness), contract during that period is valid
+- Burden on person claiming contract to prove it was made during lucid interval
+
+**Example - Unsound Mind:**
+- Person suffering from schizophrenia enters into contract during episode - Void
+- Person of unsound mind enters into contract during lucid interval when he understands contract - Valid
+- Drunk person so intoxicated that he doesn't understand contract terms - Void
+
+**Disqualified Persons:**
+
+**1. Alien Enemy:**
+- Person residing in enemy country during war cannot contract with persons in India
+- Trading with enemy prohibited
+
+**2. Insolvents:**
+- Adjudicated insolvent cannot enter into contracts until discharge
+- Contracts during insolvency voidable
+
+**3. Convicts:**
+- Convict serving sentence loses civil rights, cannot sue on contracts
+
+**Practical Examples:**
+
+**Competent:**
+- 25-year-old adult of sound mind enters into sale contract - Valid
+- 18-year-old buys car on finance - Valid (attained majority)
+- Sane person in normal state enters into employment contract - Valid
+
+**Incompetent:**
+- 16-year-old buys laptop on EMI - Void (minor)
+- Mentally ill person sells property during illness - Void (unsound mind)
+- Foreign enemy during war tries to enforce contract with Indian - Void (alien enemy)
+
+**Related Sections:**
+- Section 10: Essentials of contract
+- Section 68: Necessaries supplied to minor
+- Section 69: Reimbursement of person paying money due by another
+- Indian Majority Act, 1875: Age of majority
+
+**Important Notes:**
+- Minor's agreement is absolutely void, not voidable
+- Minor cannot ratify contract after attaining majority (as original contract was void)
+- Persons of unsound mind and disqualified persons' contracts are voidable, not void
+- Necessaries to minor: Minor liable to pay from his property (not personally liable)
+- Guardian can contract on behalf of minor for minor's benefit
+
+---
+
+=== Contract Act Section 14-19: Free Consent ===
+
+**Section Number:** Sections 14-19
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** Consent and factors vitiating consent
+
+**Free Consent (Section 14):**
+"Consent is said to be free when it is not caused by (1) coercion, (2) undue influence, (3) fraud, (4) misrepresentation, or (5) mistake."
+
+**Five Factors Vitiating Consent:**
+
+**1. Coercion (Section 15):**
+- Committing or threatening to commit any act forbidden by IPC/BNS
+- Unlawfully detaining or threatening to detain any property
+- With intent to cause any person to enter into agreement
+- Example: A threatens to kill B if B doesn't sell property to A at undervalue - Coercion
+
+**2. Undue Influence (Section 16):**
+- Dominant position over another
+- Uses position to obtain unfair advantage
+- Relationship of trust: doctor-patient, lawyer-client, parent-child, teacher-student
+- Example: Doctor influences elderly patient to gift property to doctor - Undue influence
+
+**3. Fraud (Section 17):**
+- Suggestion that fact is true when not true, by person who doesn't believe it to be true
+- Active concealment of fact
+- Promise without intention to perform
+- Any deceptive act
+- Example: A sells car concealing that it was in major accident - Fraud
+
+**4. Misrepresentation (Section 18):**
+- Positive assertion of fact not warranted by information
+- Breach of duty giving party misleading advantage
+- Causing party to make mistake about subject matter
+- Innocent false statement (no intention to deceive)
+- Example: A genuinely believes car is 2020 model and sells it to B, but it's actually 2018 model - Innocent misrepresentation
+
+**5. Mistake (Section 20-22):**
+- **Mistake of Fact:** Bilateral mistake of fact material to contract makes it void
+- **Mistake of Law:** Mistake of Indian law is no excuse; mistake of foreign law is mistake of fact
+- Example: Both parties believe goods are of particular quality but actually different quality - Bilateral mistake of fact, void
+
+**Effect of Vitiated Consent:**
+
+**Coercion, Undue Influence, Fraud, Misrepresentation (Section 19, 19A):**
+- Contract is voidable at the option of the party whose consent was vitiated
+- Aggrieved party can rescind (cancel) contract or affirm it
+- If affirms, contract becomes valid
+
+**Mistake:**
+- Bilateral mistake of fact: Contract void ab initio
+- Unilateral mistake: Generally not a ground to void contract (except mistake as to identity of person or nature of contract)
+
+**Remedies (Section 19):**
+- Rescission: Cancel the contract
+- Restitution: Restore benefits received
+- Refuse to perform
+- Damages (in case of fraud)
+
+**Practical Examples:**
+
+**Coercion:**
+- A threatens B with gun to sign sale deed - Voidable at B's option
+- Employer threatens employee with dismissal if doesn't sign new contract with reduced salary - Coercion (if threat unlawful)
+
+**Undue Influence:**
+- Old man in hospital influenced by doctor to execute will in doctor's favor - Undue influence, voidable
+- Teacher influences student to invest in teacher's business - Undue influence
+
+**Fraud:**
+- A sells painting claiming it's original when A knows it's fake - Fraud, voidable at B's option, B can claim damages
+- Jeweler sells imitation jewelry as real gold - Fraud
+
+**Misrepresentation:**
+- A genuinely believes land is 2000 sq ft and sells to B, but it's actually 1800 sq ft - Innocent misrepresentation, voidable
+- Real estate agent gives wrong information about property in good faith - Misrepresentation
+
+**Mistake:**
+- Both A and B believe cow is alive but it had died before contract - Bilateral mistake of fact, void
+- A believes land is exempt from tax (Indian law), enters into contract - Mistake of law, not excuse, valid contract
+- A believes B is famous artist and contracts for painting, but B is someone else - Mistake as to identity, void
+
+**Related Sections:**
+- Section 10: Free consent is essential
+- Section 64, 65: Rescission and restitution
+- Section 73: Damages for breach (fraud)
+- BNS: Offenses like fraud, cheating
+
+**Important Notes:**
+- Coercion and undue influence focus on domination of will
+- Fraud and misrepresentation focus on false statements
+- Fraud requires intention to deceive; misrepresentation is innocent
+- Burden of proof: Party alleging coercion/fraud/misrepresentation must prove it
+- Silence is not fraud unless there is duty to speak
+- Consent obtained by fraud can be ratified if party chooses not to rescind
+
+---
+
+=== Contract Act Section 37, 39, 73: Performance and Breach ===
+
+**Section Number:** Section 37 (Performance), Section 39 (Tender), Section 73 (Damages)
+**Act Name:** Indian Contract Act, 1872
+**Law Type:** Commercial and Civil Law
+**Subject:** Performance of contract and remedies for breach
+
+**Obligation to Perform (Section 37):**
+"The parties to a contract must either perform, or offer to perform, their respective promises, unless such performance is dispensed with or excused under the provisions of this Act, or of any other law."
+
+**Types of Performance:**
+
+**1. Actual Performance:**
+- Both parties perform their obligations
+- Contract is discharged by performance
+
+**2. Attempted Performance / Tender (Section 38):**
+- Party ready and willing to perform but other party refuses to accept
+- Tender of performance is equivalent to performance
+- Tenderer not liable for non-performance
+
+**Effect of Refusal to Accept Offer of Performance (Section 39):**
+When promisee refuses to accept performance, promisor is not responsible for non-performance and does not lose rights under contract.
+
+**Example - Tender:**
+- A is to deliver goods to B on 1st January, A brings goods to B but B refuses to accept - A has performed (by tender), not liable for non-performance
+
+**Breach of Contract:**
+
+**Types of Breach:**
+
+**1. Actual Breach:**
+- Party fails to perform on due date
+- Example: Seller fails to deliver goods on agreed date
+
+**2. Anticipatory Breach:**
+- Party renounces contract before due date of performance
+- Example: Seller informs buyer 10 days before delivery date that he will not deliver goods
+
+**Remedies for Breach:**
+
+**1. Damages (Section 73):**
+- Compensation for loss or damage arising naturally from breach
+- Compensation for loss that parties knew, when they made the contract, to be likely to result from breach
+- Measure: Put the aggrieved party in the position they would have been if contract was performed
+
+**Section 73:**
+"When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it."
+
+**Types of Damages:**
+- Ordinary damages: Loss naturally arising from breach
+- Special damages: Unusual loss which parties contemplated at time of contract
+- Nominal damages: Small amount when breach but no actual loss
+- Liquidated damages: Pre-agreed amount in contract (Section 74)
+
+**Example - Damages:**
+- A contracts to sell goods to B for ₹1 lakh, market price ₹1.2 lakhs. A breaches. B buys from market for ₹1.3 lakhs. Damages: ₹30,000 (difference between contract price and purchase price)
+
+**2. Specific Performance:**
+- Court orders actual performance of contract
+- Granted when monetary damages inadequate (e.g., sale of unique property, rare painting)
+- Governed by Specific Relief Act, 1963
+
+**3. Injunction:**
+- Court order restraining party from doing something
+- Preventive remedy
+- Example: A contracts not to compete with B for 2 years. A breaches. Court grants injunction preventing A from competing.
+
+**4. Rescission:**
+- Treat contract as cancelled
+- Parties restored to original position
+- Available for fundamental breach or when consent vitiated
+
+**5. Quantum Meruit:**
+- Payment for work done
+- "As much as earned"
+- When contract is discharged and party has done part performance
+- Example: A contracts to build house for B for ₹10 lakhs. After half work done, B wrongfully cancels contract. A can claim quantum meruit for work done.
+
+**Practical Examples:**
+
+**Performance:**
+- A sells goods to B, delivers goods, B pays price - Actual performance, contract discharged
+- A contracts to paint B's house, brings paint and labor but B refuses entry - Tender of performance, A not liable
+
+**Breach and Damages:**
+- A contracts to sell 100 bags of wheat at ₹1000/bag on 1st Jan, fails to deliver. Market price on 1st Jan is ₹1200/bag. B buys from market. Damages: ₹20,000 (₹200 × 100 bags)
+- Theater owner breaches contract with actor for performance. Actor claims loss of reputation - Special damages (not recoverable unless parties contemplated at time of contract)
+- Wedding photographer fails to cover wedding. Damages: Loss naturally arising (refund of fees) + mental agony/inconvenience in special cases
+
+**Anticipatory Breach:**
+- A contracts to sell goods to B on 1st March. On 1st February, A informs B he will not deliver. B can immediately sue for breach without waiting till 1st March
+
+**Related Sections:**
+- Section 37: Obligation of parties to perform
+- Section 39: Effect of refusal to accept performance
+- Section 73: Compensation for breach
+- Section 74: Liquidated damages
+- Specific Relief Act, 1963: Specific performance and injunction
+
+**Important Notes:**
+- Damages compensatory, not punitive
+- Aggrieved party must mitigate loss (cannot deliberately increase damages)
+- Liquidated damages clause: Court awards reasonable compensation, not necessarily contractual amount
+- Remote and indirect losses not compensable unless parties contemplated at time of contract
+- Specific performance is discretionary remedy, not automatic
+- Burden of proof: Party claiming damages must prove loss
+
+---
+
+**End of Contract Act Seed File**
+**Total Sections Covered:** 10 key sections covering essentials, consideration, capacity, consent, performance, breach, and remedies
+**Cross-References:** Specific Relief Act, Indian Majority Act, BNS
+**Law Type:** Commercial and Civil Law
+**Effective Date:** September 1, 1872

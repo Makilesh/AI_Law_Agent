@@ -1,0 +1,374 @@
+=== TRANSFER OF PROPERTY ACT, 1882 ===
+
+**Act Number:** 4 of 1882
+**Enacted:** March 17, 1882
+**Effective:** July 1, 1882
+**Amendments:** Multiple amendments including major amendments in 1929, 2001, 2002
+**Total Sections:** 137 sections across 8 chapters
+**Law Type:** Property and Civil Law
+
+The Transfer of Property Act, 1882 defines and amends the law relating to transfer of property by act of parties. It does not deal with transfers by operation of law (succession, insolvency). The Act is based on English common law principles adapted to Indian conditions. It applies to whole of India except State of Jammu and Kashmir (until 2019).
+
+**Key Features:**
+- Defines transfer of property and modes of transfer
+- Regulates sale, mortgage, lease, exchange, gift
+- Specifies formalities (registration, delivery)
+- Protects bona fide purchasers for value
+- Provides remedies for breach
+
+---
+
+=== ToP Act Section 5: Transfer of Property Defined ===
+
+**Section Number:** Section 5
+**Act Name:** Transfer of Property Act, 1882
+**Law Type:** Property Law
+**Subject:** What constitutes transfer of property
+
+**Legal Definition:**
+"Transfer of property" means an act by which a living person conveys property, in present or in future, to one or more other living persons, or to himself and one or more other living persons; and "to transfer property" is to perform such act.
+
+**Key Elements:**
+1. Act by living person (transferor)
+2. To one or more living persons (transferee)
+3. Property conveyed in present or future
+4. By act of parties (not by operation of law)
+
+**Modes of Transfer:**
+- Sale (Section 54)
+- Mortgage (Section 58)
+- Lease (Section 105)
+- Exchange (Section 118)
+- Gift (Section 122)
+
+**What Can Be Transferred (Section 6):**
+- Property of any kind (movable or immovable, tangible or intangible)
+- Exceptions: Spes successionis (expectancy of inheritance), right to sue, public office, pension, stipend
+
+**Practical Examples:**
+- A sells his house to B for ₹50 lakhs - Transfer by sale
+- A mortgages land to bank for loan - Transfer by mortgage
+- Father gifts property to son - Transfer by gift
+- A leases flat to B for 5 years - Transfer by lease
+- Person cannot transfer right to inherit property from living person (spes successionis) - Cannot be transferred
+
+**Related Sections:**
+- Section 6: What may be transferred
+- Section 8: Operation of transfer
+- Section 54-137: Specific modes of transfer
+
+**Important Notes:**
+- Transfer must be inter vivos (between living persons), not testamentary (will)
+- Transfer by act of parties, not by law (succession, forfeiture)
+- Both movable and immovable property can be transferred
+- Certain rights are non-transferable (Section 6)
+
+---
+
+=== ToP Act Section 54: Sale Defined and Formalities ===
+
+**Section Number:** Section 54
+**Act Name:** Transfer of Property Act, 1882
+**Law Type:** Property Law
+**Subject:** Sale of immovable property
+
+**Definition:**
+"Sale" is a transfer of ownership in exchange for a price paid or promised or part-paid and part-promised.
+
+**Essentials of Sale:**
+1. Transfer of ownership (not mere possession)
+2. In exchange for price (money consideration)
+3. Price paid or promised or part-paid/part-promised
+4. Present transfer (not agreement to sell in future)
+
+**Sale vs Agreement to Sell:**
+- **Sale:** Transfer of ownership immediate, property passes to buyer
+- **Agreement to Sell:** Transfer of ownership in future, buyer gets right to obtain ownership
+
+**Formalities for Sale of Immovable Property (Section 54):**
+
+**General Rule:**
+Sale of immovable property of value ₹100 or more can be made only by registered instrument (sale deed).
+
+**Exceptions (Registration Not Required):**
+1. Government grants and leases
+2. Certain tenancy rights
+3. Property of value less than ₹100 (rare in practice)
+
+**Registration Requirements:**
+- Sale deed executed and signed by seller (transferor)
+- Sale deed registered under Registration Act, 1908
+- Minimum 2 witnesses
+- Stamp duty paid as per state law
+- Sub-registrar registers the deed
+
+**Effect of Sale:**
+- Ownership transfers from seller to buyer
+- Buyer becomes owner with right to possess, use, and transfer
+- Seller's title extinguished
+
+**Practical Examples:**
+- A sells house to B for ₹1 crore. Sale deed executed, signed, stamped, and registered - Valid sale, ownership transfers to B
+- A agrees to sell land to B after 6 months for ₹50 lakhs - Agreement to sell (not sale), ownership does not pass until actual sale deed executed
+- Sale deed executed but not registered - Invalid, ownership does not pass (Section 54 requires registration for immovable property above ₹100)
+- A sells movable property (car) to B by delivery without written document - Valid (movables can be sold by delivery)
+
+**Related Sections:**
+- Section 55: Rights and liabilities of buyer and seller
+- Section 17: Warranty of title (seller warrants he has right to transfer)
+- Contract Act Section 2(h): Contract defined
+- Registration Act, 1908: Compulsory registration of sale deeds
+
+**Important Notes:**
+- Sale of immovable property must be by registered document (Section 54)
+- Unregistered sale deed does not transfer ownership
+- Sale of movables does not require registration (delivery sufficient)
+- Part performance (Section 53A) may give limited protection to buyer if sale deed not registered but possession given
+
+---
+
+=== ToP Act Section 58: Mortgage Defined ===
+
+**Section Number:** Section 58
+**Act Name:** Transfer of Property Act, 1882
+**Law Type:** Property Law
+**Subject:** Mortgage of immovable property
+
+**Definition:**
+"Mortgage" is the transfer of an interest in specific immovable property for the purpose of securing payment of money advanced or to be advanced by way of loan, an existing or future debt, or the performance of an engagement which may give rise to a pecuniary liability.
+
+**Parties:**
+- Mortgagor: Person who transfers interest (borrower)
+- Mortgagee: Person in whose favor interest is transferred (lender)
+- Mortgage Deed: Instrument effecting transfer
+- Mortgaged Property: Property transferred as security
+
+**Types of Mortgages (Section 58):**
+
+**1. Simple Mortgage (Section 58(b)):**
+- Mortgagor does not deliver possession of property
+- Binds himself personally to pay and binds property for payment
+- Mortgagee has right to sell property through court decree if debt not paid
+- Most common type in India
+
+**2. Mortgage by Conditional Sale (Section 58(c)):**
+- Ostensible sale with condition that sale becomes void on payment
+- Sale with right of redemption
+- Ownership appears to transfer but reverts on payment
+
+**3. Usufructuary Mortgage (Section 58(d)):**
+- Mortgagor delivers possession to mortgagee
+- Mortgagee entitled to receive rents and profits in lieu of interest
+- No personal liability of mortgagor
+
+**4. English Mortgage (Section 58(e)):**
+- Mortgagor binds himself to repay on certain date
+- Transfers property absolutely to mortgagee
+- Mortgagee agrees to re-transfer on payment
+- Common for large loans, banks use this type
+
+**5. Mortgage by Deposit of Title Deeds (Section 58(f)):**
+- Equitable mortgage
+- Mortgagor delivers title deeds to mortgagee
+- No formal deed required in certain towns (notified under Section 58(f))
+- Quick and easy, commonly used by banks
+
+**6. Anomalous Mortgage (Section 58(g)):**
+- Combination of two or more types
+- Not falling under above categories
+
+**Rights of Mortgagee:**
+- Right to sue for mortgage money
+- Right to sell mortgaged property (through court or privately, depending on type)
+- Right to foreclosure (extinguish mortgagor's right)
+- Right to possession (in certain types)
+
+**Rights of Mortgagor:**
+- Right to redemption (pay debt and get property back)
+- Right to redeem even after due date (equity of redemption)
+- Right to transfer mortgaged property subject to mortgage
+- Right to lease (with restrictions)
+
+**Practical Examples:**
+- A mortgages house to bank for ₹20 lakh loan, no possession delivered, mortgage deed registered - Simple mortgage
+- A deposits title deeds of property with bank for ₹10 lakh loan without executing formal deed - Mortgage by deposit of title deeds
+- A mortgages agricultural land to B, delivers possession, B takes crops in lieu of interest - Usufructuary mortgage
+- A executes mortgage deed transferring property to bank with covenant to re-transfer on payment - English mortgage
+
+**Related Sections:**
+- Section 60: Right to redeem (mortgagor can pay and get property back)
+- Section 69: Foreclosure (mortgagee can extinguish mortgagor's right)
+- Section 67: Power of sale (mortgagee's right to sell)
+
+**Important Notes:**
+- Mortgage is security for loan, not outright transfer
+- Mortgagor retains equity of redemption (right to get property back by paying debt)
+- Registration required for mortgages (except deposit of title deeds in notified areas)
+- Banks commonly use simple mortgage or deposit of title deeds
+- Foreclosure requires court decree
+
+---
+
+=== ToP Act Section 105-107: Lease Defined ===
+
+**Section Number:** Section 105 (Definition), Section 106-107 (Duration and Formalities)
+**Act Name:** Transfer of Property Act, 1882
+**Law Type:** Property Law
+**Subject:** Lease of immovable property
+
+**Definition (Section 105):**
+"Lease" is a transfer of a right to enjoy immovable property for a certain time, express or implied, or in perpetuity, in consideration of a price paid or promised, or of money, a share of crops, service or any other thing of value, to be rendered periodically or on specified occasions to the transferor by the transferee, who accepts the transfer on such terms.
+
+**Parties:**
+- Lessor: Owner who transfers right to enjoy property (landlord)
+- Lessee: Person who gets right to enjoy property (tenant)
+- Rent: Consideration (money or kind) paid by lessee
+- Lease Deed: Instrument creating lease
+
+**Essentials:**
+1. Transfer of right to enjoy (not ownership)
+2. Immovable property
+3. For certain time or in perpetuity
+4. In consideration of rent or premium
+5. Periodical payment or on specified occasions
+
+**Duration of Lease (Section 106):**
+
+**Lease from Year to Year:**
+- Terminable by 6 months' notice ending with end of year of tenancy
+- Example: Lease commences on 1st April, notice can terminate lease on 31st March after 6 months
+
+**Lease from Month to Month:**
+- Terminable by 15 days' notice
+
+**Lease from Week to Week/Day to Day:**
+- 7 days' notice for weekly, 24 hours' notice for daily
+
+**Fixed Term Lease:**
+- Terminates at end of specified period
+- No notice required (unless agreed otherwise)
+
+**Formalities (Section 107):**
+
+**Leases for Less Than 1 Year:**
+- Can be oral or written
+- No registration required
+
+**Leases from Year to Year OR for More Than 1 Year OR Reserving Yearly Rent:**
+- Must be in writing
+- Must be registered under Registration Act
+
+**Practical Examples:**
+- A leases house to B for 11 months at ₹20,000/month - Oral lease valid, no registration required
+- A leases commercial property to B for 5 years at ₹50,000/month - Must be written and registered
+- A leases land to B on year-to-year basis with rent ₹10,000/year - Must be written and registered (yearly rent)
+- Tenant refuses to vacate after lease expires - Lessor can file eviction suit
+
+**Related Sections:**
+- Section 108: Rights and liabilities of lessor and lessee
+- Section 111: Determination (termination) of lease
+- Rent Control Acts (state-specific laws)
+
+**Important Notes:**
+- Lease transfers only right to enjoy, not ownership
+- Lease for more than 1 year must be registered
+- Lease from year to year (even if no specified term) must be registered
+- Unregistered lease for more than 1 year creates only monthly tenancy
+- Lessee cannot transfer leasehold without lessor's consent (unless lease permits)
+
+---
+
+=== ToP Act Section 122: Gift Defined ===
+
+**Section Number:** Section 122
+**Act Name:** Transfer of Property Act, 1882
+**Law Type:** Property Law
+**Subject:** Gift of immovable and movable property
+
+**Definition:**
+"Gift" is the transfer of certain existing movable or immovable property made voluntarily and without consideration, by one person, called the donor, to another, called the donee, and accepted by or on behalf of the donee.
+
+**Essentials of Valid Gift:**
+
+**1. Donor:**
+- Person who gives the gift
+- Must be competent to contract
+- Must own the property
+
+**2. Donee:**
+- Person who receives the gift
+- Can be any person (including minor)
+
+**3. Subject Matter:**
+- Existing property (movable or immovable)
+- Donor must have transferable interest
+- Cannot be future property
+
+**4. Transfer:**
+- Voluntary (not under compulsion)
+- Without consideration (no payment)
+- Present transfer (not future promise)
+
+**5. Acceptance:**
+- Donee or someone on his behalf must accept
+- Acceptance during lifetime of donor
+- If donee dies before acceptance, gift fails
+
+**Formalities (Section 123):**
+
+**Gift of Immovable Property:**
+- Must be effected by registered instrument (gift deed)
+- Signed by donor
+- Attested by at least two witnesses
+- Registration under Registration Act mandatory
+
+**Gift of Movable Property:**
+- Can be made by delivery (physical transfer)
+- OR by registered instrument
+- No registration required for movables
+
+**Onerous Gift (Section 127):**
+- Gift with condition (e.g., gift of property subject to maintenance of donor)
+- Donee must accept gift subject to onerous clause or reject entire gift
+- Cannot accept benefit and reject burden
+
+**Revocation of Gift:**
+- Gift once complete cannot be revoked (general rule)
+- Exception: Gift by revocable deed specifying revocation circumstances
+
+**Practical Examples:**
+
+**Valid Gifts:**
+- Father executes registered gift deed transferring house to son without consideration - Valid gift of immovable property
+- Mother gives jewelry to daughter by physically delivering it - Valid gift of movable property
+- Grandfather gives cash of ₹1 lakh to grandson by handing over - Valid gift
+
+**Invalid Gifts:**
+- A promises to gift land to B next year - Invalid (future property, no present transfer)
+- A executes gift deed but does not register it - Invalid gift of immovable property (registration mandatory)
+- Donor gifts property but donee does not accept - Invalid (acceptance required)
+- Gift made under threat or coercion - Invalid (must be voluntary)
+
+**Onerous Gift:**
+- A gifts house to B on condition that B maintains A for life - Onerous gift. B must accept both gift and obligation or reject both.
+
+**Related Sections:**
+- Section 126: Onerous gift
+- Section 127: Universal donee (takes all property subject to all obligations)
+- Contract Act Section 25: Gift does not require consideration
+
+**Important Notes:**
+- Gift must be voluntary and without consideration
+- Gift of immovable property must be registered (Section 123)
+- Gift of movables can be by delivery or registered document
+- Unregistered gift deed of immovable property is invalid
+- Gift cannot be revoked once accepted (except in specified circumstances)
+- Donor must intend to transfer ownership, not mere possession
+
+---
+
+**End of Transfer of Property Act Seed File**
+**Total Sections Covered:** 6 key sections covering transfer, sale, mortgage, lease, and gift
+**Cross-References:** Contract Act, Registration Act, CPC
+**Law Type:** Property and Civil Law
+**Effective Date:** July 1, 1882

@@ -1,0 +1,619 @@
+=== RIGHT TO INFORMATION ACT, 2005 ===
+
+**Act Number:** 22 of 2005
+**Enacted:** June 15, 2005
+**Effective Date:** October 12, 2005 (except Jammu & Kashmir until 2019)
+**Amended:** 2019 (Central Information Commission composition)
+**Total Sections:** 31 sections across 6 chapters
+**Law Type:** Transparency and Governance Law
+
+The Right to Information (RTI) Act, 2005 is a landmark legislation that empowers citizens to seek information from public authorities, promoting transparency and accountability in government. The Act is based on the principle that democracy requires an informed citizenry and transparency of information. It establishes the right to information as a fundamental right under Article 19(1)(a) of the Constitution.
+
+**Key Features:**
+- Any citizen can request information from public authorities
+- Public authorities must respond within 30 days (48 hours for life/liberty matters)
+- Exemptions listed for sensitive information
+- Three-tier appellate mechanism
+- Penalties for non-compliance by Public Information Officers
+- Proactive disclosure mandated for public authorities
+
+---
+
+=== RTI Act Section 2(f) and 2(j): Definitions of Information and Right to Information ===
+
+**Section Number:** Section 2(f) - Information, Section 2(j) - Right to Information
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** What constitutes information and the right to access it
+
+**Description:**
+Section 2(f) defines "information" as any material in any form, including records, documents, memos, e-mails, opinions, advices, press releases, circulars, orders, logbooks, contracts, reports, papers, samples, models, data material held in any electronic form and information relating to any private body which can be accessed by a public authority under any other law.
+
+Section 2(j) defines "right to information" as the right to information accessible under this Act which is held by or under the control of any public authority and includes the right to inspection of work, documents, records; taking notes, extracts or certified copies of documents or records; taking certified samples of material; and obtaining information in the form of diskettes, floppies, tapes, video cassettes or in any other electronic mode or through printouts.
+
+**What is "Information" (Section 2(f)):**
+
+Includes:
+- Records, documents, memorandums
+- E-mails, letters, circulars
+- Opinions, advices given to ministries
+- Press releases, notifications, orders
+- Logbooks, registers, diaries
+- Reports, papers, studies, analysis
+- Contracts, agreements
+- Data in electronic form
+- Files, notings of officials
+- Samples, models
+- Information about private bodies accessible to public authority
+
+**What is "Right to Information" (Section 2(j)):**
+
+Right to:
+1. Inspect work, documents, and records
+2. Take notes and extracts from documents
+3. Obtain certified copies of documents
+4. Obtain certified samples of material
+5. Obtain information in electronic form (diskettes, CDs, printouts)
+
+**Practical Examples:**
+- Citizen requests copies of file notings related to tender awarded by government department - "Information" under RTI
+- Request for inspection of school building construction records - Right to inspect is part of RTI
+- Request for data on government expenditure in electronic form (Excel sheet) - Right to obtain in electronic form
+- Request for opinions given by law officers to ministry - "Information" includes opinions and advices
+- Request to inspect samples of food grains stored in government warehouse - Right to obtain certified samples
+- Request for email correspondence between officials regarding policy decision - E-mails are "information"
+
+**What is NOT Information:**
+- Information about private individuals (unless public interest overrides privacy)
+- Personal information that has no relationship to public activity
+- Third party commercial confidential information (unless public interest)
+
+**Related Sections:**
+- RTI Section 3: Right to information subject to provisions
+- RTI Section 8: Exemptions from disclosure
+- RTI Section 11: Third party information
+- Constitution Article 19(1)(a): Freedom of speech and expression (includes right to information)
+
+**Important Notes:**
+- "Information" is broadly defined to include all forms of material
+- Right to information includes not just copies but also inspection and samples
+- Information in electronic form must be provided if available in that form
+- Information held by public authority on behalf of others is also covered
+- Private body information accessible to public authority can be sought under RTI
+
+---
+
+=== RTI Act Section 3: Right to Information Subject to Provisions ===
+
+**Section Number:** Section 3
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Scope and extent of right to information
+
+**Description:**
+Section 3 establishes that all citizens have the right to information, subject to the provisions of the Act and any other law in force. This section is the foundational provision that confers the right to information on citizens, while also clarifying that the right is not absolute and is subject to exemptions and other laws.
+
+**Key Elements:**
+1. Right conferred on "all citizens" (non-citizens not covered)
+2. Right extends to information "subject to provisions of this Act"
+3. Also subject to "any other law for the time being in force"
+4. Public authorities obligated to provide information
+
+**Scope:**
+- Right to information is a fundamental right flowing from Article 19(1)(a)
+- Applies to all public authorities (central, state, local governments)
+- Includes autonomous bodies, NGOs receiving government funding
+- Covers all information held by or under control of public authority
+
+**Limitations:**
+- Exemptions under Section 8 (national security, privacy, etc.)
+- Third party confidential information under Section 11
+- Laws like Official Secrets Act may restrict certain information
+- Right available only to citizens of India, not foreigners
+
+**Practical Examples:**
+- Indian citizen requests information from municipal corporation - Right available
+- Foreign national requests information - Not covered under RTI Act
+- Citizen requests budget allocation details from ministry - Right available subject to no exemptions
+- Citizen requests cabinet meeting minutes - May be exempt under Section 8(1)(i)
+
+**Related Sections:**
+- RTI Section 2(j): Right to information defined
+- RTI Section 8: Exemptions
+- RTI Section 4: Obligations of public authorities
+- Constitution Article 19(1)(a): Freedom of speech and expression
+
+**Important Notes:**
+- RTI right is subject to reasonable restrictions
+- Exemptions are not absolute; public interest test applies in many cases
+- Right to information is enforceable right, not a mere privilege
+- Public authorities have positive duty to provide information
+
+---
+
+=== RTI Act Section 4: Obligations of Public Authorities - Proactive Disclosure ===
+
+**Section Number:** Section 4
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Mandatory proactive disclosure of information
+
+**Description:**
+Section 4 mandates that every public authority shall proactively disclose certain categories of information suo motu (on its own) without waiting for requests. This includes information about the organization's structure, functions, powers, duties, salaries, budget, manner of execution of subsidy programs, and details of concessions, permits, or authorizations granted. The information must be disseminated widely and updated regularly.
+
+**Information to be Disclosed Proactively (Section 4(1)(b)):**
+
+1. Particulars of organization, functions, and duties
+2. Powers and duties of officers and employees
+3. Procedure followed in decision-making process
+4. Norms set for discharge of functions
+5. Rules, regulations, instructions, manuals, records used by employees
+6. Statement of categories of documents held or under control
+7. Details of consultation with public in policy formation
+8. Boards, councils, committees, bodies constituted as part of public authority
+9. Directory of officers and employees
+10. Monthly remuneration of officers and employees
+11. Budget allocated and expenditure details
+12. Manner of execution of subsidy programs
+13. Particulars of recipients of concessions, permits, or authorizations
+14. Information available in electronic form
+15. Facilities available to citizens for obtaining information
+16. Names and contact details of Public Information Officers
+17. Other information prescribed
+
+**Mode of Disclosure:**
+- Published on official website (if available)
+- Published in print form in widely accessible formats
+- Disseminated through notice boards, newspapers, public announcements
+- Updated at least annually (or more frequently as required)
+
+**Practical Examples:**
+- Ministry publishes list of all officers with contact details on website - Proactive disclosure under Section 4
+- Municipality publishes budget allocation and expenditure quarterly - Mandatory disclosure
+- Public authority displays names of RTI officers on notice board - Required disclosure
+- University publishes rules and regulations governing admissions on website - Proactive disclosure
+- Department publishes details of all beneficiaries of subsidy scheme - Mandatory under Section 4(1)(b)(xiii)
+
+**Related Sections:**
+- RTI Section 5: Designation of Public Information Officers
+- RTI Section 6: Request for information (when proactive disclosure insufficient)
+- RTI Section 7: Disposal of requests
+
+**Important Notes:**
+- Proactive disclosure reduces burden of individual RTI requests
+- Non-compliance with Section 4 may lead to penalty on PIO
+- Updated information must be published at least annually
+- Proactive disclosure is in addition to responding to individual requests
+- Websites must be user-friendly and information easily accessible
+
+---
+
+=== RTI Act Section 5: Public Information Officers ===
+
+**Section Number:** Section 5
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Designation and duties of PIOs and APIOs
+
+**Description:**
+Section 5 mandates that every public authority shall designate Public Information Officers (PIOs) and Assistant Public Information Officers (APIOs) to receive and respond to RTI applications. PIOs are the nodal officers responsible for providing information under the Act.
+
+**Designation:**
+- PIOs designated at appropriate level (usually section level or equivalent)
+- APIOs designated to receive applications and forward to PIO within 5 days
+- Contact details of PIOs and APIOs to be published
+
+**Duties of PIO:**
+- Receive RTI applications
+- Provide information within 30 days or give reasons for rejection
+- Transfer application to concerned public authority if information relates to them
+- Assist applicants who cannot write or have disability
+- Maintain records of applications and responses
+
+**Duties of APIO:**
+- Receive RTI applications
+- Forward to concerned PIO within 5 days
+- Issue receipt to applicant
+
+**Related Sections:**
+- RTI Section 6: Request for information
+- RTI Section 7: Disposal of request
+- RTI Section 20: Penalties for non-compliance
+
+**Important Notes:**
+- PIOs personally liable for delay or refusal to provide information
+- Penalties up to ₹25,000 for non-compliance
+- PIOs can be held accountable by Information Commission
+
+---
+
+=== RTI Act Section 6: Request for Information ===
+
+**Section Number:** Section 6
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Procedure for filing RTI application
+
+**Description:**
+Section 6 provides the procedure for requesting information from a public authority. A person who desires to obtain information must make a request in writing or through electronic means to the PIO/APIO, specifying the particulars of the information sought. The request may be made in English, Hindi, or the official language of the area.
+
+**How to File RTI Application:**
+
+**1. Application Form:**
+- Written application or electronic application
+- Can be handwritten, typed, or online
+- Need not be on any prescribed format
+- Should be addressed to PIO or APIO
+
+**2. Content of Application:**
+- Name and contact details of applicant
+- Particulars of information sought (specific and clear)
+- Preferred mode of receiving information (inspection, copy, electronic)
+- Can state "under RTI Act 2005"
+- No need to give reasons for seeking information
+
+**3. Language:**
+- English, Hindi, or official language of the area
+- Application can be in any of these languages
+
+**4. Fees:**
+- Application fee: ₹10 for central government (may vary for states)
+- Additional fee for copies, inspection, or samples as prescribed
+- BPL cardholders exempt from all fees
+- Fee can be paid by cash, demand draft, banker's cheque, or online
+
+**Where to File:**
+- PIO of the concerned public authority
+- APIO (who must forward to PIO within 5 days)
+- Can file in person, by post, or online (if facility available)
+
+**Practical Examples:**
+- Citizen writes RTI application by hand on plain paper requesting information on road construction tenders - Valid application
+- Application submitted online through RTI portal with ₹10 fee paid electronically - Valid
+- BPL cardholder files RTI without paying any fee - Exempted from fee
+- Applicant files RTI in Hindi to central government office - Valid, must be accepted
+- Application does not state reasons for seeking information - Valid, reasons not required
+- Applicant specifies wants certified photocopies of documents - PIO must provide in that mode
+
+**Third Party Information (Section 6(3)):**
+- If information relates to or supplied by third party, PIO must give notice to third party
+- Third party has 10 days to make representation
+- PIO decides after considering third party's representation
+
+**Related Sections:**
+- RTI Section 7: Disposal of request (time limits)
+- RTI Section 18-19: Appeals if application rejected
+- RTI Section 8: Exemptions from disclosure
+- RTI Section 11: Third party information
+
+**Important Notes:**
+- No need to give reasons for seeking information
+- Application fee nominal (₹10 for central govt)
+- BPL cardholders completely exempt from all fees
+- Application can be rejected only on grounds specified in Section 8
+- PIO must assist applicants who cannot write their application
+- Oral requests not accepted (must be in writing)
+
+---
+
+=== RTI Act Section 7: Disposal of Request and Time Limits ===
+
+**Section Number:** Section 7
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Time limits for providing information
+
+**Description:**
+Section 7 prescribes the time limits within which the PIO must provide information or reject the request. The standard time limit is 30 days from receipt of request. However, if the information concerns the life or liberty of a person, it must be provided within 48 hours. If the request is transferred to another public authority, an additional 30 days is available from the date of transfer.
+
+**Time Limits:**
+
+**1. Standard Time Limit (Section 7(1)):**
+- 30 days from receipt of request by PIO
+- Counted from date of receipt, not from date of application
+
+**2. Life or Liberty Matters (Section 7(1) proviso):**
+- 48 hours from receipt of request
+- Applies when information concerns life or liberty of person
+- Examples: Medical emergency, person in custody, life-threatening situation
+
+**3. Information Concerning Third Party (Section 7(3)):**
+- Notice to third party: Within 5 days of receipt of request
+- Third party response: 10 days from receipt of notice
+- PIO decision: Within 40 days from receipt of request (30 + 10 for third party response)
+
+**4. Transferred Application (Section 6(3)):**
+- If request transferred to another public authority: That authority has 30 days from receipt
+- PIO transferring must inform applicant within 5 days
+
+**Failure to Meet Time Limit:**
+- If information not provided within time limit, deemed that PIO has refused to provide
+- Applicant can treat it as rejection and file first appeal
+- If information provided late, it must be provided free of charge
+
+**Practical Examples:**
+- RTI application filed on 1st January, PIO must respond by 31st January - 30-day limit
+- Application concerns person detained by police, information must be provided within 48 hours - Life/liberty matter
+- PIO transfers application to another ministry on 10th day, that ministry has 30 days from receipt - Transfer provision
+- PIO fails to respond within 30 days, applicant files first appeal treating it as deemed refusal - Deemed refusal
+- PIO provides information on 40th day - Information must be free as time limit exceeded
+
+**Providing Information:**
+
+**Modes of Providing Information:**
+- Copies of documents (photocopies or printed)
+- Inspection of documents or work
+- Certified samples of material
+- Electronic form (diskette, CD, email, pendrive)
+- Extracts or notes from documents
+
+**Additional Fees:**
+- Fee for photocopies: ₹2 per page (for central govt, may vary for states)
+- Fee for inspection: No fee or nominal fee
+- Fee for certified copies: As prescribed
+- BPL cardholders exempt from all fees
+
+**Related Sections:**
+- RTI Section 6: Request for information
+- RTI Section 8: Grounds for rejection
+- RTI Section 19: First appeal if information not provided
+- RTI Section 20: Penalty on PIO for delay
+
+**Important Notes:**
+- 48-hour time limit strictly enforced for life/liberty matters
+- If time limit exceeded, information must be provided free
+- PIO can seek extension by another 30 days with recorded reasons
+- "Life or liberty" interpreted broadly to include health emergencies
+- Deemed refusal if no response within time limit
+
+---
+
+=== RTI Act Section 8: Exemptions from Disclosure ===
+
+**Section Number:** Section 8
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Grounds for refusing information
+
+**Description:**
+Section 8 lists the categories of information that are exempt from disclosure under the RTI Act. These exemptions balance the right to information with other important interests such as national security, privacy, commercial confidence, and effective governance. However, most exemptions are not absolute - information can be disclosed if public interest in disclosure outweighs the harm to the protected interest.
+
+**Exemptions Under Section 8(1):**
+
+**1. Section 8(1)(a): Sovereignty, Security, Strategic Interests**
+- Information prejudicial to sovereignty and integrity of India
+- Security, strategic, scientific, or economic interests of the State
+- Relation with foreign State
+- Information leading to incitement of an offense
+- Examples: Defense secrets, intelligence reports, nuclear technology details
+
+**2. Section 8(1)(b): Cabinet Papers and Records**
+- Cabinet papers including deliberations of Council of Ministers
+- Exception: After decision is taken and matter is complete, reasons for decision can be disclosed
+
+**3. Section 8(1)(c): Breach of Privilege of Parliament/Legislature**
+- Information breach of privilege of Parliament or State Legislature
+- Examples: Legislative proceedings, legislative committee reports (if confidential)
+
+**4. Section 8(1)(d): Commercial Confidence, Trade Secrets**
+- Information including commercial confidence, trade secrets, or intellectual property
+- Disclosure would harm competitive position of third party
+- Exception: Public interest in disclosure outweighs harm; or Information Held by service provider can be disclosed
+
+**5. Section 8(1)(e): Fiduciary Information**
+- Information available to person in fiduciary relationship
+- Examples: Information received in confidence from foreign government, information from tax returns
+
+**6. Section 8(1)(f): Personal Information**
+- Information received in confidence from foreign government
+- Information whose disclosure would cause unwarranted invasion of privacy unless:
+  - Larger public interest justifies disclosure, OR
+  - Information relates to public activity or interest of public
+- Examples: Medical records, financial details of private individuals (unless public servants or relates to public activity)
+
+**7. Section 8(1)(g): Endangering Life or Safety**
+- Information which would endanger life or physical safety of any person
+- Information which would identify the source of information or assistance given in confidence for law enforcement or security
+- Examples: Informer's identity, witness protection details
+
+**8. Section 8(1)(h): Investigative Process**
+- Information which would impede the process of investigation or apprehension or prosecution of offenders
+- Examples: Ongoing investigation details, police strategies, evidence before charge sheet filed
+
+**9. Section 8(1)(i): Confidential Information**
+- Information which relates to or has been received from a foreign Government in confidence
+
+**10. Section 8(1)(j): Court Contempt or Breach of Privilege**
+- Information which would amount to contempt of court
+- Information breach of privilege of Parliament or State Legislature
+
+**Public Interest Override (Section 8(2)):**
+- Notwithstanding exemptions, information can be disclosed if public interest in disclosure outweighs the harm to protected interests
+- Applies to all exemptions except Section 8(1)(a) relating to sovereignty and security (which has limited override)
+
+**Section 8(3): Life and Liberty Information**
+- Information about allegations of corruption and human rights violations by public servants must be disclosed
+- No exemption allowed if information relates to allegations of corruption against public authority/public servant
+- No exemption if relates to allegations of human rights violations
+
+**Practical Examples:**
+- Request for nuclear weapons design - Exempt under Section 8(1)(a), no public interest override
+- Request for cabinet minutes of meeting discussing policy - Exempt under 8(1)(b) until decision implemented
+- Request for income tax returns of private individual - Exempt under 8(1)(f) as personal information
+- Request for ongoing investigation file in corruption case - Exempt under 8(1)(h) until charge sheet filed
+- Request for informer's identity who reported illegal activity - Exempt under 8(1)(g), endanger life
+- Request alleging corruption in tender award, asking for file notings - Must be disclosed under 8(3) despite exemptions
+- Commercial contract of public authority with private company - Disclosure unless commercial confidence established
+
+**Related Sections:**
+- RTI Section 11: Third party information (additional protection for commercial confidence)
+- RTI Section 24: Organizations exempt from RTI (intelligence agencies, etc.)
+- Official Secrets Act: Overlapping provisions on national security
+
+**Important Notes:**
+- Exemptions are discretionary, not mandatory (authority "may" refuse, not "shall")
+- Public interest test must be applied for most exemptions
+- Corruption and human rights violations information cannot be exempted
+- Partial disclosure: If part of information is exempt, other parts must be disclosed (severability)
+- Burden on public authority to prove exemption applies
+- Time for exemptions: Some information becomes non-exempt after passage of time (e.g., cabinet papers after implementation)
+
+---
+
+=== RTI Act Section 18-19: Appeals to Senior Officer and Information Commission ===
+
+**Section Number:** Section 18 (First Appeal) and Section 19 (Second Appeal)
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Appellate mechanism for RTI rejection
+
+**Description:**
+Sections 18 and 19 provide a two-tier appellate mechanism for applicants whose RTI requests have been rejected, or who have not received information within the prescribed time limit, or who are aggrieved by the information provided. The first appeal lies to a senior officer within the public authority, and the second appeal lies to the Information Commission.
+
+**First Appeal (Section 18):**
+
+**Who Can File:**
+- Person who has not received information within time limit (deemed refusal)
+- Person whose request has been rejected
+- Person who has been required to pay excessive fee
+- Person dissatisfied with information provided
+
+**Where to File:**
+- To officer senior in rank to the PIO (designated by public authority as First Appellate Authority)
+
+**Time Limit for Filing:**
+- 30 days from expiry of time limit for providing information (i.e., 60 days from filing application)
+- 30 days from receipt of information (if dissatisfied with information provided)
+- 30 days from date of rejection of request
+- First Appellate Authority can condone delay up to 30 days for sufficient cause
+
+**Disposal:**
+- First Appellate Authority must dispose appeal within 30 days (extendable by 15 days for sufficient reasons)
+
+**Orders FAA Can Pass:**
+- Reject appeal
+- Direct PIO to provide information
+- Direct PIO to provide information free of charge if time limit exceeded
+- Impose penalty on PIO under Section 20
+
+**Second Appeal (Section 19):**
+
+**Who Can File:**
+- Person aggrieved by order of First Appellate Authority
+- Person who has not received decision from FAA within time limit
+
+**Where to File:**
+- Central Information Commission (for central govt and union territories)
+- State Information Commission (for state govt)
+
+**Time Limit for Filing:**
+- 90 days from date of decision of FAA
+- 90 days from date of expiry of period for FAA decision
+- Information Commission can condone delay for sufficient cause
+
+**Disposal:**
+- Information Commission should dispose within 30 days (may be extended for reasons to be recorded)
+
+**Powers of Information Commission:**
+- Direct public authority to take steps to conform to provisions of RTI Act
+- Require public authority to publish information or categories of information
+- Make recommendations for amendments to RTI Act
+- Provide compensation to applicant for loss or detriment suffered
+- Impose penalty on PIO up to ₹25,000 for non-compliance
+- Reject appeal
+
+**Practical Examples:**
+- RTI application filed on 1st Jan, no response by 31st Jan, applicant files first appeal on 10th Feb - Within time limit
+- First appeal rejected, applicant files second appeal to Information Commission within 90 days - Valid second appeal
+- PIO provides incomplete information, applicant files first appeal claiming dissatisfaction - Valid ground for appeal
+- FAA does not decide appeal within 45 days, applicant directly files second appeal to IC - Deemed refusal by FAA
+- Information Commission orders PIO to pay ₹10,000 compensation to applicant for mental harassment - Power under Section 19(8)
+- Information Commission imposes penalty of ₹15,000 on PIO for persistent refusal to provide information - Penalty under Section 20
+
+**Related Sections:**
+- RTI Section 20: Penalties for refusal to provide information
+- RTI Section 15-17: Information Commission composition and powers
+- RTI Section 7: Time limits for disposal
+
+**Important Notes:**
+- First appeal is prerequisite for second appeal (except in certain cases)
+- No court fee for filing appeals
+- Appeals can be filed by post, in person, or online (if facility available)
+- Information Commission decisions are binding
+- Appeals against IC decision lie to High Court under writ jurisdiction
+- IC can recommend disciplinary action against erring PIOs in addition to penalty
+
+---
+
+=== RTI Act Section 20: Penalties for Non-Compliance ===
+
+**Section Number:** Section 20
+**Act Name:** Right to Information Act, 2005
+**Law Type:** Transparency and Governance
+**Subject:** Penalties on Public Information Officers
+
+**Description:**
+Section 20 empowers the Information Commission to impose penalties on the Public Information Officer for failing to provide information without reasonable cause, or for knowingly providing incorrect, incomplete, or misleading information, or for destroying information which was subject of RTI request. The penalty can be up to ₹250 per day of delay (maximum ₹25,000).
+
+**Grounds for Penalty:**
+
+**1. Refusal Without Reasonable Cause:**
+- PIO refuses to receive application
+- PIO does not provide information within time limit without reasonable cause
+- PIO malafidely denies request
+
+**2. Providing Incorrect Information:**
+- PIO knowingly gives incorrect information
+- PIO provides incomplete information to mislead
+- PIO provides misleading information
+
+**3. Destruction of Information:**
+- PIO destroys information which was subject of RTI request
+- PIO obstructs in any manner in furnishing information
+
+**Quantum of Penalty:**
+- ₹250 per day of delay
+- Maximum: ₹25,000 per RTI application
+- Cumulative penalty can exceed ₹25,000 if multiple RTI applications involved
+
+**Procedure:**
+- Information Commission must give PIO reasonable opportunity of being heard
+- IC must take into account PIO's explanation
+- IC must record findings on whether refusal was malafide or not
+- Burden on PIO to prove refusal was with reasonable cause
+
+**Burden of Proof:**
+- PIO must show refusal was for reasonable cause
+- PIO must prove information was not within their control or difficult to obtain
+
+**Deduction of Penalty:**
+- Penalty amount deducted from salary of PIO
+- Reimbursement to applicant if compensation ordered
+
+**Practical Examples:**
+- PIO does not respond to RTI for 60 days without reason, IC imposes penalty of ₹250 × 30 = ₹7,500 for 30 days delay - Valid
+- PIO provides incorrect information knowingly to mislead applicant, IC imposes ₹10,000 penalty - Penalty for malafide conduct
+- PIO destroys file after receiving RTI request, IC imposes ₹25,000 penalty - Maximum penalty for destruction
+- PIO explains delay was due to information being in another department and reasonable efforts made, IC accepts explanation and does not impose penalty - No penalty if reasonable cause
+- PIO refuses multiple RTI applications malafidely, IC imposes cumulative penalty of ₹50,000 - Penalty for multiple violations
+
+**Related Sections:**
+- RTI Section 19: Powers of Information Commission
+- RTI Section 7: Time limits
+- RTI Section 18: First appeal
+
+**Important Notes:**
+- Penalty is personal liability of PIO, not public authority
+- Penalty intended to ensure PIOs take RTI compliance seriously
+- IC must record reasons for imposing penalty
+- PIO can challenge penalty before High Court
+- No penalty if PIO proves reasonable cause for delay or refusal
+- Malafide refusal attracts higher penalty
+
+---
+
+**End of RTI Act Seed File**
+**Total Sections Covered:** 10 key sections covering definitions, procedure, exemptions, appeals, and penalties
+**Cross-References:** Constitution (Article 19(1)(a)), Official Secrets Act
+**Law Type:** Transparency and Governance Law
+**Effective Date:** October 12, 2005

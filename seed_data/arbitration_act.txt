@@ -1,0 +1,385 @@
+=== ARBITRATION AND CONCILIATION ACT, 1996 ===
+
+**Act Number:** 26 of 1996
+**Enacted:** August 16, 1996
+**Effective:** January 22, 1996 (retrospective)
+**Major Amendments:** 2015, 2019, 2021
+**Total Sections:** 86 sections across 4 parts
+**Law Type:** Commercial and Civil Law - Alternative Dispute Resolution
+
+The Arbitration and Conciliation Act, 1996 is a comprehensive legislation consolidating and amending the law relating to domestic arbitration, international commercial arbitration, and enforcement of foreign arbitral awards. It is based on the UNCITRAL Model Law on International Commercial Arbitration. The Act aims to minimize judicial intervention in arbitration and make arbitration an effective, speedy, and cost-effective alternative to litigation.
+
+**Key Features:**
+- Party autonomy in choosing arbitrators and procedure
+- Minimal court intervention
+- Speedy resolution (award within 12 months)
+- Limited grounds for challenging award
+- Enforcement of foreign awards
+- Conciliation as alternative to arbitration
+
+---
+
+=== Arbitration Act Section 7: Arbitration Agreement ===
+
+**Section Number:** Section 7
+**Act Name:** Arbitration and Conciliation Act, 1996
+**Law Type:** Commercial Law - ADR
+**Subject:** Form and content of arbitration agreement
+
+**Legal Definition:**
+An arbitration agreement is an agreement by parties to submit to arbitration all or certain disputes which have arisen or which may arise between them in respect of a defined legal relationship, whether contractual or not.
+
+**Forms of Arbitration Agreement:**
+
+**1. Arbitration Clause:**
+- Clause in main contract referring future disputes to arbitration
+- Example: "Any dispute arising out of this contract shall be settled by arbitration"
+
+**2. Separate Arbitration Agreement:**
+- Independent agreement to refer existing or future disputes to arbitration
+- Can be made before or after dispute arises
+
+**Essentials:**
+
+**1. In Writing (Section 7(4)):**
+- Contained in document signed by parties, OR
+- Exchange of letters, telex, telegrams, or other means of telecommunication, OR
+- Exchange of pleadings in which existence of arbitration agreement alleged and not denied
+
+**2. Defined Legal Relationship:**
+- Contract, tort, or other legal relationship
+- Need not be contractual
+
+**3. Disputes Covered:**
+- Present or future disputes
+- All disputes or certain disputes
+- Must be clearly defined
+
+**Separability (Section 16(1)(a)):**
+- Arbitration clause is separate and independent from main contract
+- Invalidity of main contract does not affect arbitration clause
+- Example: Contract void for fraud, but arbitration clause survives to determine fraud issue
+
+**Practical Examples:**
+
+**Valid Arbitration Agreements:**
+- Construction contract contains clause: "Disputes about payment or delays shall be referred to arbitration by sole arbitrator appointed by mutual consent" - Valid
+- After dispute arises, parties sign separate agreement to refer dispute to three-arbitrator tribunal - Valid
+- Parties exchange emails agreeing to arbitration - Valid (in writing)
+
+**Invalid:**
+- Oral agreement to arbitrate - Not valid (must be in writing)
+- Agreement too vague: "Disputes may be settled amicably" - Not arbitration agreement
+
+**Related Sections:**
+- Section 11: Appointment of arbitrators
+- Section 16: Competence of arbitral tribunal (Kompetenz-Kompetenz)
+- Section 8: Power to refer parties to arbitration
+
+**Important Notes:**
+- Arbitration agreement must be in writing (signed, email, or exchange of documents)
+- Court must refer parties to arbitration if valid arbitration agreement exists (Section 8)
+- Even if main contract void, arbitration clause survives
+- Arbitration agreement can cover non-contractual disputes (torts, property disputes)
+
+---
+
+=== Arbitration Act Section 11: Appointment of Arbitrators ===
+
+**Section Number:** Section 11
+**Act Name:** Arbitration and Conciliation Act, 1996
+**Law Type:** Commercial Law - ADR
+**Subject:** Constitution of arbitral tribunal
+
+**Appointment Methods:**
+
+**1. By Agreement of Parties (Section 11(2)):**
+- Parties free to agree on procedure for appointing arbitrator(s)
+- Number of arbitrators (sole, 3, or any odd number)
+- Procedure for appointment
+
+**2. Default Procedure (Section 11(3)):**
+If parties fail to agree:
+- **Sole Arbitrator:** Either party can request Chief Justice or designated authority to appoint
+- **Three Arbitrators:** Each party appoints one arbitrator, two appointed arbitrators appoint third (presiding) arbitrator
+- If party fails to appoint or arbitrators fail to appoint third arbitrator: Chief Justice appoints
+
+**3. By Supreme Court/High Court (Section 11(5), 11(6)):**
+- If default procedure fails or parties disagree
+- Chief Justice of India (international arbitration) or Chief Justice of High Court (domestic arbitration)
+- Designated judge/authority acts on behalf of Chief Justice
+
+**Qualifications of Arbitrators:**
+
+**2019 Amendment - Eligibility:**
+- Arbitrators must be impartial and independent
+- No conflict of interest
+- Disclosure of potential conflicts required
+- Arbitrators in international commercial arbitrations must meet qualification criteria in Eighth Schedule
+
+**Grounds of Ineligibility (Fifth Schedule):**
+- Person is employee, consultant, advisor of party
+- Person has financial interest in outcome
+- Person has managed party or has shares or control over party
+- Person has close family relationship with party
+
+**Number of Arbitrators:**
+- Odd number (1, 3, 5, etc.)
+- If parties agree on even number, additional arbitrator appointed as presiding arbitrator
+
+**Practical Examples:**
+
+**Appointment by Agreement:**
+- Contract states: "Disputes shall be referred to sole arbitrator appointed by President of Bar Council" - Parties' agreement honored
+- Each party appoints one arbitrator, two arbitrators appoint third - Default procedure
+
+**Appointment by Court:**
+- Parties cannot agree on arbitrator, High Court appoints on application by either party
+- One party appoints arbitrator but other party fails to appoint within 30 days, High Court appoints second and third arbitrators
+
+**Ineligibility:**
+- Company's legal advisor proposed as arbitrator in company's dispute - Ineligible (employee/advisor)
+- Father of company director proposed as arbitrator - Ineligible (close family relationship)
+
+**Related Sections:**
+- Section 12: Grounds for challenge of arbitrator
+- Section 13: Challenge procedure
+- Section 14: Termination of arbitrator's mandate
+
+**Important Notes:**
+- 2015 Amendment reduced court intervention in appointment
+- 2019 Amendment introduced arbitrator accreditation (Eighth Schedule for international arbitrations)
+- Arbitrators must disclose conflicts before appointment
+- Party cannot appoint own employee or advisor as arbitrator
+- Arbitrator's fees regulated (Fourth Schedule)
+
+---
+
+=== Arbitration Act Section 16: Kompetenz-Kompetenz ===
+
+**Section Number:** Section 16
+**Act Name:** Arbitration and Conciliation Act, 1996
+**Law Type:** Commercial Law - ADR
+**Subject:** Competence of arbitral tribunal to rule on jurisdiction
+
+**Principle:**
+"Kompetenz-Kompetenz" (German term) means arbitral tribunal can decide on its own jurisdiction, including objections to existence or validity of arbitration agreement.
+
+**Section 16(1):**
+Arbitral tribunal may rule on its own jurisdiction, including ruling on objections to existence or validity of arbitration agreement. For this purpose, arbitration clause in contract is treated as independent agreement (separability doctrine).
+
+**Key Aspects:**
+
+**1. Jurisdiction to Decide Jurisdiction:**
+- Arbitral tribunal decides whether it has jurisdiction
+- Tribunal not dependent on court to determine jurisdiction
+
+**2. Separability of Arbitration Clause:**
+- Arbitration clause is independent of main contract
+- Even if main contract is void, unenforceable, or terminated, arbitration clause survives
+- Tribunal can decide validity of main contract
+
+**Procedure for Raising Objection (Section 16(2)):**
+- Objection to jurisdiction must be raised not later than submission of statement of defense
+- Objection that tribunal is exceeding scope can be raised as soon as matter is raised during proceedings
+- Late objection allowed only if delay was for sufficient cause
+
+**Tribunal's Decision (Section 16(3)):**
+- Tribunal may rule on objection as preliminary question or in final award
+- If tribunal rules it has jurisdiction, party can appeal to court under Section 37 (limited appeal)
+- If tribunal proceeds despite jurisdictional objection, party can challenge award under Section 34
+
+**Practical Examples:**
+
+**Jurisdictional Objections:**
+- Respondent claims no arbitration agreement exists - Tribunal decides this issue first
+- Respondent claims arbitration clause invalid due to fraud in inducement - Tribunal can decide
+- Respondent claims main contract void, therefore arbitration clause also void - Tribunal can decide; arbitration clause survives even if main contract void
+
+**Separability:**
+- Construction contract alleged to be procured by fraud. Contractor refers dispute to arbitration. Builder objects that contract void for fraud, so arbitration clause also void. Tribunal can proceed to determine fraud issue - Separability principle
+
+**Exceeding Jurisdiction:**
+- Arbitration agreement covers price disputes only. Arbitrator decides quality dispute. Party objects tribunal is exceeding scope - Valid objection
+
+**Related Sections:**
+- Section 7: Arbitration agreement
+- Section 34: Setting aside arbitral award (including jurisdictional grounds)
+- Section 37: Appealable orders (including Section 16 orders)
+
+**Important Notes:**
+- Kompetenz-Kompetenz reduces court intervention
+- Arbitral tribunal's jurisdictional ruling is not final - subject to court review under Section 34 or 37
+- Separability ensures arbitration clause survives invalidity of main contract
+- Jurisdictional objection must be raised at earliest opportunity
+
+---
+
+=== Arbitration Act Section 34: Setting Aside Arbitral Award ===
+
+**Section Number:** Section 34
+**Act Name:** Arbitration and Conciliation Act, 1996
+**Law Type:** Commercial Law - ADR
+**Subject:** Limited grounds for challenging arbitral award
+
+**General Principle:**
+Arbitral award can be set aside only on limited grounds. Court does not act as appellate court reviewing merits of dispute. This ensures finality and minimal judicial intervention.
+
+**Time Limit:**
+Application to set aside award must be made within 3 months from date of receipt of award. Court can extend by maximum 30 days if sufficient cause shown.
+
+**Grounds for Setting Aside Award (Section 34(2)):**
+
+**A. Party Proving (Section 34(2)(a)):**
+
+**1. Incapacity (Section 34(2)(a)(i)):**
+- Party to arbitration agreement was under incapacity (minor, unsound mind, insolvent)
+- Example: Award set aside if one party was minor when arbitration agreement signed
+
+**2. Invalid Arbitration Agreement (Section 34(2)(a)(i)):**
+- Arbitration agreement not valid under law to which parties subjected it
+- Example: Arbitration agreement obtained by coercion - award set aside
+
+**3. Inadequate Notice or Unable to Present Case (Section 34(2)(a)(ii)):**
+- Party not given proper notice of arbitrator appointment or proceedings
+- Party unable to present case due to procedural unfairness
+- Example: Notice sent to wrong address, party could not appear - award set aside
+
+**4. Award Beyond Scope (Section 34(2)(a)(iv)):**
+- Award deals with dispute not contemplated by or not falling within arbitration agreement
+- Award contains decisions on matters beyond scope of submission
+- Example: Arbitration agreement covers price dispute, award decides quality issue - beyond scope
+
+**5. Improper Composition or Procedure (Section 34(2)(a)(v)):**
+- Composition of arbitral tribunal not in accordance with agreement of parties
+- Arbitral procedure not in accordance with agreement (unless contrary to Part I of Act)
+- Example: Parties agreed on 3 arbitrators, but sole arbitrator gave award - improper composition
+
+**B. Court's Finding (Section 34(2)(b)):**
+
+**1. Non-Arbitrability (Section 34(2)(b)(i)):**
+- Subject matter of dispute not capable of settlement by arbitration under Indian law
+- Example: Criminal matters, matrimonial disputes (divorce), insolvency - not arbitrable
+
+**2. Public Policy (Section 34(2)(b)(ii)):**
+- Award is in conflict with public policy of India
+- Public policy includes:
+  - Award induced by fraud or corruption
+  - Award in contravention of fundamental policy of Indian law
+  - Award in conflict with most basic notions of morality or justice
+  - Award is patently illegal (2015 Amendment)
+
+**Explanation to Public Policy (Added 2015):**
+Award is patently illegal if:
+- Arbitrator decided without evidence or contrary to evidence
+- Award contrary to substantive law (contract law, etc.)
+- Arbitrator exceeded jurisdiction
+
+**What Court CANNOT Do:**
+- Court cannot review merits of award
+- Court cannot reappreciate evidence
+- Court cannot substitute its view for arbitrator's view on facts
+- Court cannot set aside award merely because it disagrees with arbitrator's reasoning
+
+**Practical Examples:**
+
+**Valid Grounds:**
+- Arbitrator did not give notice to one party, gave ex parte award - Set aside (inadequate notice)
+- Arbitration agreement covered payment disputes, arbitrator decided termination of contract - Set aside (beyond scope)
+- Award based on no evidence or fabricated evidence - Set aside (patently illegal/public policy)
+- Award procured by fraud/bribery - Set aside (public policy)
+
+**Invalid Grounds (Award NOT Set Aside):**
+- Party claims arbitrator wrongly appreciated evidence - Cannot set aside (not ground under Section 34)
+- Party claims arbitrator's legal reasoning is wrong - Cannot set aside (court not appellate court)
+- Party disagrees with quantum of damages awarded - Cannot set aside (unless arbitrary/perverse)
+
+**Related Sections:**
+- Section 36: Enforcement of award
+- Section 37: Appealable orders
+- Section 48: Conditions for enforcement of foreign awards (similar grounds)
+
+**Important Notes:**
+- 2015 Amendment narrowed public policy ground to reduce frivolous challenges
+- Award cannot be set aside on ground that arbitrator made error of law or fact (unless patently illegal)
+- Patently illegal means award so irrational that no reasonable person could have arrived at it
+- Burden of proof on party challenging award
+- Court must be satisfied that grounds under Section 34 are made out
+- Setting aside award is exceptional, not routine
+
+---
+
+=== Arbitration Act Section 36: Enforcement of Arbitral Award ===
+
+**Section Number:** Section 36
+**Act Name:** Arbitration and Conciliation Act, 1996
+**Law Type:** Commercial Law - ADR
+**Subject:** Enforcement and execution of award
+
+**General Principle:**
+Arbitral award is final and binding on parties. It has same status as court decree and is enforceable as such.
+
+**Section 36 (Amended 2015, 2019):**
+
+**Enforceability:**
+- Arbitral award is enforceable as if it were a decree of court
+- Executed under Code of Civil Procedure, 1908 (as if it were civil court decree)
+
+**Stay of Enforcement (Section 36(2)):**
+Before 2015 Amendment: Award enforcement automatically stayed when Section 34 application filed
+
+After 2015 Amendment (Current Position):
+- Enforcement NOT automatically stayed when Section 34 application filed
+- Party can apply for stay of enforcement
+- Court may grant stay ONLY if:
+  - Prima facie case for setting aside award, AND
+  - Balance of convenience in favor of stay, AND
+  - Award if enforced would cause irreparable harm, AND
+  - Applicant deposits amount of award or provides security (unless undue hardship)
+
+**Deposit Requirement (2019 Amendment):**
+- Applicant seeking stay must deposit amount of award with court OR provide bank guarantee
+- Court can waive deposit if it causes undue hardship
+- Deposit protects successful party while challenge is pending
+
+**Time Limit for Enforcement:**
+- Award must be enforced within limitation period (usually 3 years from date of award)
+- Limitation Act, 1963 applies
+
+**Procedure:**
+1. Award holder files execution petition in court under CPC
+2. Court treats award as decree and issues execution process
+3. Recovery through attachment and sale of property, garnishee, arrest, etc. (same as decree execution)
+
+**Practical Examples:**
+
+**Enforcement:**
+- Arbitrator awards ₹50 lakhs to claimant. Award holder files execution petition in court. Court attaches respondent's property and recovers amount - Enforcement as decree
+
+**Stay:**
+- Before 2015 Amendment: Party files Section 34, enforcement automatically stayed
+- After 2015 Amendment: Party files Section 34 application AND applies for stay. Must show prima facie case and deposit ₹50 lakhs or provide bank guarantee. Court may grant stay if conditions satisfied.
+
+**No Stay:**
+- Party files Section 34 but cannot deposit amount and cannot show irreparable harm. Court refuses stay, award enforceable immediately despite pending challenge.
+
+**Related Sections:**
+- Section 34: Setting aside award (challenge to award)
+- Section 9: Interim measures by court
+- Code of Civil Procedure (CPC): Execution provisions
+
+**Important Notes:**
+- 2015 Amendment ended automatic stay on filing Section 34 application
+- This prevents parties from delaying enforcement by frivolous challenges
+- Deposit requirement ensures successful party gets payment pending challenge
+- Foreign awards enforced under Section 47-49 (different procedure)
+- Award is final and binding unless set aside under Section 34
+- Enforcement can be refused only if award set aside or falls under Section 34/48 grounds
+
+---
+
+**End of Arbitration Act Seed File**
+**Total Sections Covered:** 6 key sections covering arbitration agreement, appointment, jurisdiction, award challenge, and enforcement
+**Cross-References:** Contract Act, CPC, Specific Relief Act
+**Law Type:** Commercial Law - Alternative Dispute Resolution
+**Effective Date:** January 22, 1996; Major Amendments: 2015, 2019, 2021

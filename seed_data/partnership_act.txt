@@ -1,0 +1,387 @@
+=== INDIAN PARTNERSHIP ACT, 1932 ===
+
+**Act Number:** 9 of 1932
+**Enacted:** March 30, 1932
+**Effective:** October 1, 1932
+**Amendments:** Various amendments including Limited Liability Partnership Act, 2008
+**Total Sections:** 73 sections across 7 chapters
+**Law Type:** Commercial Law
+
+The Indian Partnership Act, 1932 defines and regulates partnership in India. It is based on English Partnership Act, 1890. The Act defines partnership, rights and duties of partners, registration of firms, and rules for dissolution. Partnership is a popular form of business organization in India, especially for small and medium businesses, professional services (law firms, CA firms, consultancy), and trading.
+
+**Key Features:**
+- Based on mutual agreement (contract)
+- Minimum 2 partners, maximum depends on business type
+- Unlimited liability of partners
+- Mutual agency (each partner can bind firm)
+- Registration optional but advisable
+- Profits and losses shared as per agreement
+
+---
+
+=== Partnership Act Section 4: Definition of Partnership ===
+
+**Section Number:** Section 4
+**Act Name:** Indian Partnership Act, 1932
+**Law Type:** Commercial Law
+**Subject:** What constitutes partnership
+
+**Legal Definition:**
+"Partnership is the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all."
+
+**Essentials of Partnership:**
+
+**1. Association of Two or More Persons:**
+- Minimum: 2 partners
+- Maximum: 10 partners (banking business), 20 partners (other business) under Companies Act
+- Person includes individuals, HUF, companies, LLPs
+
+**2. Agreement:**
+- Partnership created by agreement (contract), not by status
+- Agreement can be written, oral, or implied from conduct
+- Partnership deed recommended but not compulsory
+
+**3. Business:**
+- There must be lawful business
+- Business includes trade, profession, occupation
+- Charitable activities not "business" for partnership
+
+**4. Carried on by All or Any Acting for All:**
+- Business carried on by partners or any of them acting for all
+- Mutual agency: Each partner is agent of firm and other partners
+
+**5. Sharing of Profits:**
+- Objective must be to earn and share profits
+- Non-profit organizations not partnerships
+- Sharing of profits is evidence of partnership (but not conclusive)
+
+**Partnership vs Company:**
+- Partnership: Unlimited liability, no separate legal entity, governed by Partnership Act
+- Company: Limited liability, separate legal entity, governed by Companies Act
+
+**Partnership vs HUF:**
+- Partnership: Created by contract, partners can be unrelated
+- HUF: Created by birth, only family members
+
+**Practical Examples:**
+
+**Valid Partnerships:**
+- A and B agree to start grocery shop, share profits 50:50 - Partnership
+- Three lawyers start law firm, share profits as agreed - Partnership
+- Five doctors run hospital together, profits shared as per capital contribution - Partnership
+
+**Not Partnership:**
+- Employees sharing salary/bonus - Not partnership (no business carried on for profit)
+- Co-owners of property receiving rent - Not partnership (no active business)
+- Charity organization with multiple trustees - Not partnership (no profit motive)
+
+**Related Sections:**
+- Section 5: Partnership not created by status
+- Section 6: Mode of determining existence of partnership
+- Section 7: Partnership-at-will
+
+**Important Notes:**
+- Partnership is a contractual relationship
+- Registration is optional (Section 58) but advisable
+- Unregistered firm cannot sue third parties (Section 69)
+- Partners have unlimited liability (unlike LLP which has limited liability)
+
+---
+
+=== Partnership Act Section 9: Liability of Partners ===
+
+**Section Number:** Section 9
+**Act Name:** Indian Partnership Act, 1932
+**Law Type:** Commercial Law
+**Subject:** Joint and several liability of partners
+
+**Legal Text:**
+"Every partner is liable, jointly with all the other partners and also severally, for all acts of the firm done while he is a partner."
+
+**Key Principles:**
+
+**1. Joint Liability:**
+- All partners liable together
+- Creditor can sue all partners together
+
+**2. Several Liability:**
+- Each partner individually liable for entire debt
+- Creditor can sue any one partner for full amount
+- Partner who pays can recover contribution from co-partners
+
+**3. Unlimited Liability:**
+- Partners liable to extent of personal assets
+- No limit on liability (unlike shareholders in company)
+- Personal property can be attached for firm's debts
+
+**4. Liability During Partnership:**
+- Partner liable for acts done while he is a partner
+- New partner not liable for debts before he joined (unless agreed)
+- Retiring partner liable for debts up to retirement (unless creditor agrees otherwise)
+
+**Practical Examples:**
+- Firm owes ₹10 lakhs to creditor. Creditor can sue all 3 partners jointly OR can sue any one partner for full ₹10 lakhs. Partner who pays can claim ₹3.33 lakhs each from other two - Joint and several liability
+- A retires from firm on 1st Jan. Firm's debt of ₹5 lakhs arose on 15th Dec (before retirement). A still liable for this debt unless creditor agrees to release A - Liability continues
+- New partner B joins on 1st Feb. Firm has existing debt of ₹2 lakhs from last year. B not liable for this past debt (unless B agrees to be liable) - No liability for past debts
+
+**Related Sections:**
+- Section 13: Implied authority of partner to bind firm
+- Section 25: Partner's liability is unlimited
+- Section 32: Retiring partner's liability
+
+**Important Notes:**
+- Partners have unlimited personal liability
+- Creditor can choose to sue all partners or any one partner
+- Partner who pays more than his share can claim contribution from others
+- Limited Liability Partnership (LLP) Act, 2008 provides for limited liability alternative
+
+---
+
+=== Partnership Act Section 13: Implied Authority of Partner ===
+
+**Section Number:** Section 13
+**Act Name:** Indian Partnership Act, 1932
+**Law Type:** Commercial Law
+**Subject:** Partner's power to bind firm
+
+**Principle:**
+Subject to provisions of Section 22 (express restriction of authority), every partner has implied authority to bind the firm in all acts done in the usual course of the firm's business.
+
+**Implied Authority Includes:**
+
+**1. Acts in Usual Course of Business:**
+- Buying and selling goods of the kind dealt in by firm
+- Receiving payment of debts
+- Settling accounts with persons dealing with firm
+- Engaging employees
+- Drawing, accepting, endorsing negotiable instruments in firm's name
+
+**2. Emergencies:**
+- Taking necessary steps to protect firm from loss
+- Pledging goods of firm to raise money in emergencies
+
+**Implied Authority DOES NOT Include:**
+
+**1. Submission to Arbitration:**
+- Partner cannot submit dispute to arbitration without consent of all partners
+
+**2. Opening Bank Account:**
+- Partner cannot open bank account in firm's name without all partners' consent (unless business requires)
+
+**3. Compromising/Withdrawing Suit:**
+- Partner cannot compromise or withdraw legal proceedings on behalf of firm without consent
+
+**4. Admitting Liability:**
+- Partner cannot admit liability in suit against firm without consent
+
+**5. Transfer/Mortgage of Immovable Property:**
+- Partner cannot transfer or mortgage firm's immovable property without consent
+
+**Practical Examples:**
+
+**Acts Binding Firm (Implied Authority):**
+- Partner buys raw materials for manufacturing - Binds firm (usual business)
+- Partner hires salesperson - Binds firm (employment for business)
+- Partner accepts payment from customer - Binds firm (receiving payment)
+- Partner draws cheque in firm's name for paying supplier - Binds firm (negotiable instrument in business)
+
+**Acts NOT Binding Firm (Beyond Implied Authority):**
+- Partner mortgages firm's factory building without consulting other partners - Does NOT bind firm (immovable property transfer)
+- Partner settles firm's lawsuit by compromise without others' consent - Does NOT bind firm
+- Partner gives personal guarantee on behalf of firm without consent - Does NOT bind firm
+
+**Related Sections:**
+- Section 19: Partners bound by acts within authority
+- Section 22: Express restriction of partner's authority
+- Section 25: Partner's liability unlimited
+
+**Important Notes:**
+- Implied authority arises from nature of business
+- Restriction on partner's authority must be communicated to third parties to be effective
+- Acts within implied authority bind firm even if other partners don't consent
+- Acts beyond implied authority don't bind firm unless ratified by all partners
+
+---
+
+=== Partnership Act Section 18: Rights and Duties of Partners ===
+
+**Section Number:** Section 18
+**Act Name:** Indian Partnership Act, 1932
+**Law Type:** Commercial Law
+**Subject:** Partners' mutual rights and obligations
+
+**Rights of Partners:**
+
+**1. Right to Take Part in Business (Section 12(a)):**
+- Every partner has right to participate in conduct of business
+- Cannot be excluded from management without consent
+
+**2. Right to be Consulted (Section 12(c)):**
+- Differences about ordinary business matters decided by majority
+- Change in nature of business requires consent of all partners
+
+**3. Right to Access Books (Section 12(b)):**
+- Partner has right to inspect and copy firm's books of accounts
+- Right to get true information about firm's affairs
+
+**4. Right to Share Profits (Section 13(b)):**
+- Partners share profits equally (unless agreement provides otherwise)
+- Also share losses equally
+
+**5. Right to Interest on Capital:**
+- No interest on capital unless agreement provides
+- Interest on advances beyond capital allowed at 6% per annum (if partnership deed silent)
+
+**6. Right to be Indemnified:**
+- Firm must indemnify partner for payments made and liabilities incurred in ordinary and proper conduct of business or in emergency
+
+**Duties of Partners:**
+
+**1. Duty to Carry on Business for Greatest Common Advantage (Section 9):**
+- Partner must work for mutual benefit of all partners
+- Fiduciary duty
+
+**2. Duty to be Just and Faithful (Section 9):**
+- Render true accounts
+- Provide full information of all matters affecting firm
+- Act in good faith
+
+**3. Duty to Account for Private Profits (Section 16):**
+- Partner must account for any benefit derived from:
+  - Transaction of firm, OR
+  - Use of firm property, name, or business connections, OR
+  - Without consent of other partners
+
+**4. Duty Not to Compete (Section 16):**
+- Partner cannot carry on competing business without consent of other partners
+- Must account for profits from competing business
+
+**5. Duty to Attend Diligently:**
+- Partner must attend to partnership business with reasonable diligence
+- Cannot delegate duties without consent (except ministerial acts)
+
+**6. Duty to Hold and Use Property for Firm:**
+- Partner holds partnership property as trustee for firm
+- Cannot use firm property for private purposes
+
+**7. Duty to Indemnify for Fraud:**
+- Partner must indemnify firm for loss caused by his willful neglect or fraud
+
+**Practical Examples:**
+
+**Rights:**
+- Partner A wants to see firm's accounts - Has right to access (Section 12(b))
+- Firm earned ₹10 lakhs profit, 4 partners, no agreement on profit sharing - Each gets ₹2.5 lakhs (equal sharing)
+- Partners disagree on hiring new employee - Ordinary matter, decided by majority
+- Partners disagree on starting new line of business - Change in nature, requires unanimous consent
+
+**Duties:**
+- Partner A uses firm's customer list to start own competing business - Breach of duty (Section 16), must account for profits
+- Partner B makes secret profit from firm's transaction - Must account to firm (Section 16)
+- Partner C was negligent causing loss to firm - Must indemnify firm for loss (Section 10)
+- Partner D uses firm's money for personal investment without consent - Breach of fiduciary duty, must account for profits
+
+**Related Sections:**
+- Section 13: Implied authority of partner
+- Section 16: Partner's duty to account for private profits
+- Section 9: Partners are agents of firm
+
+**Important Notes:**
+- Partners have both rights and fiduciary duties
+- Fiduciary duty means high standard of good faith
+- Partners cannot make secret profits from partnership business
+- Partnership deed can modify rights and duties
+- Equal profit sharing is default rule (can be changed by agreement)
+
+---
+
+=== Partnership Act Section 32-42: Dissolution of Partnership ===
+
+**Section Number:** Sections 32-42
+**Act Name:** Indian Partnership Act, 1932
+**Law Type:** Commercial Law
+**Subject:** Termination of partnership
+
+**Modes of Dissolution:**
+
+**1. Dissolution by Agreement (Section 40):**
+- Partnership can be dissolved by consent of all partners
+- Or in accordance with partnership deed
+
+**2. Compulsory Dissolution (Section 41):**
+- All partners except one become insolvent (adjudicated insolvent)
+- Business of firm becomes unlawful
+- Example: Partnership doing liquor business, government imposes prohibition - Compulsory dissolution
+
+**3. On Happening of Contingency (Section 42):**
+- Partnership deed specifies contingency for dissolution
+- Death of partner (if deed so provides)
+- Completion of venture (for specific project partnerships)
+
+**4. Dissolution by Notice (Section 43):**
+- Partnership-at-will can be dissolved by any partner giving notice
+- Firm dissolved from date mentioned in notice
+
+**5. Dissolution by Court (Section 44):**
+Partner can apply to court for dissolution on grounds:
+- Partner becomes of unsound mind
+- Partner becomes permanently incapable of performing duties
+- Partner guilty of misconduct affecting business
+- Partner persistently breaches partnership agreement
+- Business can only be carried on at a loss
+- Court considers it just and equitable
+
+**Effect of Dissolution:**
+
+**1. Winding Up:**
+- Business activities cease
+- Assets realized and liabilities paid
+- Surplus distributed among partners
+
+**2. Authority of Partners (Section 46):**
+- After dissolution, authority of partners continues for winding up
+- Partners can complete unfinished business
+- Partners can realize assets and pay debts
+
+**3. Settlement of Accounts (Section 48):**
+Order of application of firm's assets:
+(i) Losses (including capital deficiency) paid first from profits, then capital, then by partners individually
+(ii) Debts to third parties paid
+(iii) Advances to partners (loans) paid
+(iv) Capital returned to partners
+(v) Surplus distributed as profits
+
+**Practical Examples:**
+
+**Dissolution Modes:**
+- Three partners mutually agree to dissolve firm - Dissolution by agreement
+- Partner A gives notice to partners B and C in partnership-at-will - Dissolved from date in notice
+- Partner becomes mentally ill, other partners apply to court for dissolution - Court dissolution
+- Partnership for constructing a building, building completed - Dissolution on completion of venture
+- Partner convicted of fraud related to firm's business - Misconduct, court can dissolve
+
+**Settlement:**
+- Firm has assets ₹20 lakhs, debts to third parties ₹8 lakhs, partners' capital ₹9 lakhs (A: ₹5L, B: ₹2L, C: ₹2L).
+- First pay debts: ₹20L - ₹8L = ₹12L remaining
+- Return capital: ₹12L - ₹9L = ₹3L surplus
+- Surplus distributed as profits: Each partner gets ₹1L (if equal profit sharing)
+
+**Related Sections:**
+- Section 48: Mode of settlement of accounts
+- Section 37: Rights of outgoing partner
+- Section 55: Registration of dissolution
+
+**Important Notes:**
+- Dissolution of firm different from retirement of partner (firm continues after retirement)
+- Partnership-at-will can be dissolved by any partner's notice
+- Court dissolution requires specific grounds
+- After dissolution, partners must wind up and settle accounts
+- Partners remain liable for acts done before dissolution
+
+---
+
+**End of Partnership Act Seed File**
+**Total Sections Covered:** 6 key sections covering definition, liability, authority, rights/duties, and dissolution
+**Cross-References:** Contract Act, Companies Act, LLP Act
+**Law Type:** Commercial Law
+**Effective Date:** October 1, 1932

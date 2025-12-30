@@ -1,0 +1,562 @@
+=== COMPANIES ACT, 2013 ===
+
+**Act Number:** 18 of 2013
+**Enacted:** August 29, 2013
+**Effective:** September 12, 2013 (notified in phases, fully effective April 1, 2014)
+**Replaces:** Companies Act, 1956
+**Total Sections:** 470 sections across 29 chapters
+**Law Type:** Corporate and Commercial Law
+
+The Companies Act, 2013 is a comprehensive legislation regulating incorporation, management, functioning, and winding up of companies in India. It replaced the Companies Act, 1956. The 2013 Act introduces significant corporate governance reforms, recognizes one-person company concept, provides for class action suits, mandates Corporate Social Responsibility (CSR), and enhances disclosures and accountability.
+
+**Key Features:**
+- Separate legal entity with limited liability
+- Perpetual succession
+- Common seal
+- Transferable shares
+- Strict disclosure and governance norms
+- CSR mandatory for large companies
+- E-governance and digital filing
+
+---
+
+=== Companies Act Section 2(20): Company Defined ===
+
+**Section Number:** Section 2(20)
+**Act Name:** Companies Act, 2013
+**Law Type:** Corporate Law
+**Subject:** Definition of company
+
+**Legal Definition:**
+"Company" means a company incorporated under this Act or under any previous company law.
+
+**Types of Companies (Section 2):**
+
+**1. By Liability:**
+
+**(a) Company Limited by Shares (Section 2(22)):**
+- Liability of members limited to unpaid amount on shares
+- Most common type
+- Example: ABC Ltd. issues shares of ₹10 each, shareholder paid ₹7, liable for remaining ₹3 only
+
+**(b) Company Limited by Guarantee (Section 2(21)):**
+- Liability limited to amount members undertake to contribute in case of winding up
+- Usually for non-profit activities (clubs, associations, NGOs)
+- Example: Members guarantee ₹10,000 each if company winds up
+
+**(c) Unlimited Company (Section 2(92)):**
+- No limit on liability of members
+- Rare type
+
+**2. By Access to Public:**
+
+**(a) Public Company (Section 2(71)):**
+- Minimum 7 members (no maximum)
+- Minimum 3 directors (maximum 15, can be increased)
+- Can invite public to subscribe to shares/debentures
+- Name ends with "Limited"
+- Example: Reliance Industries Limited
+
+**(b) Private Company (Section 2(68)):**
+- Minimum 2 members (maximum 200)
+- Minimum 2 directors (maximum 15)
+- Restrictions on transfer of shares
+- Cannot invite public to subscribe
+- Name ends with "Private Limited"
+- Example: ABC Private Limited
+
+**3. Special Types:**
+
+**(a) One Person Company (OPC) (Section 2(62)):**
+- Introduced in 2013 Act
+- Can be incorporated by single person
+- Suitable for small entrepreneurs
+- Only one member (nominee must be appointed)
+
+**(b) Small Company (Section 2(85)):**
+- Private company with paid-up capital not exceeding ₹50 lakhs OR turnover not exceeding ₹2 crores
+- Various relaxations in compliance
+
+**(c) Government Company (Section 2(45)):**
+- 51% or more shares held by Central/State Government
+- Example: Bharat Petroleum Corporation Limited
+
+**(d) Foreign Company (Section 2(42)):**
+- Company incorporated outside India but has place of business in India
+
+**Key Characteristics of Company:**
+
+**1. Separate Legal Entity:**
+- Company is separate from its members
+- Can own property, enter contracts in its own name
+- Can sue and be sued in its own name
+- Landmark case: Salomon v. Salomon & Co. Ltd.
+
+**2. Limited Liability:**
+- Members liable only to extent of unpaid share capital
+- Personal assets protected
+
+**3. Perpetual Succession:**
+- Company continues despite change in membership or death of members
+- "Members may come and go, but company goes on forever"
+
+**4. Transferable Shares:**
+- Shares freely transferable (except private company restrictions)
+- Provides liquidity to members
+
+**5. Common Seal:**
+- Company's signature
+- Used for important documents
+
+**Practical Examples:**
+
+**Private Company:**
+- XYZ Private Limited incorporated by 3 persons with ₹10 lakh capital. Each person has limited liability. Shares cannot be freely transferred. Cannot invite public to buy shares - Private company
+
+**Public Company:**
+- ABC Limited incorporated by 10 persons. Issues shares to public through IPO. Shares listed on stock exchange. Minimum 3 directors - Public company
+
+**One Person Company:**
+- Individual entrepreneur starts OPC, is the sole member, appoints nominee. Suitable for solo ventures - OPC
+
+**Small Company:**
+- Private company with ₹40 lakh capital and ₹1.5 crore turnover - Small company (relaxed compliance)
+
+**Separate Legal Entity:**
+- Company owns factory. Member's personal house cannot be attached for company's debt - Limited liability
+- Director commits fraud in personal capacity. Company not liable (unless director was acting on behalf of company) - Separate entity
+
+**Related Sections:**
+- Section 3: Formation of company
+- Section 7: Incorporation of company
+- Section 149: Board of Directors
+
+**Important Notes:**
+- Company is an artificial legal person created by law
+- Most popular form of business organization for medium and large businesses
+- Limited liability is major advantage
+- Regulated by Ministry of Corporate Affairs (MCA)
+- Companies registered with Registrar of Companies (ROC)
+
+---
+
+=== Companies Act Section 7: Incorporation of Company ===
+
+**Section Number:** Section 7
+**Act Name:** Companies Act, 2013
+**Law Type:** Corporate Law
+**Subject:** Procedure for incorporating a company
+
+**Incorporation Process:**
+
+**Step 1: Digital Signature Certificate (DSC):**
+- Promoters obtain DSC for online filing
+
+**Step 2: Director Identification Number (DIN):**
+- Proposed directors obtain DIN from MCA
+
+**Step 3: Name Reservation:**
+- Apply to ROC for name approval
+- Name must be unique and not identical/similar to existing company
+- Should not violate trademark laws
+
+**Step 4: Memorandum of Association (MOA) and Articles of Association (AOA):**
+
+**MOA (Section 4):**
+- Constitution of company
+- Contains: Name clause, Registered office clause, Objects clause, Liability clause, Capital clause
+- Defines scope of company's activities
+
+**AOA (Section 5):**
+- Internal regulations and bylaws
+- Contains: Directors' powers, meetings, voting, dividend, etc.
+
+**Step 5: Filing with ROC:**
+Documents to be filed:
+- Memorandum of Association (MOA)
+- Articles of Association (AOA)
+- Declaration that all requirements of Act complied with
+- Details of directors, registered office
+- PAN and TAN of subscribers
+
+**Step 6: Certificate of Incorporation:**
+- ROC examines documents
+- If satisfied, issues Certificate of Incorporation (Section 7(2))
+- Certificate is conclusive evidence that company is incorporated
+- Company comes into existence from date of certificate
+
+**Minimum Requirements:**
+
+**Private Company:**
+- Minimum 2 members
+- Minimum 2 directors
+- Minimum ₹1 lakh paid-up capital (recommended, no statutory minimum now)
+
+**Public Company:**
+- Minimum 7 members
+- Minimum 3 directors
+- No minimum capital (after 2015 amendment removed ₹5 lakh requirement)
+
+**One Person Company:**
+- 1 member + 1 nominee
+- 1 director
+
+**Effect of Incorporation:**
+
+**1. Separate Legal Entity:**
+- Company becomes legal person separate from members
+
+**2. Perpetual Succession:**
+- Company continues irrespective of changes in membership
+
+**3. Limited Liability:**
+- Members' liability limited
+
+**4. Capacity to Contract:**
+- Company can enter contracts in its own name
+
+**5. Right to Sue:**
+- Company can sue and be sued in its own name
+
+**Practical Examples:**
+- Three persons want to start manufacturing business. Decide on name "ABC Engineering Private Limited". Apply for name reservation, get DIN, prepare MOA and AOA, file with ROC. ROC issues Certificate of Incorporation on 15th Jan 2024. Company comes into existence from 15th Jan 2024 - Incorporated company
+
+**Related Sections:**
+- Section 3: Types of companies that can be formed
+- Section 4: Memorandum of Association
+- Section 5: Articles of Association
+- Section 8: Formation of companies with charitable objects (Section 8 companies)
+
+**Important Notes:**
+- Incorporation is conclusive (cannot be challenged except in case of fraud)
+- Certificate of Incorporation is birth certificate of company
+- Company can commence business after incorporation (private company) or after obtaining certificate of commencement of business (public company under Section 11)
+- E-filing mandatory through MCA portal
+- Typical time for incorporation: 7-10 days
+
+---
+
+=== Companies Act Section 149: Board of Directors ===
+
+**Section Number:** Section 149
+**Act Name:** Companies Act, 2013
+**Law Type:** Corporate Law
+**Subject:** Composition of Board of Directors
+
+**Directors:**
+
+**Section 149(1): Every Company Shall Have Board of Directors:**
+- Minimum 2 directors (private company)
+- Minimum 3 directors (OPC can have 1 director initially)
+- Minimum 3 directors (public company)
+- Maximum 15 directors (can be increased by special resolution up to specific limit)
+
+**Types of Directors:**
+
+**1. Executive/Managing Director (MD) (Section 2(54)):**
+- Whole-time director entrusted with substantial powers of management
+- Can be only one MD
+
+**2. Whole-Time Director (WTD):**
+- Director in whole-time employment of company
+- May be more than one
+
+**3. Independent Director (Section 149(4)):**
+- Non-executive, independent of management
+- Does not have material pecuniary relationship with company
+- Minimum 1 independent director for listed public company
+- At least one-third of board should be independent directors (listed companies)
+
+**4. Nominee Director:**
+- Appointed by financial institution, government, or debenture holder
+- Represents appointor's interests
+
+**5. Woman Director (Section 149(1)):**
+- Certain classes of companies (listed, paid-up capital ≥ ₹100 crore, turnover ≥ ₹300 crore) must have at least one woman director
+
+**Qualifications and Disqualifications (Section 164):**
+
+**Disqualifications:**
+- Found to be of unsound mind by court
+- Undischarged insolvent
+- Convicted of offense involving moral turpitude (5 years from conviction)
+- Failed to pay calls on shares for 6 months
+- Already director in more than prescribed number of companies (maximum 20, of which maximum 10 can be public companies)
+
+**Appointment:**
+- By subscribers in MOA (first directors)
+- By members in general meeting
+- By Board (casual vacancy, additional director)
+
+**Duties of Directors (Section 166):**
+
+**1. Fiduciary Duty:**
+- Act in good faith for benefit of company
+- Not for personal gain
+
+**2. Duty of Skill and Diligence:**
+- Exercise reasonable care, skill, and diligence
+- Degree of care expected from prudent person
+
+**3. Duty Not to Delegate:**
+- Cannot delegate functions without proper authority
+- Remain accountable
+
+**4. Duty to Avoid Conflict of Interest:**
+- Disclose interest in transactions
+- Not to derive personal benefit from position
+
+**5. Duty Not to Achieve Undue Gain:**
+- Not to make secret profits
+
+**Powers of Board (Section 179):**
+- Make calls on shareholders for unpaid money
+- Issue debentures
+- Borrow money
+- Invest funds
+- Make loans
+- Approve financial statements
+
+**Practical Examples:**
+
+**Board Composition:**
+- ABC Private Limited (private company) - Minimum 2 directors required
+- XYZ Limited (listed public company, capital ₹200 crore) - Minimum 3 directors, at least one-third independent directors, at least one woman director
+
+**Disqualification:**
+- Person convicted of fraud - Disqualified for 5 years
+- Person already director in 22 companies - Cannot be appointed director in more companies (exceeds limit of 20)
+
+**Fiduciary Duty:**
+- Director buys property from company at undervalue for personal benefit - Breach of fiduciary duty
+- Director uses company's confidential information for personal business - Breach
+- Director awards contract to own company without disclosure - Breach, conflict of interest
+
+**Related Sections:**
+- Section 152: Appointment of directors
+- Section 164: Disqualifications for directors
+- Section 166: Duties of directors
+- Section 203: Appointment of key managerial personnel
+
+**Important Notes:**
+- Board of Directors manages company on behalf of shareholders
+- Directors are fiduciaries, must act in company's best interests
+- Independent directors provide independent oversight
+- Director liability: Can be held personally liable for breach of duties, fraud, or gross negligence
+- Directors' decisions subject to shareholders' approval in certain matters
+
+---
+
+=== Companies Act Section 166: Duties of Directors ===
+
+**Section Number:** Section 166
+**Act Name:** Companies Act, 2013
+**Law Type:** Corporate Law
+**Subject:** Duties and responsibilities of directors
+
+**Section 166 - Seven Duties of Directors:**
+
+**1. Duty to Act in Good Faith (Section 166(1)):**
+- Director shall act in accordance with Articles of Association
+- Promote objects of company
+- Act in good faith for benefit of company as a whole
+- For benefit of members, employees, shareholders, community, and environment
+
+**2. Duty to Exercise Duties with Due and Reasonable Care, Skill and Diligence (Section 166(2)):**
+- Exercise independent judgment
+- Apply reasonable care, skill, and diligence
+- Standard: Care that a reasonably prudent person would exercise in similar circumstances
+- Both subjective (director's own skill) and objective (reasonably prudent person) standards
+
+**3. Duty Not to be Involved in Conflict of Interest (Section 166(4)):**
+- Not to achieve or attempt to achieve undue gain or advantage for self or associates
+- If director has concern or interest in contract with company, must disclose
+- Not to vote on such matters
+
+**4. Duty Not to Achieve Undue Gain (Section 166(4)):**
+- Not to make secret profits
+- Not to use position or information for personal gain
+- Not to divert business opportunities meant for company
+
+**5. Duty to Attend Board Meetings:**
+- Attend Board meetings regularly
+- Participate in decision-making
+- Absentia from all meetings may lead to disqualification
+
+**Consequences of Breach:**
+
+**1. Civil Liability:**
+- Company can sue director for damages
+- Restore profits/property wrongfully gained
+- Compensation for loss caused
+
+**2. Criminal Liability (Section 166(7)):**
+- Imprisonment up to 1 year OR
+- Fine ₹50,000 to ₹5 lakhs OR
+- Both
+
+**3. Disqualification:**
+- Court may disqualify director for specified period
+
+**4. Recovery of Loans:**
+- If director caused company to give loan in breach of Section 185, director personally liable to repay with interest
+
+**Practical Examples:**
+
+**Breach of Duties:**
+
+**Lack of Care and Diligence:**
+- Director signs financial statements without reading them, statements contain material errors - Breach of duty of care and diligence
+- Director does not attend Board meetings for 1 year, unaware of company's financial difficulties - Breach of duty to attend meetings
+
+**Conflict of Interest:**
+- Director owns construction company. Company awards construction contract to director's company without disclosure - Breach, conflict of interest
+- Director buys company property at undervalue without informing Board - Breach, secret profit
+
+**Personal Gain:**
+- Director uses company's customer list to start competing business - Breach, misuse of company information
+- Director diverts business opportunity meant for company to own company - Breach, corporate opportunity doctrine
+
+**Good Examples (Proper Conduct):**
+- Director discloses interest in transaction, abstains from voting - Proper conduct
+- Director investigates company's financial position before approving loan - Exercise of due diligence
+- Director objects to illegal transaction and records dissent in minutes - Proper discharge of duty
+
+**Related Sections:**
+- Section 184: Disclosure of interest by director
+- Section 185: Loans to directors (prohibited except in certain circumstances)
+- Section 188: Related party transactions
+- Section 447: Punishment for fraud
+
+**Important Notes:**
+- Directors are fiduciaries of company
+- Duty is to company, not to individual shareholders or groups
+- Directors can be held personally liable for breach
+- Business judgment rule: Directors not liable for bona fide business decisions that turn out bad
+- Directors should maintain minutes, attend meetings, and exercise independent judgment
+- Modern law recognizes duties to various stakeholders (shareholders, employees, community), not just shareholders
+
+---
+
+=== Companies Act Section 96-103: Meetings of Shareholders ===
+
+**Section Number:** Sections 96 (AGM), 100 (EGM), 103 (General Meetings)
+**Act Name:** Companies Act, 2013
+**Law Type:** Corporate Law
+**Subject:** General meetings of shareholders
+
+**Types of Meetings:**
+
+**1. Annual General Meeting (AGM) (Section 96):**
+
+**Mandatory Requirements:**
+- Every company must hold AGM once in each calendar year
+- Interval between two AGMs: Not more than 15 months
+- First AGM: Within 9 months from end of first financial year
+- Time: During business hours (9 AM to 6 PM) on working day
+- Venue: Registered office or within city/town/village where registered office situated
+
+**Business at AGM:**
+- Consideration of financial statements and reports
+- Declaration of dividend
+- Appointment of directors
+- Appointment and remuneration of auditors
+- Any other business
+
+**Notice:**
+- 21 days' clear notice to all members
+- Notice should contain agenda and explanatory statement for special business
+- Can be sent by email if member consents
+
+**2. Extraordinary General Meeting (EGM) (Section 100):**
+
+**When Held:**
+- For urgent matters requiring shareholders' approval
+- Cannot wait till next AGM
+- Called by Board or on requisition by members
+
+**Who Can Call:**
+- Board of Directors (suo motu or on requisition)
+- Members holding at least 10% of paid-up capital
+
+**Requisition:**
+- Members with 10% capital can requisition EGM
+- If Board does not call within 21 days, members can call themselves
+
+**Business:**
+- Only items mentioned in notice
+- Special resolutions (if any) specified in notice
+
+**Resolutions:**
+
+**1. Ordinary Resolution (Section 114):**
+- Passed by simple majority (more than 50% of members present and voting)
+- For routine business: appointment of directors, adoption of accounts, dividend declaration
+
+**2. Special Resolution (Section 114):**
+- Passed by 3/4 majority (75% of members present and voting)
+- For important matters: alteration of Articles, change of name, reduction of capital, amalgamation
+- Requires special notice (minimum 21 days)
+
+**Quorum (Section 103):**
+
+**Minimum Quorum:**
+- 2 members personally present (if members up to 1,000)
+- 5 members personally present (if members 1,001 to 5,000)
+- 15 members personally present (if members above 5,000)
+
+**Effect of No Quorum:**
+- Meeting adjourned to same day, time, and place next week
+- Or to such day and time as Board determines
+- If quorum not present at adjourned meeting, members present form quorum
+
+**Proxies (Section 105):**
+- Member can appoint proxy to attend and vote on their behalf
+- Proxy need not be member
+- Proxy cannot speak at meeting (only vote)
+
+**Video Conferencing (Section 96 read with Rules):**
+- Meetings can be held through video conferencing
+- Members can participate remotely
+- Commonly used post-COVID
+
+**Practical Examples:**
+
+**AGM:**
+- Company incorporated in April 2023, first financial year ends 31st March 2024. First AGM must be held by 31st December 2024 (within 9 months)
+- ABC Ltd. held AGM on 30th September 2023. Next AGM must be held before 31st December 2024 (within 15 months)
+
+**EGM:**
+- Company wants to alter Articles of Association urgently. Board calls EGM with 21 days' notice. Special resolution passed by 75% majority - Valid
+- Shareholders holding 12% capital requisition EGM to remove director. Board must call EGM within 21 days - Mandatory
+
+**Resolutions:**
+- Appointment of director by ordinary resolution (simple majority) - Valid
+- Change of company name requires special resolution (75% majority) - Mandatory
+- Dividend declared by ordinary resolution at AGM - Valid
+
+**Quorum:**
+- Company has 500 members. Only 1 member present at meeting - No quorum, meeting adjourned
+- Company has 10,000 members. 20 members present - Quorum satisfied (15 required)
+
+**Related Sections:**
+- Section 102: Explanatory statement for special business
+- Section 105: Proxies
+- Section 114: Voting by show of hands and poll
+- Section 117: Resolutions and agreements to be filed with ROC
+
+**Important Notes:**
+- AGM is mandatory, EGM is optional/need-based
+- 21 days' notice required for both AGM and EGM
+- Special resolution requires 21 days' notice specifying intention
+- Failure to hold AGM: Penalty on company and officers (fine up to ₹1 lakh and ₹10,000 per day continuing default)
+- Members can attend and vote through video conferencing
+- Minutes of meeting must be prepared and signed within 30 days
+
+---
+
+**End of Companies Act Seed File**
+**Total Sections Covered:** 6 key sections covering definition, incorporation, directors, duties, and meetings
+**Cross-References:** Contract Act, Partnership Act, SEBI Act
+**Law Type:** Corporate and Commercial Law
+**Effective Date:** September 12, 2013 (notified); April 1, 2014 (fully effective)
