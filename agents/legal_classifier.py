@@ -28,7 +28,7 @@ class LegalClassifierAgent:
         self.agent = GeminiChatAgent(
             name="LegalClassifier",
             instructions=self._get_system_instruction(),
-            model_name="gemini-2.5-flash",
+            model_name="gemini-2.0-flash",
             temperature=0.3
         )
         

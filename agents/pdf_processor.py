@@ -34,7 +34,7 @@ class PDFProcessorAgent:
         self.agent = GeminiChatAgent(
             name="PDFProcessor",
             instructions=self._get_system_instruction(),
-            model_name="gemini-2.5-flash",
+            model_name="gemini-2.0-flash",
             temperature=0.7
         )
         

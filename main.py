@@ -144,7 +144,7 @@ async def lifespan(app: FastAPI):
         logger.info("🚀 AI Legal Engine Ready!")
         logger.info("=" * 60)
         logger.info("Core Services:")
-        logger.info("  - Google Gemini (gemini-2.5-flash)")
+        logger.info("  - Google Gemini (gemini-2.0-flash)")
         logger.info("  - ChromaDB (local vector store)")
         logger.info("  - Sentence Transformers (local embeddings)")
         logger.info("Phase 1 Enhancements:")
@@ -420,7 +420,7 @@ async def chat(request: ChatRequest):
         return ChatResponse(
             response=response_text,
             confidence=result.get("confidence", 0.9),
-            source="gemini-2.5-flash",
+            source="gemini-2.0-flash",
             language=request.language
         )
         

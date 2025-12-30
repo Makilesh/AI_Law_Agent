@@ -132,8 +132,8 @@ class MetadataExtractor:
             "total_chunks": total_chunks,
             "law_type": self._get_law_type(filename),
             "act_name": self._get_act_name(filename),
-            "section_number": self._extract_section_number(chunk),
-            "keywords": self._extract_keywords(chunk),
+            "section_number": self._extract_section_number(chunk) or "",
+            "keywords": ", ".join(self._extract_keywords(chunk)),
             "chunk_length": len(chunk)
         }
 
