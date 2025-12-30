@@ -132,7 +132,7 @@ Response Structure:
 
 ---
 
-## � Usage Examples
+## 📋 Usage Examples
 
 ### Voice Chat
 1. Open `frontend/voice_test.html` in browser
@@ -164,7 +164,8 @@ curl -X POST http://localhost:8000/upload-pdf \
 ```
 
 ---
-� Key API Endpoints
+
+## 🔌 Key API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -256,7 +257,7 @@ AI_Law_Agent/
 │   └── request_validator.py  # Input sanitization
 ├── utils/                      # Core utilities
 │   ├── vector_store.py       # ChromaDB vector operations
-│   ├── gemini_agent.py       # Gemini API client
+│   ├── model_manager.py      # Multi-model AI client (Gemini/OpenRouter/Ollama)
 │   └── prompts.py            # Optimized system prompts
 ├── database/
 │   └── sqlite_db.py          # SQLite persistence layer
@@ -290,39 +291,6 @@ AI_Law_Agent/
 | **Docs** | python-docx | DOCX generation |
 
 **Total Cost**: $0/month 💰 | **All services free/local** (Gemini free tier + optional Ollama)
-
----
-
-## � Usage Examples
-
-### Voice Chat
-1. Open `frontend/voice_test.html` in browser
-2. Click "Connect Voice Chat"
-3. Click 🎤 microphone and speak: "What is BNS Section 103?"
-4. AI responds with voice + text
-
-### Text Chat
-```bash
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"query": "What is BNS Section 103?", "language": "English"}'
-
-# Response: Full legal explanation with confidence score
-```
-
-### Generate Document
-```bash
-curl -X POST http://localhost:8000/documents/start \
-  -d '{"document_type": "fir"}'
-# Follow prompts to fill fields → Download DOCX
-```
-
-### Upload Legal PDF
-```bash
-curl -X POST http://localhost:8000/upload-pdf \
-  -F "file=@legal_document.pdf"
-# Automatically indexed for search
-```
 
 ---
 
