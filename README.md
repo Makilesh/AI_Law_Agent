@@ -1,4 +1,4 @@
-﻿# âš–ï¸ AI Legal Engine
+# ⚖️ AI Legal Engine
 
 > **Enterprise-grade AI legal assistant with multi-agent RAG, real-time voice interaction, and automated document generation**
 
@@ -11,35 +11,35 @@
 
 ---
 
-## ðŸŽ¯ Overview
+## 🎯 Overview
 
 AI Legal Engine is a **full-stack, production-ready legal AI system** combining advanced RAG architecture, real-time voice interaction, and intelligent document generation. Built for Indian law (BNS, IPC, Constitution, Traffic Laws) with enterprise features including semantic caching, JWT authentication, and comprehensive security controls.
 
-**Key Capabilities:** Multi-agent routing â€¢ Voice-enabled chat â€¢ Automated legal documents â€¢ Semantic vector search â€¢ Real-time WebSocket communication
+**Key Capabilities:** Multi-agent routing • Voice-enabled chat • Automated legal documents • Semantic vector search • Real-time WebSocket communication
 
 ---
 
-## âœ¨ Complete Feature Set
+## ✨ Complete Feature Set
 
 | Feature | Technology | Status |
 |---------|-----------|--------|
-| ðŸ¤– **Multi-Agent RAG** | Router + Classifier + Section Expert agents | âœ… Complete |
-| ðŸ” **Vector Search** | ChromaDB with 673 indexed legal documents | âœ… Complete |
-| ðŸŽ¤ **Voice Input** | Browser Web Speech API (STT) | âœ… Complete |
-| ðŸ”Š **Voice Output** | pyttsx3 text-to-speech (TTS) | âœ… Complete |
-| ðŸŒ **Real-Time Communication** | WebSocket for voice chat | âœ… Complete |
-| ðŸ” **Authentication** | JWT-based user management | âœ… Complete |
-| ðŸ’¬ **Multi-Turn Dialogue** | Conversation history & context | âœ… Complete |
-| ðŸ“ **Document Generation** | FIR, bail, affidavit, notice, complaint | âœ… Complete |
-| âš¡ **Semantic Caching** | Redis with 92% similarity threshold | âœ… Complete |
-| ðŸ›¡ï¸ **Security Suite** | Rate limiting, IP blocking, validation | âœ… Complete |
-| ðŸŒ **Multilingual** | English, Hindi, Tamil support | âœ… Complete |
-| ðŸ“„ **PDF Processing** | Upload & index custom documents | âœ… Complete |
-| ðŸ’¾ **Data Persistence** | SQLite for users, conversations, documents | âœ… Complete |
+| 🤖 **Multi-Agent RAG** | Router + Classifier + Section Expert agents | ✅ Complete |
+| 🔍 **Vector Search** | ChromaDB with 673 indexed legal documents | ✅ Complete |
+| 🎤 **Voice Input** | Browser Web Speech API (STT) | ✅ Complete |
+| 🔊 **Voice Output** | pyttsx3 text-to-speech (TTS) | ✅ Complete |
+| 🌐 **Real-Time Communication** | WebSocket for voice chat | ✅ Complete |
+| 🔐 **Authentication** | JWT-based user management | ✅ Complete |
+| 💬 **Multi-Turn Dialogue** | Conversation history & context | ✅ Complete |
+| 📝 **Document Generation** | FIR, bail, affidavit, notice, complaint | ✅ Complete |
+| ⚡ **Semantic Caching** | Redis with 92% similarity threshold | ✅ Complete |
+| 🛡️ **Security Suite** | Rate limiting, IP blocking, validation | ✅ Complete |
+| 🌍 **Multilingual** | English, Hindi, Tamil support | ✅ Complete |
+| 📄 **PDF Processing** | Upload & index custom documents | ✅ Complete |
+| 💾 **Data Persistence** | SQLite for users, conversations, documents | ✅ Complete |
 
 ---
 
-## ðŸš€ Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.10+ | Redis (Docker) | Google Gemini API key (free)
@@ -75,9 +75,9 @@ python main.py  # Backend at http://localhost:8000
 
 ---
 
-## ï¿½ Core Capabilities
+## � Core Capabilities
 
-### ðŸŽ¤ Real-Time Voice Interaction
+### 🎤 Real-Time Voice Interaction
 ```bash
 # Start voice chat via WebSocket
 WebSocket: ws://localhost:8000/ws/voice
@@ -90,7 +90,7 @@ WebSocket: ws://localhost:8000/ws/voice
 - Full conversation context maintained
 ```
 
-### ðŸ“ Intelligent Document Generation
+### 📝 Intelligent Document Generation
 ```bash
 # Generate legal documents conversationally
 POST /documents/start {"document_type": "fir"}
@@ -105,7 +105,7 @@ POST /documents/start {"document_type": "fir"}
 Output: Professionally formatted DOCX with all legal fields
 ```
 
-### ðŸ’¬ Multi-Agent Legal Assistant
+### 💬 Multi-Agent Legal Assistant
 ```bash
 POST /chat
 {
@@ -114,21 +114,21 @@ POST /chat
 }
 
 Response Structure:
-â€¢ Accurate legal explanation from 673-document knowledge base
-â€¢ Confidence scoring (0.0-1.0)
-â€¢ Source agent attribution
-â€¢ Conversation history maintained
-â€¢ Semantic similarity caching for instant repeat queries
+• Accurate legal explanation from 673-document knowledge base
+• Confidence scoring (0.0-1.0)
+• Source agent attribution
+• Conversation history maintained
+• Semantic similarity caching for instant repeat queries
 ```
 
 ---
 
-## ðŸ“‹ Usage Examples
+## � Usage Examples
 
 ### Voice Chat
 1. Open `frontend/voice_test.html` in browser
 2. Click "Connect Voice Chat"
-3. Click ðŸŽ¤ microphone and speak: "What is BNS Section 103?"
+3. Click 🎤 microphone and speak: "What is BNS Section 103?"
 4. AI responds with voice + text
 
 ### Text Chat
@@ -144,7 +144,7 @@ curl -X POST http://localhost:8000/chat \
 ```bash
 curl -X POST http://localhost:8000/documents/start \
   -d '{"document_type": "fir"}'
-# Follow prompts to fill fields â†’ Download DOCX
+# Follow prompts to fill fields → Download DOCX
 ```
 
 ### Upload Legal PDF
@@ -155,8 +155,7 @@ curl -X POST http://localhost:8000/upload-pdf \
 ```
 
 ---
-
-## ðŸ”Œ Key API Endpoints
+� Key API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -175,101 +174,97 @@ curl -X POST http://localhost:8000/upload-pdf \
 
 ---
 
-## ðŸ—ï¸ System Architecture
+## 🏗️ System Architecture
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Frontend (HTML/JS/CSS)                              â”‚
-â”‚  â€¢ Chat UI with voice button                         â”‚
-â”‚  â€¢ WebSocket connection                              â”‚
-â”‚  â€¢ Web Speech API (browser STT)                      â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                 â”‚ REST API / WebSocket
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  FastAPI Backend (Python)                            â”‚
-â”‚  â”œâ”€ Authentication (JWT)                             â”‚
-â”‚  â”œâ”€ Rate Limiting & Security                         â”‚
-â”‚  â”œâ”€ WebSocket Handler (voice)                        â”‚
-â”‚  â””â”€ Multi-Agent Routing                              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                 â”‚
-    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-    â”‚            â”‚            â”‚
-â”Œâ”€â”€â”€â–¼â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â–¼â”€â”€â”€â”€â”€â”€â”
-â”‚ Router â”‚  â”‚Classifierâ”‚  â”‚ Section â”‚
-â”‚ Agent  â”‚  â”‚  Agent   â”‚  â”‚ Expert  â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”˜
-                                â”‚
-               â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-               â”‚                             â”‚
-         â”Œâ”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”              â”Œâ”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”
-         â”‚ ChromaDB   â”‚              â”‚ Gemini 2.5   â”‚
-         â”‚ (673 docs) â”‚              â”‚ Flash (Free) â”‚
-         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜              â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌──────────────────────────────────────────────────────┐
+│  Frontend (HTML/JS/CSS)                              │
+│  • Chat UI with voice button                         │
+│  • WebSocket connection                              │
+│  • Web Speech API (browser STT)                      │
+└────────────────┬─────────────────────────────────────┘
+                 │ REST API / WebSocket
+┌────────────────▼─────────────────────────────────────┐
+│  FastAPI Backend (Python)                            │
+│  ├─ Authentication (JWT)                             │
+│  ├─ Rate Limiting & Security                         │
+│  ├─ WebSocket Handler (voice)                        │
+│  └─ Multi-Agent Routing                              │
+└────────────────┬─────────────────────────────────────┘
+                 │
+    ┌────────────┼────────────┐
+    │            │            │
+┌───▼────┐  ┌────▼─────┐  ┌──▼──────┐
+│ Router │  │Classifier│  │ Section │
+│ Agent  │  │  Agent   │  │ Expert  │
+└────────┘  └──────────┘  └────┬────┘
+                                │
+               ┌────────────────┴────────────┐
+               │                             │
+         ┌─────▼──────┐              ┌───────▼──────┐
+         │ ChromaDB   │              │ Gemini 2.5   │
+         │ (673 docs) │              │ Flash (Free) │
+         └────────────┘              └──────────────┘
          
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Storage Layer                                       â”‚
-â”‚  â€¢ SQLite (users, conversations, documents)          â”‚
-â”‚  â€¢ Redis (semantic cache, 92% similarity)            â”‚
-â”‚  â€¢ ChromaDB (vector embeddings)                      â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌──────────────────────────────────────────────────────┐
+│  Storage Layer                                       │
+│  • SQLite (users, conversations, documents)          │
+│  • Redis (semantic cache, 92% similarity)            │
+│  • ChromaDB (vector embeddings)                      │
+└──────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## ðŸ“ Project Structure
+## 📁 Project Structure
 
 ```
 AI_Law_Agent/
-â”œâ”€â”€ main.py                     # FastAPI server 
-â”œâ”€â”€ agents/                     # Multi-agent RAG system
-â”‚   â”œâ”€â”€ router.py              # Intelligent query routing
-â”‚   â”œâ”€â”€ legal_classifier.py   # Legal domain classification
-â”‚   â”œâ”€â”€ section_expert.py     # Section-specific expertise
-â”‚   â””â”€â”€ pdf_processor.py      # Document ingestion pipeline
-â”œâ”€â”€ voice/                      # Real-time voice system
-â”‚   â”œâ”€â”€ voice_assistant.py    # WebSocket voice handler
-â”‚   â”œâ”€â”€ text_to_speech.py     # TTS engine (pyttsx3)
-â”‚   â””â”€â”€ speech_to_text.py     # STT utilities
-â”œâ”€â”€ auth/                       # Authentication system
-â”‚   â”œâ”€â”€ jwt_handler.py        # JWT token management
-â”‚   â”œâ”€â”€ password.py           # bcrypt password hashing
-â”‚   â””â”€â”€ user_manager.py       # User lifecycle management
-â”œâ”€â”€ document_templates/         # Legal document generators
-â”‚   â”œâ”€â”€ fir_template.py       # FIR automated generation
-â”‚   â”œâ”€â”€ bail_template.py      # Bail application builder
-â”‚   â””â”€â”€ [3 more templates]    # Notice, complaint, affidavit
-â”œâ”€â”€ dialogue/                   # Conversation management
-â”‚   â””â”€â”€ dialogue_manager.py   # Multi-turn context handling
-â”œâ”€â”€ models/                     # Pydantic schemas
-â”‚   â””â”€â”€ schemas.py            # Request/response models
-â”œâ”€â”€ cache/                      # Semantic caching layer
-â”‚   â”œâ”€â”€ redis_cache.py        # Redis cache operations
-â”‚   â””â”€â”€ cache_strategies.py   # Similarity-based caching
-â”œâ”€â”€ security/                   # Security middleware
-â”‚   â”œâ”€â”€ rate_limiter.py       # Token bucket rate limiting
-â”‚   â”œâ”€â”€ ip_blocker.py         # IP management & blocking
-â”‚   â””â”€â”€ request_validator.py  # Input sanitization
-â”œâ”€â”€ utils/                      # Core utilities
-â”‚   â”œâ”€â”€ vector_store.py       # ChromaDB vector operations
-â”‚   â”œâ”€â”€ gemini_agent.py       # Gemini API client
-â”‚   â””â”€â”€ prompts.py            # Optimized system prompts
-â”œâ”€â”€ database/
-â”‚   â””â”€â”€ sqlite_db.py          # SQLite persistence layer
-â”œâ”€â”€ frontend/                   # Responsive web interface
-â”‚   â”œâ”€â”€ index.html            # Main chat UI
-â”‚   â”œâ”€â”€ voice_test.html       # Voice testing interface
-â”‚   â”œâ”€â”€ script.js             # WebSocket client logic
-â”‚   â””â”€â”€ styles.css            # Modern responsive design
-â””â”€â”€ seed_data/                 # Pre-indexed legal corpus
-    â”œâ”€â”€ bns_sections.txt      # Bharatiya Nyaya Sanhita
-    â”œâ”€â”€ constitution_rights.txt
-    â””â”€â”€ [670+ documents]      # IPC, traffic laws, procedures
+├── main.py                     # FastAPI server 
+├── agents/                     # Multi-agent RAG system
+│   ├── router.py              # Intelligent query routing
+│   ├── legal_classifier.py   # Legal domain classification
+│   ├── section_expert.py     # Section-specific expertise
+│   └── pdf_processor.py      # Document ingestion pipeline
+├── voice/                      # Real-time voice system
+│   ├── voice_assistant.py    # WebSocket voice handler
+│   ├── text_to_speech.py     # TTS engine (pyttsx3)
+│   └── speech_to_text.py     # STT utilities
+├── auth/                       # Authentication system
+│   ├── jwt_handler.py        # JWT token management
+│   ├── password.py           # bcrypt password hashing
+│   └── user_manager.py       # User lifecycle management
+├── document_templates/         # Legal document generators
+│   ├── fir_template.py       # FIR automated generation
+│   ├── bail_template.py      # Bail application builder
+│   └── [3 more templates]    # Notice, complaint, affidavit
+├── cache/                      # Semantic caching layer
+│   ├── redis_cache.py        # Redis cache operations
+│   └── cache_strategies.py   # Similarity-based caching
+├── security/                   # Security middleware
+│   ├── rate_limiter.py       # Token bucket rate limiting
+│   ├── ip_blocker.py         # IP management & blocking
+│   └── request_validator.py  # Input sanitization
+├── utils/                      # Core utilities
+│   ├── vector_store.py       # ChromaDB vector operations
+│   ├── gemini_agent.py       # Gemini API client
+│   └── prompts.py            # Optimized system prompts
+├── database/
+│   └── sqlite_db.py          # SQLite persistence layer
+├── frontend/                   # Responsive web interface
+│   ├── index.html            # Main chat UI
+│   ├── voice_test.html       # Voice testing interface
+│   ├── script.js             # WebSocket client logic
+│   └── styles.css            # Modern responsive design
+└── seed_data/                 # Pre-indexed legal corpus
+    ├── bns_sections.txt      # Bharatiya Nyaya Sanhita
+    ├── constitution_rights.txt
+    └── [670+ documents]      # IPC, traffic laws, procedures
 ```
 
 ---
 
-## ðŸ› ï¸ Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -285,8 +280,44 @@ AI_Law_Agent/
 | **Frontend** | HTML5 + Vanilla JS | Responsive chat UI |
 | **Docs** | python-docx | DOCX generation |
 
-**Total Cost**: $0/month ðŸ’° | **All services free/local**
+**Total Cost**: $0/month 💰 | **All services free/local**
 
+---
+
+## � Usage Examples
+
+### Voice Chat
+1. Open `frontend/voice_test.html` in browser
+2. Click "Connect Voice Chat"
+3. Click 🎤 microphone and speak: "What is BNS Section 103?"
+4. AI responds with voice + text
+
+### Text Chat
+```bash
+curl -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"query": "What is BNS Section 103?", "language": "English"}'
+
+# Response: Full legal explanation with confidence score
+```
+
+### Generate Document
+```bash
+curl -X POST http://localhost:8000/documents/start \
+  -d '{"document_type": "fir"}'
+# Follow prompts to fill fields → Download DOCX
+```
+
+### Upload Legal PDF
+```bash
+curl -X POST http://localhost:8000/upload-pdf \
+  -F "file=@legal_document.pdf"
+# Automatically indexed for search
+```
+
+---
+
+## 🧪 Validation
 
 ```bash
 # Verify legal query accuracy
@@ -307,7 +338,7 @@ curl http://localhost:8000/health
 
 ---
 
-## ðŸ“ˆ Performance & Scale
+## 📈 Performance & Scale
 
 | Metric | Value | Technology |
 |--------|-------|-----------|
@@ -322,52 +353,37 @@ curl http://localhost:8000/health
 
 ---
 
-## ðŸŒŸ Technical Highlights
+## 🌟 Technical Highlights
 
-âœ… **Multi-Agent Architecture** - Router, classifier, and domain expert agents with confidence scoring  
-âœ… **Real-Time Voice** - WebSocket-based bidirectional voice chat with live status updates  
-âœ… **Semantic Caching** - Redis-powered similarity matching (92% threshold) for sub-second repeat queries  
-âœ… **Enterprise Security** - JWT authentication, bcrypt hashing, rate limiting, IP blocking  
-âœ… **Vector Search** - ChromaDB with Sentence Transformers for semantic document retrieval  
-âœ… **Document Automation** - Template-based DOCX generation for 5 legal document types  
-âœ… **Zero Cloud Costs** - 100% free/local services (Gemini, ChromaDB, Redis)  
-âœ… **Production Ready** - Comprehensive error handling, logging, input validation
+✅ **Multi-Agent Architecture** - Router, classifier, and domain expert agents with confidence scoring  
+✅ **Real-Time Voice** - WebSocket-based bidirectional voice chat with live status updates  
+✅ **Semantic Caching** - Redis-powered similarity matching (92% threshold) for sub-second repeat queries  
+✅ **Enterprise Security** - JWT authentication, bcrypt hashing, rate limiting, IP blocking  
+✅ **Vector Search** - ChromaDB with Sentence Transformers for semantic document retrieval  
+✅ **Document Automation** - Template-based DOCX generation for 5 legal document types  
+✅ **Zero Cloud Costs** - 100% free/local services (Gemini, ChromaDB, Redis)  
+✅ **Production Ready** - Comprehensive error handling, logging, input validation
 
 ---
 
-## ðŸŽ“ How It Works
+## 🎓 How It Works
 
 ### Retrieval-Augmented Generation (RAG) Pipeline
 
-1. **Query Reception** â†’ User submits question via text or voice
-2. **Agent Routing** â†’ Router agent classifies intent and selects appropriate expert
-3. **Vector Search** â†’ Query converted to embedding using Sentence Transformers
-4. **Document Retrieval** â†’ ChromaDB finds top 5 most relevant chunks from 673 documents
-5. **Context Assembly** â†’ Retrieved documents combined with query
-6. **AI Generation** â†’ Gemini 2.5 Flash generates grounded response
-7. **Semantic Caching** â†’ Response cached in Redis for instant retrieval on similar queries
-8. **Response Delivery** â†’ Text + optional TTS voice output
+1. **Query Reception** → User submits question via text or voice
+2. **Agent Routing** → Router agent classifies intent and selects appropriate expert
+3. **Vector Search** → Query converted to embedding using Sentence Transformers
+4. **Document Retrieval** → ChromaDB finds top 5 most relevant chunks from 673 documents
+5. **Context Assembly** → Retrieved documents combined with query
+6. **AI Generation** → Gemini 2.5 Flash generates grounded response
+7. **Semantic Caching** → Response cached in Redis for instant retrieval on similar queries
+8. **Response Delivery** → Text + optional TTS voice output
 
 **Result**: Accurate, context-aware legal answers with 95%+ confidence scores
 
 ---
-## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
-- 🐛 Report bugs or issues  
-- 💡 Suggest new features  
-- 🔧 Submit pull requests  
-- 📖 Improve documentation
-
----
-
-## 👨‍💻 Author
-
-**Your Name**  
-🔗 [GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile) • [Portfolio](https://yourwebsite.com)
-
----
-## ðŸ“ License
+## 📝 License
 
 MIT License - Free for personal and commercial use
 
@@ -375,16 +391,16 @@ MIT License - Free for personal and commercial use
 
 <div align="center">
 
-### **AI Legal Engine** âš–ï¸
+### **AI Legal Engine** ⚖️
 
-**Enterprise-Grade Legal AI** â€¢ **Real-Time Voice** â€¢ **Production-Ready**
+**Enterprise-Grade Legal AI** • **Real-Time Voice** • **Production-Ready**
 
-*Multi-Agent RAG â€¢ 673 Legal Documents â€¢ Semantic Caching â€¢ Zero Cloud Costs*
+*Multi-Agent RAG • 673 Legal Documents • Semantic Caching • Zero Cloud Costs*
 
 ---
 
-**Tech Stack**: Python â€¢ FastAPI â€¢ Google Gemini 2.5 â€¢ ChromaDB â€¢ Redis â€¢ WebSocket â€¢ JWT â€¢ pyttsx3 â€¢ SQLite
+**Tech Stack**: Python • FastAPI • Google Gemini 2.5 • ChromaDB • Redis • WebSocket • JWT • pyttsx3 • SQLite
 
-**Skills Demonstrated**: RAG Systems â€¢ Multi-Agent AI â€¢ WebSocket â€¢ Voice I/O â€¢ Authentication â€¢ Caching â€¢ Security â€¢ Document Generation
+**Skills Demonstrated**: RAG Systems • Multi-Agent AI • WebSocket • Voice I/O • Authentication • Caching • Security • Document Generation
 
 </div>
