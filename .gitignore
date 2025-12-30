@@ -45,5 +45,36 @@ Thumbs.db
 *.db
 *.sqlite
 
+# ChromaDB Vector Database
+chroma_db/
+chroma_db_backup_*/
+*.chroma
+
 # Jupyter
 .ipynb_checkpoints
+
+# Project-specific
+# Test outputs
+test_*.txt
+test_*.json
+test_*.py
+nul
+
+# Batch files
+*.bat
+
+# Generated documentation (keep only in local, not in repo)
+PHASE*.md
+PHASE*.txt
+*_SUMMARY.md
+*_SUMMARY.txt
+*_REPORT.md
+*_REPORT.txt
+*_COMPLETION_REPORT.md
+*_QUICKSTART.md
+PROJECT_HANDOFF_DOCUMENTATION.txt
+FIXES_APPLIED_README.md
+MIGRATION*.md
+ARCHITECTURE.md
+CLAUDE_CODE_IMPLEMENTATION_PROMPT.md
+SEED_FILE_GENERATION_PROMPT.md
