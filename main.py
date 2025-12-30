@@ -8,6 +8,7 @@ Enhanced with:
 - Rate limiting and IP blocking
 - Request validation
 - Comprehensive security middleware
+- Voice I/O with WebSocket (Phase 5)
 """
 
 import os
@@ -19,7 +20,7 @@ import tempfile
 import uuid
 from datetime import datetime
 
-from fastapi import FastAPI, HTTPException, File, UploadFile, Request, Body, Depends, status
+from fastapi import FastAPI, HTTPException, File, UploadFile, Request, Body, Depends, status, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -59,6 +60,21 @@ from document_templates import (
 
 # Phase 4 Imports: Export and Engagement Features
 from utils.export_handler import get_export_handler
+
+# Phase 5 Imports: Voice I/O (lazy loaded)
+voice_assistant = None
+
+def get_voice_assistant():
+    """Lazy load voice assistant to avoid startup overhead."""
+    global voice_assistant
+    if voice_assistant is None:
+        try:
+            from voice.voice_assistant import VoiceAssistant
+            voice_assistant = VoiceAssistant()
+            logger.info("Voice assistant initialized")
+        except ImportError as e:
+            logger.warning(f"Voice I/O not available: {e}")
+    return voice_assistant
 
 # Load environment variables
 load_dotenv()
@@ -1529,6 +1545,104 @@ async def delete_bookmark(
     except Exception as e:
         logger.error(f"Delete bookmark error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to delete bookmark: {str(e)}")
+
+
+# =============================================================================
+# PHASE 5: VOICE I/O ENDPOINTS
+# =============================================================================
+
+@app.websocket("/ws/voice")
+async def voice_websocket(websocket: WebSocket):
+    """
+    WebSocket endpoint for real-time voice chat.
+    
+    Protocol:
+    - Client sends: {"type": "start_listening"} to begin STT
+    - Client sends: {"type": "stop_listening"} to stop STT
+    - Client sends: {"type": "text", "content": "query", "language": "English"}
+    - Client sends: {"type": "speak", "content": "text to speak"}
+    - Client sends: {"type": "stop_speaking"} to stop TTS
+    - Server sends: {"type": "transcript", "content": "..."} for STT result
+    - Server sends: {"type": "response", "content": "...", "metadata": {...}}
+    - Server sends: {"type": "status", "content": "listening|processing|speaking|ready"}
+    - Server sends: {"type": "error", "content": "error message"}
+    """
+    await websocket.accept()
+    session_id = str(uuid.uuid4())
+    
+    # Define chat handler that uses the existing chat logic
+    async def chat_handler(query: str, language: str) -> dict:
+        global router_agent
+        try:
+            if router_agent is None:
+                router_agent = get_router_agent()
+            result = router_agent.process_query(query, language)
+            return {
+                "response": result.get("response", "I couldn't process that query."),
+                "confidence": result.get("confidence", 0.0),
+                "source": result.get("source", "unknown")
+            }
+        except Exception as e:
+            logger.error(f"Chat handler error: {e}")
+            return {"response": f"Error processing query: {str(e)}", "confidence": 0.0}
+    
+    assistant = get_voice_assistant()
+    if assistant is None:
+        await websocket.send_json({
+            "type": "error",
+            "content": "Voice I/O not available. Install RealtimeSTT and RealtimeTTS."
+        })
+        await websocket.close()
+        return
+        
+    assistant.chat_handler = chat_handler
+    
+    try:
+        await assistant.handle_websocket(websocket, session_id)
+    except WebSocketDisconnect:
+        logger.info(f"Voice WebSocket disconnected: {session_id}")
+    except Exception as e:
+        logger.error(f"Voice WebSocket error: {e}")
+    finally:
+        assistant.cleanup()
+
+
+@app.get("/voice/status")
+async def voice_status():
+    """Check voice I/O availability and status."""
+    voice_available = False
+    stt_available = False
+    tts_available = False
+    
+    try:
+        from voice.speech_to_text import SpeechToText
+        stt_available = True
+    except ImportError:
+        pass
+        
+    try:
+        from voice.text_to_speech import TextToSpeech
+        tts_available = True
+    except ImportError:
+        pass
+        
+    voice_available = stt_available and tts_available
+    
+    return {
+        "success": True,
+        "voice_available": voice_available,
+        "components": {
+            "speech_to_text": stt_available,
+            "text_to_speech": tts_available,
+            "websocket_endpoint": "/ws/voice"
+        },
+        "instructions": {
+            "connect": "Connect to WebSocket at /ws/voice",
+            "start_listening": "Send {\"type\": \"start_listening\"} to begin voice input",
+            "send_text": "Send {\"type\": \"text\", \"content\": \"your query\", \"language\": \"English\"}",
+            "speak": "Send {\"type\": \"speak\", \"content\": \"text to speak\"}"
+        }
+    }
 
 
 def main():
