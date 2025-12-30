@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Chat Test - AI Legal Engine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .status-box {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .status-box.disconnected {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .status-box.connected {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .status-box.listening {
+            background: #e3f2fd;
+            color: #1565c0;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-box.processing {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .status-box.speaking {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .btn-connect {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .btn-connect:hover:not(:disabled) {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        }
+        
+        .btn-disconnect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .btn-disconnect:hover:not(:disabled) {
+            background: #da190b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+        }
+        
+        .text-input-area {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn-send {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+        }
+        
+        .btn-send:hover:not(:disabled) {
+            background: #5568d3;
+        }
+        
+        .btn-mic {
+            background: #FF5722;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            min-width: 60px;
+        }
+        
+        .btn-mic:hover:not(:disabled) {
+            background: #E64A19;
+        }
+        
+        .btn-mic.listening {
+            background: #f44336;
+            animation: pulse-mic 1.5s infinite;
+        }
+        
+        @keyframes pulse-mic {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(244, 67, 54, 0);
+            }
+        }
+        
+        .messages {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+        
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        
+        .message.system {
+            background: #e3f2fd;
+            color: #1565c0;
+            font-style: italic;
+        }
+        
+        .message.transcript {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .message.response {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .message.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .timestamp {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .instructions {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .instructions h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Voice Chat Test</h1>
+        <p class="subtitle">AI Legal Engine - Voice I/O Testing Interface</p>
+        
+        <div id="status" class="status-box disconnected">
+            <span id="statusIcon">⚪</span>
+            <span id="statusText">Disconnected</span>
+        </div>
+        
+        <div class="controls">
+            <button id="connectBtn" class="btn-connect" onclick="connect()">Connect Voice Chat</button>
+            <button id="disconnectBtn" class="btn-disconnect" onclick="disconnect()" disabled>Disconnect</button>
+        </div>
+        
+        <div class="text-input-area">
+            <button class="btn-mic" id="micBtn" onclick="toggleMicrophone()" disabled title="Use microphone">
+                🎤
+            </button>
+            <input 
+                type="text" 
+                id="textInput" 
+                placeholder="Type or use microphone to send legal question..."
+                onkeypress="handleKeyPress(event)"
+                disabled
+            >
+            <button class="btn-send" id="sendBtn" onclick="sendTextQuery()" disabled>Send</button>
+        </div>
+        
+        <div class="messages" id="messages">
+            <div class="message system">
+                💡 Click "Connect Voice Chat" to start. The system will process your text queries through the voice WebSocket.
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📝 Instructions:</h3>
+            <ul>
+                <li>Click <strong>Connect Voice Chat</strong> to establish WebSocket connection</li>
+                <li><strong>🎤 Click microphone button</strong> to speak your question (uses browser speech recognition)</li>
+                <li>Or <strong>type</strong> your legal question and click <strong>Send</strong></li>
+                <li>Watch the status indicator for real-time feedback</li>
+                <li>The AI will process and <strong>speak</strong> the response back to you</li>
+                <li>Example: "What is BNS Section 103?"</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const WS_URL = 'ws://localhost:8000/ws/voice';
+        let ws = null;
+        let recognition = null;
+        let isListening = false;
+        
+        // Initialize Web Speech API
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'en-US';
+                
+                recognition.onstart = () => {
+                    isListening = true;
+                    document.getElementById('micBtn').classList.add('listening');
+                    addMessage('system', '🎤 Listening... Speak now!');
+                };
+                
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    document.getElementById('textInput').value = transcript;
+                    addMessage('transcript', `🎤 You said: ${transcript}`);
+                    // Auto-send the query
+                    sendTextQuery();
+                };
+                
+                recognition.onerror = (event) => {
+                    addMessage('error', `❌ Speech recognition error: ${event.error}`);
+                    isListening = false;
+                    document.getElementById('micBtn').classList.remove('listening');
+                };
+                
+                recognition.onend = () => {
+                    isListening = false;
+                    document.getElementById('micBtn').classList.remove('listening');
+                };
+                
+                return true;
+            } else {
+                addMessage('error', '❌ Speech recognition not supported in this browser. Use Chrome, Edge, or Safari.');
+                return false;
+            }
+        }
+        
+        function toggleMicrophone() {
+            if (!recognition) {
+                if (!initSpeechRecognition()) {
+                    return;
+                }
+            }
+            
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.start();
+            }
+        }
+        
+        function connect() {
+            addMessage('system', '🔌 Connecting to voice WebSocket...');
+            
+            try {
+                ws = new WebSocket(WS_URL);
+                
+                ws.onopen = () => {
+                    console.log('WebSocket connected');
+                    updateStatus('connected', '✅', 'Connected');
+                    addMessage('system', '✅ Connected! You can now send text queries or use microphone 🎤');
+                    
+                    document.getElementById('connectBtn').disabled = true;
+                    document.getElementById('disconnectBtn').disabled = false;
+                    document.getElementById('textInput').disabled = false;
+                    document.getElementById('sendBtn').disabled = false;
+                    document.getElementById('micBtn').disabled = false;
+                };
+                
+                ws.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    console.log('Received:', data);
+                    handleMessage(data);
+                };
+                
+                ws.onerror = (error) => {
+                    console.error('WebSocket error:', error);
+                    updateStatus('disconnected', '❌', 'Connection Error');
+                    addMessage('error', '❌ Connection error. Make sure the server is running on port 8000.');
+                };
+                
+                ws.onclose = () => {
+                    console.log('WebSocket closed');
+                    updateStatus('disconnected', '⚪', 'Disconnected');
+                    addMessage('system', '🔴 Connection closed.');
+                    
+                    document.getElementById('connectBtn').disabled = false;
+                    document.getElementById('disconnectBtn').disabled = true;
+                    document.getElementById('textInput').disabled = true;
+                    document.getElementById('sendBtn').disabled = true;
+                    document.getElementById('micBtn').disabled = true;
+                    
+                    // Stop any ongoing recognition
+                    if (recognition && isListening) {
+                        recognition.stop();
+                    }
+                    
+                    ws = null;
+                };
+                
+            } catch (error) {
+                console.error('Connection failed:', error);
+                addMessage('error', `❌ Failed to connect: ${error.message}`);
+            }
+        }
+        
+        function disconnect() {
+            if (ws) {
+                ws.close();
+                ws = null;
+            }
+        }
+        
+        function sendTextQuery() {
+            const input = document.getElementById('textInput');
+            const query = input.value.trim();
+            
+            if (!query || !ws || ws.readyState !== WebSocket.OPEN) {
+                return;
+            }
+            
+            const message = {
+                type: 'text',
+                content: query,
+                language: 'English'
+            };
+            
+            console.log('Sending:', message);
+            ws.send(JSON.stringify(message));
+            
+            addMessage('transcript', `📝 Query: ${query}`);
+            input.value = '';
+        }
+        
+        function handleMessage(data) {
+            const { type, content, metadata } = data;
+            
+            switch (type) {
+                case 'status':
+                    handleStatus(content);
+                    break;
+                    
+                case 'transcript':
+                    addMessage('transcript', `🎤 Transcript: ${content}`);
+                    break;
+                    
+                case 'response':
+                    const confidence = metadata?.confidence ? (metadata.confidence * 100).toFixed(1) + '%' : 'N/A';
+                    addMessage('response', `🤖 Response: ${content}<br><small>Confidence: ${confidence} | Source: ${metadata?.source || 'unknown'}</small>`);
+                    break;
+                    
+                case 'error':
+                    addMessage('error', `❌ Error: ${content}`);
+                    updateStatus('disconnected', '❌', 'Error');
+                    break;
+                    
+                default:
+                    console.log('Unknown message type:', type);
+            }
+        }
+        
+        function handleStatus(status) {
+            const statusMap = {
+                'connected': { icon: '✅', text: 'Connected', className: 'connected' },
+                'listening': { icon: '🎤', text: 'Listening...', className: 'listening' },
+                'processing': { icon: '⏳', text: 'Processing...', className: 'processing' },
+                'speaking': { icon: '🔊', text: 'Speaking...', className: 'speaking' },
+                'ready': { icon: '✅', text: 'Ready', className: 'connected' }
+            };
+            
+            const state = statusMap[status] || { icon: '⚪', text: status, className: 'disconnected' };
+            updateStatus(state.className, state.icon, state.text);
+            addMessage('system', `${state.icon} Status: ${state.text}`);
+        }
+        
+        function updateStatus(className, icon, text) {
+            const statusBox = document.getElementById('status');
+            const statusIcon = document.getElementById('statusIcon');
+            const statusText = document.getElementById('statusText');
+            
+            statusBox.className = `status-box ${className}`;
+            statusIcon.textContent = icon;
+            statusText.textContent = text;
+        }
+        
+        function addMessage(type, content) {
+            const messagesDiv = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            messageDiv.innerHTML = `
+                ${content}
+                <div class="timestamp">${timestamp}</div>
+            `;
+            
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendTextQuery();
+            }
+        }
+    </script>
+</body>
+</html>

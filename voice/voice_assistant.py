@@ -210,7 +210,13 @@ class VoiceAssistant:
         try:
             tts = self._get_tts()
             loop = asyncio.get_event_loop()
+            
+            # Speak with blocking to ensure completion
             await loop.run_in_executor(None, lambda: tts.speak(text, block=True))
+            
+            # Add small delay to ensure audio finishes playing
+            await asyncio.sleep(0.5)
+            
         except Exception as e:
             logger.error(f"TTS error: {e}")
         finally:
