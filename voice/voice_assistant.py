@@ -74,8 +74,16 @@ class VoiceAssistant:
         try:
             await self._send_status(websocket, "connected")
             
-            async for message in websocket:
-                await self._process_message(websocket, message, session_id)
+            # Handle FastAPI WebSocket - use receive_text() in a loop
+            while True:
+                try:
+                    message = await websocket.receive_text()
+                    await self._process_message(websocket, message, session_id)
+                except Exception as e:
+                    # Check if it's a disconnect
+                    if "disconnect" in str(e).lower() or "closed" in str(e).lower():
+                        break
+                    raise
                 
         except Exception as e:
             logger.error(f"WebSocket error: {e}")
@@ -153,7 +161,7 @@ class VoiceAssistant:
                 
     async def _on_transcript(self, websocket, text: str, session_id: str):
         """Handle STT transcript."""
-        await websocket.send(VoiceMessage(
+        await websocket.send_text(VoiceMessage(
             type="transcript",
             content=text
         ).to_json())
@@ -177,7 +185,7 @@ class VoiceAssistant:
                 result = await self.chat_handler(query, language)
                 response_text = result.get("response", "I couldn't process that query.")
                 
-                await websocket.send(VoiceMessage(
+                await websocket.send_text(VoiceMessage(
                     type="response",
                     content=response_text,
                     metadata={
@@ -210,17 +218,23 @@ class VoiceAssistant:
             
     async def _send_status(self, websocket, status: str):
         """Send status update."""
-        await websocket.send(VoiceMessage(
-            type="status",
-            content=status
-        ).to_json())
+        try:
+            await websocket.send_text(VoiceMessage(
+                type="status",
+                content=status
+            ).to_json())
+        except Exception:
+            pass  # Ignore send errors on closed connections
         
     async def _send_error(self, websocket, error: str):
         """Send error message."""
-        await websocket.send(VoiceMessage(
-            type="error",
-            content=error
-        ).to_json())
+        try:
+            await websocket.send_text(VoiceMessage(
+                type="error",
+                content=error
+            ).to_json())
+        except Exception:
+            pass  # Ignore send errors on closed connections
         
     def cleanup(self):
         """Cleanup resources."""
